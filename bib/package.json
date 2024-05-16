@@ -6,7 +6,8 @@
   },
   "dependencies": {
     "@tinyhttp/app": "^2.2.3",
-    "@tinyhttp/logger": "latest"
+    "@tinyhttp/logger": "latest",
+    "liquidjs": "^10.13.0"
   },
   "type": "module"
 }
