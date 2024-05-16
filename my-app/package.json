@@ -1,0 +1,12 @@
+{
+  "name": "my-app",
+  "private": true,
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@tinyhttp/app": "^2.2.3",
+    "@tinyhttp/logger": "latest"
+  },
+  "type": "module"
+}
