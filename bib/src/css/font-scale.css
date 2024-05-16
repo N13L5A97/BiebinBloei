@@ -1,0 +1,36 @@
+:root{
+    --font-size: 1rem;
+    --button-icon: "➕";
+}
+
+p{
+    font-size: var(--font-size);
+}
+
+
+input[type="checkbox"]{
+    display: none;
+}
+
+label{
+    position: relative;
+    display: block;
+    height: 2rem;
+    width: 2rem;
+    background-color: #85effa;
+    border-radius: 1rem;
+}
+
+label::before{
+    content: var(--button-icon);
+    position: absolute;
+    top: 51%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+/* if checkbox is checked */
+html:has(input[type="checkbox"]:checked){
+    --font-size: 2rem;
+    --button-icon: "➖";
+}

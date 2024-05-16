@@ -31,7 +31,7 @@ app.get('/', async (req, res) => {
 });
 
 app.get('font-scale', async (req, res) => {
-  return res.send(renderTemplate('views/font-scale.liquid', {title: 'Font Scale'}));
+  return res.send(renderTemplate('views/font-scale.liquid', {title: 'Font Scale', content: 'lorem ipsum'}));
 });
 
 
