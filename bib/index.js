@@ -27,9 +27,11 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', async (req, res) => {
-    
-
   return res.send(renderTemplate('views/index.liquid', {title: 'Bieb in Bloei'}));
+});
+
+app.get('font-scale', async (req, res) => {
+  return res.send(renderTemplate('views/font-scale.liquid', {title: 'Font Scale'}));
 });
 
 
