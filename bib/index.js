@@ -24,7 +24,7 @@ app
   .set('views', './views')
   .set('view engine', 'liquid')
 
-  .listen(7000, () => console.log(`Listening on http://localhost:7000`))
+  .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', async (req, res) => {
     
