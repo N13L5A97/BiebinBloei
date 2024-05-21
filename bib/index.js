@@ -29,6 +29,7 @@ app
 
 app.get('/', (req, res) => {
   return res.send(renderTemplate('views/index.liquid', { 
+    siteTitle: 'Bieb in Bloei',
     title: 'Samen Groener Leven',
     subtitle: 'Inspireer & Deel je Groene Passie!',
 
