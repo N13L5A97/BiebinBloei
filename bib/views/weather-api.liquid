@@ -1,0 +1,46 @@
+{% layout "layouts/base.liquid" %}
+
+{% block content %}
+    <h1>
+        {{ title }}
+    </h1>
+    <h2> 
+        {{ location }}
+    </h2>
+
+    <div class="content">
+        <p>Hallo, dit is voorbeeld tekst.</p>
+        <p>Gebruik te knop hieronder om een taal te kiezen om de pagina te vertalen.</p>
+    </div>
+    <div id="google_translate_element"></div>
+
+    <ul>
+        <li> {{ temperature }}° celcius </li>
+        <li> {{ weather_condition }} </li>
+        <li> <img src={{ weather_icon }}> </li>
+        <li> {{ wind_speed }} km/h </li>
+        <li> {{ precip }}mm </li>
+        <li> {{ humidity }}%</li>
+        <li> {{ cloud }} ??? </li>
+        <li> UV-index: {{ uv }} </li>
+        <li> {{ sunrise }} </li>
+        <li> {{ sunset }} </li>
+        <li> {{ moonrise }} </li>
+        <li> {{ moonset }} </li>
+        <li> {{ moon_illumination }} lumen </li>
+        <li> 
+        {% if is_moon_up == 0 %}
+            Manenschijn
+        {% elsif is_moon_up == 1 %}
+            Geen manenschijn
+        {% endif %}</li>
+        <li>
+        {% if is_sun_up == 0 %}
+            Zonnenschijn 
+        {% elsif is_sun_up == 1 %}
+            Geen zonnenschijn
+        {% endif %}
+        </li>
+        {% comment %} <li> {{ check_sunset }}</li> {% endcomment %}
+    </ul>
+{% endblock %}

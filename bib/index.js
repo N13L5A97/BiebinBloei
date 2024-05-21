@@ -27,7 +27,11 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+  res.send(renderTemplate('views/index.liquid', { title: 'Bieb in Bloei' }));
+});
+
+app.get('/weather-api', async (req, res) => {
 
   const dataWeather = await test.pullDataWeather(apiToken)
   console.log(dataWeather)
@@ -35,8 +39,8 @@ app.get('/', async (req, res) => {
   console.log(dataSunMoon)
   test.useData(dataWeather)
 
-  return res.send(renderTemplate('views/index.liquid', {
-    title: 'Bieb in Bloei',
+  return res.send(renderTemplate('views/weather-api.liquid', {
+    title: 'Weather API',
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
