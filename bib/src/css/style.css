@@ -1,32 +1,42 @@
-:root{
-    
+:root {
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-body{
-    background-color: bisque;
+body {
+	background-color: bisque;
 }
 
-nav{
-    display: flex;
-    justify-content: space-between;
+nav {
+	display: flex;
+	justify-content: space-between;
 }
 
-nav ul{
-    display: flex;
-    justify-content: space-around;
+nav ul {
+	display: flex;
+	justify-content: space-around;
 }
 
 /* remove bullet points */
-ul{
-    list-style-type: none;
+ul {
+	list-style-type: none;
 }
 
-footer h3{
-    text-transform: uppercase;
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 3rem;
+    padding: 2rem;
+
+	h3 {
+		text-transform: uppercase;
+	}
+    article{
+        display: flex;
+        flex-direction: column;
+    }
 }

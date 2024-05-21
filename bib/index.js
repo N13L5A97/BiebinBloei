@@ -28,10 +28,18 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', (req, res) => {
-  res.send(renderTemplate('views/index.liquid', { 
+  return res.send(renderTemplate('views/index.liquid', { 
     title: 'Samen Groener Leven',
     subtitle: 'Inspireer & Deel je Groene Passie!',
 
+    name: 'OBA Linnaeusstraat',
+    street: 'Linnaeusstraat 44', 
+    zip: '1092 CL', 
+    city: 'Amsterdam',
+
+    email: 'buurtcampusoost@hva.nl',
+    tel: '0643450198',
+    btw: '0055.81.205.B01',
   }));
 });
 

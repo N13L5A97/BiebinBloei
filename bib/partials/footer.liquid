@@ -1,17 +1,31 @@
 <footer>
-  <ul>
-    <li>
-        <h3>Adres</h3>
-    </li>
-  </ul>
-  <ul>
-    <li>
-        <h3>Samenwerken</h3>
-    </li>
-  </ul>
-  <ul>
-    <li>
-        <h3>Contact</h3>
-    </li>
-  </ul>
+  <article>
+    <h3>Adres</h3>
+    <p>
+      {{ name }}
+    </p>
+    <p>
+      {{ street }}
+    </p>
+    <p>
+      {{ zip }} {{ city }}
+    </p>
+  </article>
+  <article>
+    <h3>Samenwerken</h3>
+    <p>
+      Wil jij met andere organisaties,   
+      buurtbewoners en studenten
+      samenwerken aan de stedelijke
+      uitdagingen van Amsterdam Oost?
+      Stuur een e-mail naar
+      <a href="mailto:{{ email }}" > {{ email }}</a>.
+    </p>
+  </article>
+  <article>
+    <h3>Contact</h3>
+    <a href="mailto:{{ email }}"> {{ email }} </a>
+    <a href="tel:{{ tel }}">{{ tel }}</a>
+    <a href="{{ btw }}"> {{ btw }}</a>
+  </article>
 </footer>
