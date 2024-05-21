@@ -14,10 +14,10 @@
     </head>
 
     <body>
-        {% layout "layouts/header.liquid" %}
+        {% render "partials/header.liquid" %}
         <main>
         {% block content %}{% endblock %}
         </main>
-        {% layout "layouts/footer.liquid" %}
+        {% render  "partials/footer.liquid" %}
     </body>
 </html> 
