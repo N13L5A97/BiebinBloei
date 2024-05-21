@@ -1,0 +1,15 @@
+#google_translate_element div div span a span {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#google_translate_element div div img {
+    display: none;
+}
+
+a div .text {
+    font-family: 'Courier New', Courier, monospace !important;
+}
+
+.VIpgJd-ZVi9od-vH1Gmf-ibnC6b div .text {
+    display: none !important;
+}

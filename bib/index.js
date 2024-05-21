@@ -7,9 +7,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+// local scripts
+import { test } from './scripts/pullDataAPI.js'
+
 const envFile = dotenv.config({path:'../token.env'})
 var apiToken = process.env.API_TOKEN
-console.log(apiToken)
 
 const engine = new Liquid();
 const app = new App()
@@ -23,13 +25,36 @@ app
   .engine('liquid', engine)
   .set('views', './views')
   .set('view engine', 'liquid')
-
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', async (req, res) => {
-    
 
-  return res.send(renderTemplate('views/index.liquid', {title: 'Bieb in Bloei'}));
+  const dataWeather = await test.pullDataWeather(apiToken)
+  console.log(dataWeather)
+  const dataSunMoon = await test.pullDataSunMoon(apiToken)
+  console.log(dataSunMoon)
+  test.useData(dataWeather)
+
+  return res.send(renderTemplate('views/index.liquid', {
+    title: 'Bieb in Bloei',
+    location: dataWeather.location.name,
+    temperature: dataWeather.current.temp_c,
+    weather_condition: dataWeather.current.condition.text,
+    weather_icon: dataWeather.current.condition.icon,
+    wind_speed: dataWeather.current.wind_kph,
+    precip: dataWeather.current.precip_mm,
+    humidity: dataWeather.current.humidity,
+    cloud: dataWeather.current.cloud,
+    uv: dataWeather.current.uv,
+    sunrise: dataSunMoon.astronomy.astro.sunrise,
+    sunset: dataSunMoon.astronomy.astro.sunset,
+    moonrise: dataSunMoon.astronomy.astro.moonrise,
+    moonset: dataSunMoon.astronomy.astro.moonset,
+    moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
+    is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
+    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
+  }));
 });
 
 
