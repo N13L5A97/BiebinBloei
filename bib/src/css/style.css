@@ -1,0 +1,32 @@
+:root{
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: bisque;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* remove bullet points */
+ul{
+    list-style-type: none;
+}
+
+footer h3{
+    text-transform: uppercase;
+}

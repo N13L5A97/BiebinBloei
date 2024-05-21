@@ -14,6 +14,10 @@
     </head>
 
     <body>
+        {% layout "layouts/header.liquid" %}
+        <main>
         {% block content %}{% endblock %}
+        </main>
+        {% layout "layouts/footer.liquid" %}
     </body>
 </html> 
