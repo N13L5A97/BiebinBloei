@@ -28,7 +28,11 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', (req, res) => {
-  res.send(renderTemplate('views/index.liquid', { title: 'Bieb in Bloei' }));
+  res.send(renderTemplate('views/index.liquid', { 
+    title: 'Samen Groener Leven',
+    subtitle: 'Inspireer & Deel je Groene Passie!',
+
+  }));
 });
 
 app.get('/weather-api', async (req, res) => {
