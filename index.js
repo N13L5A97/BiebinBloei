@@ -9,6 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
+import { homepageData, } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'../token.env'})
 var apiToken = process.env.API_TOKEN
@@ -28,7 +29,23 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', (req, res) => {
-  res.send(renderTemplate('views/index.liquid', { title: 'Bieb in Bloei' }));
+  console.log(homepageData)
+  return res.send(renderTemplate('views/index.liquid', { 
+    homepageData,
+    siteTitle: 'Bieb in Bloei',
+    title: 'Samen Groener Leven',
+    subtitle: 'Inspireer & Deel je Groene Passie!',
+
+    name: 'OBA Linnaeusstraat',
+    street: 'Linnaeusstraat 44', 
+    zip: '1092 CL', 
+    city: 'Amsterdam',
+
+    email: 'buurtcampusoost@hva.nl',
+    tel: '0643450198',
+    btw: '0055.81.205.B01',
+
+  }));
 });
 
 app.get('/weather-api', async (req, res) => {

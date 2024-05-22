@@ -1,0 +1,17 @@
+<section class="card">
+  <article>
+    <h2>
+      {{ data.title }}
+    </h2>
+    <div class="p">
+      {{ data.content }}
+    </div>
+    {% include "partials/button.liquid"
+      , button: data.button %}
+  </article>
+  <div class="card-image-container">
+    {% if data.image %}
+      <img src=" {{ data.image.src }}" alt=" {{ data.image.alt }} ">
+    {% endif %}
+  </div>
+</section>
