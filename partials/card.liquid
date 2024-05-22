@@ -1,12 +1,17 @@
 <section class="card">
-    <article>
-      <h2> {{ card-title }} </h2>
-      <p>
-        {{ card-content }}
-      </p>
-      {% include "partials/button.liquid" %}
-    </article>
-    <div class="card-image-container">
-      <img src=" {{ card-image }}" alt=" {{ image-alt }} ">
+  <article>
+    <h2>
+      {{ data.title }}
+    </h2>
+    <div class="p">
+      {{ data.content }}
     </div>
-  </section>
+    {% include "partials/button.liquid"
+      , button: data.button %}
+  </article>
+  <div class="card-image-container">
+    {% if data.image %}
+      <img src=" {{ data.image.src }}" alt=" {{ data.image.alt }} ">
+    {% endif %}
+  </div>
+</section>
