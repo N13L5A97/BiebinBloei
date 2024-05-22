@@ -27,7 +27,24 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-app.get('/', async (req, res) => {
+app.get('/', (req, res) => {
+  return res.send(renderTemplate('views/index.liquid', { 
+    siteTitle: 'Bieb in Bloei',
+    title: 'Samen Groener Leven',
+    subtitle: 'Inspireer & Deel je Groene Passie!',
+
+    name: 'OBA Linnaeusstraat',
+    street: 'Linnaeusstraat 44', 
+    zip: '1092 CL', 
+    city: 'Amsterdam',
+
+    email: 'buurtcampusoost@hva.nl',
+    tel: '0643450198',
+    btw: '0055.81.205.B01',
+  }));
+});
+
+app.get('/weather-api', async (req, res) => {
 
   const dataWeather = await test.pullDataWeather(apiToken)
   console.log(dataWeather)
@@ -35,8 +52,8 @@ app.get('/', async (req, res) => {
   console.log(dataSunMoon)
   test.useData(dataWeather)
 
-  return res.send(renderTemplate('views/index.liquid', {
-    title: 'Bieb in Bloei',
+  return res.send(renderTemplate('views/weather-api.liquid', {
+    title: 'Weather API',
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
