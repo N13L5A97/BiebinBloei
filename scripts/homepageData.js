@@ -1,4 +1,4 @@
-export const homepageData = [
+export const cardData = [
     {
         "title": "hoi",
         "content": "<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias tempore doloribus beatae dignissimos reprehenderit obcaecati, totam aut vitae consequatur saepe ad doloremque rerum inventore, aliquid, fuga eum. Dignissimos, unde voluptas!</p>",
