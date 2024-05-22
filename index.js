@@ -11,7 +11,7 @@ import { dirname } from 'path';
 import { test } from './scripts/pullDataAPI.js'
 import { cardData, } from './scripts/homepageData.js'
 
-const envFile = dotenv.config({path:'../token.env'})
+const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
 
 const engine = new Liquid();
