@@ -1,0 +1,12 @@
+<section class="card">
+    <article>
+      <h2> {{ card-title }} </h2>
+      <p>
+        {{ card-content }}
+      </p>
+      {% include "partials/button.liquid" %}
+    </article>
+    <div class="card-image-container">
+      <img src=" {{ card-image }}" alt=" {{ image-alt }} ">
+    </div>
+  </section>
