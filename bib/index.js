@@ -61,6 +61,10 @@ app.get('/weather-api', async (req, res) => {
   }));
 });
 
+app.get('/transparent-card', async (req, res) => {
+  res.send(renderTemplate('views/transparent-card.liquid'))
+})
+
 
 const renderTemplate = (template, data) => {
   return engine.renderFileSync(template, data)

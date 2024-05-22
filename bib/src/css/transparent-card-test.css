@@ -1,0 +1,188 @@
+div {
+    margin: 4rem;
+}
+
+.card-1 {
+    /* background-image: url('../pictures/transparent-design-test.jpg');
+    background-size: contain; */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    border: 2px solid black;
+    border-radius: .5rem;
+}
+
+.transparent-1 {
+    grid-column: 1;
+    grid-row: span 2;
+    z-index: -2;
+    /* filter: blur(3px); */
+    width: 300px;
+    position: absolute;
+    /* border-radius: .5rem; */
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: .5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: .8;
+}
+
+.image-1 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 80%;
+    justify-self: center;
+}
+
+.title-1 {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
+
+
+
+
+
+
+
+.card-2 {
+    /* background-image: url('../pictures/transparent-design-test.jpg');
+    background-size: contain; */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    border: 2px solid black;
+    border-radius: .5rem;   
+}
+
+.card-3 {
+    /* background-image: url('../pictures/transparent-design-test.jpg');
+    background-size: contain; */
+    /* filter: blur(4px);
+    -webkit-filter: blur(4px); */
+    width: 300px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 80% 20%;
+    border: 2px solid black;
+    border-radius: .5rem;   
+}
+
+.overlay {
+    grid-column: 1;
+    grid-row: 2 span;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.6), rgba(200, 200, 255, 0.3));
+    opacity: 0;
+    border-radius: 10px;
+    margin: 0px;
+    z-index: 100000;
+    pointer-events: none; /* Ensures that the frost layer doesn't block interactions with card content */
+}
+
+.animation-1:hover {
+    animation: dommepoging 2s forwards;
+}
+
+.animation-2:hover {
+    animation: dommepoging 2s forwards;
+}
+
+.persistent-shadow-1 {
+    box-shadow: inset 0 0 1000px #aac4df;
+}
+
+.persistent-shadow-2 {
+    box-shadow: inset 0 0 1000px #aac4df;
+    animation: goedepoging 4s forwards;
+}
+
+@keyframes frost {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%) rotate(0deg);
+    }
+    50% {
+        opacity: 0.7;
+        transform: translateY(0%) rotate(10deg);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(100%) rotate(-10deg);
+    }
+
+}
+
+@keyframes dommepoging {
+    0% {
+        box-shadow: inset 0 0 0px #aac4df;
+    }
+
+    100% {
+        box-shadow: inset 0 0 1000px #aac4df;
+    }
+}
+
+@keyframes goedepoging {
+    0% {
+        box-shadow: inset 0 0 1000px #aac4df;
+    }
+
+    /* 90% {
+        box-shadow: inset 0 0 1000px #aac4df;
+    } */
+
+    100% {
+        box-shadow: inset 0 0 0px #aac4df;
+    }
+}
+
+
+
+.transparent-2 {
+    grid-column: 1;
+    grid-row: span 2;
+    z-index: -2;
+    /* filter: blur(3px); */
+    width: 300px;
+    position: absolute;
+    /* border-radius: .5rem; */
+    background: rgba(255, 255, 255, 0.22);
+    border-radius: .5rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    opacity: .8;
+}
+
+.image-2 {
+    grid-column: 1;
+    grid-row: 1;
+    width: 80%;
+    justify-self: center;
+}
+
+.title-2 {
+    grid-column: 1;
+    grid-row: 2;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-align: center;
+}
