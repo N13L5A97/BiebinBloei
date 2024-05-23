@@ -1,7 +1,7 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
-  {% for data in homepageData %}
+  {% for data in cardData %}
     {% include "partials/card.liquid"
       , {data} %}
   {% endfor %}

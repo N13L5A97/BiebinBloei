@@ -1,7 +1,25 @@
+@import 'button.css';
+@import 'card.css';
+
 :root {
 	--padding-small: 2rem;
 	--padding-medium: 4rem;
 	--padding-large: 6rem;
+
+	--margin-small: 2rem;
+	--margin-medium: 4rem;
+	--margin-large: 6rem;
+
+	--font-size-small: 1rem;
+	--font-size-medium: 1.5rem;
+	--font-size-large: 5rem;
+
+	--primary-color: #3C593E;
+	--secondary-color: #F9E9C2;
+	--tertiary-color: #FF9A41;
+	--quaternary-color: #491B02;
+
+	--background-color: #fff;
 }
 
 * {
@@ -11,7 +29,7 @@
 }
 
 body {
-	background-color: bisque;
+	background-color: var(--background-color);
 }
 
 nav {
@@ -33,10 +51,6 @@ main{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-
-	.card{
-		margin: 2rem;
-	}
 }
 
 footer {
