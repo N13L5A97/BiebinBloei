@@ -1,0 +1,14 @@
+nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+nav ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+/* remove bullet points */
+ul {
+	list-style-type: none;
+}

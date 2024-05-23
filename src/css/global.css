@@ -1,5 +1,8 @@
+@import 'header.css';
+@import 'footer.css';
 @import 'button.css';
 @import 'card.css';
+@import 'google-translate-button.css';
 
 :root {
 	--padding-small: 2rem;
@@ -32,38 +35,8 @@ body {
 	background-color: var(--background-color);
 }
 
-nav {
-	display: flex;
-	justify-content: space-between;
-}
-
-nav ul {
-	display: flex;
-	justify-content: space-around;
-}
-
-/* remove bullet points */
-ul {
-	list-style-type: none;
-}
-
 main{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
-}
-
-footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    padding: 2rem;
-
-	h3 {
-		text-transform: uppercase;
-	}
-    article{
-        display: flex;
-        flex-direction: column;
-    }
 }
