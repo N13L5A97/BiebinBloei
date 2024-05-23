@@ -5,6 +5,8 @@
         <link rel="stylesheet" href="./css/global.css">
         <link rel="stylesheet" href="./css/google-translate-button.css">
         <link rel="stylesheet" href="./css/transparent-card-test.css">
+        <link rel="stylesheet" href="./css/agenda.css">
+        <link rel="stylesheet" href="./css/scroll-bar.css">
         <link rel="icon" type="image/x-icon" href="">
 
         <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
@@ -15,7 +17,7 @@
         {% block head %}{% endblock %}
     </head>
 
-    <body>
+    <body class="scroll scroll-vertical">
         {% include "partials/header.liquid" %}
         <main>
         {% block content %}{% endblock %}
