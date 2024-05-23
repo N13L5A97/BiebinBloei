@@ -1,19 +1,103 @@
 .card{
     margin: var(--margin-small);
-    background-color: antiquewhite;
-    border-radius: 1rem;
-    padding: var(--padding-small);
+    border-radius: 5rem;
+    padding: var(--padding-small) var(--padding-small) var(--padding-medium);
     display: grid;
     grid-template-columns: 1fr 1fr;
     padding-left: var(--padding-large);
     gap: var(--padding-small);
-
-    img{
-        width: 100%;
-        border-radius: 1rem;
-    }
+    margin-bottom: calc((var(--padding-small) * -2) - (var(--padding-medium) / 2));
+    box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     h2{
         font-size: var(--font-size-large);
+        position: relative;
+        line-height: 1.1em;
+        margin-bottom: .25em;
+
+        &:before{
+            content: "";
+            position: absolute;
+            top: .5em;
+            left: calc(var(--padding-large) / -2);
+            transform: translate(-50%, -50%);
+            height: .25em;
+            width: .25em;
+            border-radius: 50%;
+        }
     }
+
+    p{
+        margin-bottom: 1em;
+    }
+
+    .card-image-container{
+        overflow: hidden;
+        border-radius: 3rem;
+        display: flex;
+        justify-content: center;
+
+        img{
+            height: 100%;
+        }
+    }
+}
+
+.card:nth-of-type(3n + 1){
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+
+    h2:before{
+      background-color: var(--tertiary-color);
+    }
+
+    .button{
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+
+        svg{
+            fill: var(--secondary-color);
+        }
+    }
+}
+
+.card:nth-of-type(3n + 2){
+    background-color: var(--tertiary-color);
+    color: var(--quaternary-color);
+
+    h2:before{
+      background-color: var(--secondary-color);
+    }
+
+    .button{
+        background-color: var(--quaternary-color);
+        color: var(--secondary-color);
+
+        svg{
+            fill: var(--secondary-color);
+        }
+    }
+}
+
+.card:nth-of-type(3n + 3){
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+
+    h2:before{
+      background-color: var(--tertiary-color);
+    }
+
+    .button{
+        background-color: var(--secondary-color);
+        color: var(--quaternary-color);
+
+        svg{
+            fill: var(--quaternary-color);
+        }
+    }
+}
+
+.card:last-of-type{
+    margin-bottom: var(--margin-small);
+    background-color: rgb(0, 136, 255);
 }

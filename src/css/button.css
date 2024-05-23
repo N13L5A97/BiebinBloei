@@ -1,8 +1,13 @@
-/* .button{
-    padding: .1rem 1rem;
-    background-color: inherit;
-    color: inherit;
+.button{
+    padding: .5rem 1.2rem;
+    color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 5rem;
     cursor: pointer;
-} */
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    width: fit-content;
+    text-decoration: none;
+    margin-top: 2rem;
+}
