@@ -3,11 +3,16 @@
     border-radius: 5rem;
     padding: var(--padding-small) var(--padding-small) var(--padding-medium);
     display: grid;
+    height: min-content;
     grid-template-columns: 1fr 1fr;
     padding-left: var(--padding-large);
     gap: var(--padding-small);
-    margin-bottom: calc((var(--padding-small) * -2) - (var(--padding-medium) / 2));
+    margin-top: calc((var(--padding-small) * -2) - (var(--padding-medium) / 2));
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
+
+    article{
+        height: min-content;
+    }
 
     h2{
         font-size: var(--font-size-large);
@@ -32,14 +37,12 @@
     }
 
     .card-image-container{
-        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        background-image: var(--background-image);
+        background-size: cover;
+        background-position: center;
         border-radius: 3rem;
-        display: flex;
-        justify-content: center;
-
-        img{
-            height: 100%;
-        }
     }
 }
 
