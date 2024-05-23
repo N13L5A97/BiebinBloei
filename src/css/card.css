@@ -96,8 +96,3 @@
         }
     }
 }
-
-.card:last-of-type{
-    margin-bottom: var(--margin-small);
-    background-color: rgb(0, 136, 255);
-}
