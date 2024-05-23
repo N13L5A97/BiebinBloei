@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { homepageData, } from './scripts/homepageData.js'
+import { cardData, } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -29,9 +29,9 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', (req, res) => {
-  console.log(homepageData)
+  console.log(cardData)
   return res.send(renderTemplate('views/index.liquid', { 
-    homepageData,
+    cardData,
     siteTitle: 'Bieb in Bloei',
     title: 'Samen Groener Leven',
     subtitle: 'Inspireer & Deel je Groene Passie!',
