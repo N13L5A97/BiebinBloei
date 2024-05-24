@@ -1,5 +1,7 @@
 .scroll-horizontal::-webkit-scrollbar {
     height: 5px;
+    position: absolute;
+    
 }
 
 .scroll-vertical::-webkit-scrollbar {
@@ -8,7 +10,7 @@
       
 /* Track */
 .scroll::-webkit-scrollbar-track {
-    background: none;
+    background: transparent;
 }
        
 /* Handle */
