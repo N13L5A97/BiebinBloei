@@ -2,10 +2,28 @@
 @import 'footer.css';
 @import 'button.css';
 @import 'card.css';
+@import 'agenda.css';
+@import 'scroll-bar.css';
 @import 'google-translate-button.css';
+@import 'transparent-card-test.css';
 @import 'agenda.css';
 @import 'scroll-bar.css';
 @import 'partners.css';
+
+/* import poppins black and medium */
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../fonts/Poppins-Medium.ttf);
+	type: truetype;
+}
+
+@font-face {
+	font-family: 'Poppins';
+	src: url(../fonts/Poppins-Black.ttf);
+	font-weight: 900;
+	type: truetype;
+}
 
 :root {
 	--padding-small: 2rem;
@@ -17,8 +35,10 @@
 	--margin-large: 6rem;
 
 	--font-size-small: 1rem;
-	--font-size-medium: 1.5rem;
-	--font-size-large: 5rem;
+	--font-size-medium: 5rem;
+	--font-size-large: clamp(3rem, 10vw ,9rem);
+
+	--font-family: 'Poppins';
 
 	--primary-color: #3C593E;
 	--secondary-color: #F9E9C2;
@@ -36,10 +56,15 @@
 
 body {
 	background-color: var(--background-color);
+	font-family: var(--font-family);
 }
 
 main{
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6{
+	font-weight: 700;
 }
