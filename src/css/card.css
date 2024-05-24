@@ -1,0 +1,19 @@
+.card{
+    margin: var(--margin-small);
+    background-color: antiquewhite;
+    border-radius: 1rem;
+    padding: var(--padding-small);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-left: var(--padding-large);
+    gap: var(--padding-small);
+
+    img{
+        width: 100%;
+        border-radius: 1rem;
+    }
+
+    h2{
+        font-size: var(--font-size-large);
+    }
+}

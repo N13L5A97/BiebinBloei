@@ -1,74 +1,11 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
-  {% for data in homepageData %}
+  {% for card in cardData %}
     {% include "partials/card.liquid"
-      , {data} %}
+      , {card} %}
   {% endfor %}
-
-
-  {% comment %} <section class="card">
-                <article>
-                  <h2>Onze Stekjes Bieb</h2>
-                  <p>
-                    Bij Buurtcampus Oost kun je de stekjeskast bezoeken om stekjes te ruilen,  
-                        je kunt ook op onze website inzien welke stekjes beschikbaar zijn. 
-                        Dit is een geweldige manier voor plantenliefhebbers om met elkaar in 
-                        contact te komen en planten te delen.
-                  </p>
-                  <p>
-                    Het maakt het gemakkelijk om je favoriete stekjes te vinden en  
-                        te ruilen met anderen in de buurt, zonder gedoe. Kom langs bij 
-                        Buurtcampus Oost en ontmoet mede-plantenliefhebbers!
-                  </p>
-                  <a href="/stekjes">Lees meer</a>
-                </article>
-                <div class="card-image-container">
-                  <img src="" alt="">
-                </div>
-              </section>
-
-              <section class="card">
-                <article>
-                  <h2>Onze Zaden Bieb</h2>
-                  <p>
-                    Bij Buurtcampus Oost kun je de zadenkast bezoeken om zaadjes  
-                    te kunnen ruilen, je kunt ook op onze website inzien welke stekjes beschikbaar zijn. 
-                    Dit is een geweldige manier voor plantenliefhebbers om met elkaar in contact te
-                    komen en planten te delen.
-                  </p>
-                  <p>
-                    Het maakt het gemakkelijk om je favoriete stekjes te vinden en te  
-                    ruilen met anderen in de buurt, zonder gedoe. Kom langs bij Buurtcampus Oost 
-                    en ontmoet mede-plantenliefhebbers!
-                  </p>
-                  <a href="/zaden">Lees meer</a>
-                </article>
-                <div class="card-image-container">
-                  <img src="" alt="">
-                </div>
-              </section>
-
-              <section class="card">
-                <article>
-                  <h2>Onze Geveltuinen</h2>
-                  <p>
-                    Bij Buurtcampus Oost kan je deelnemen aan de geveltuin projecten. 
-                    Het geveltuinproject is een geweldige manier om je steentje bij te dragen aan een mooier, 
-                    groener en socialer Amsterdam. Of je nu een ervaren tuinier bent of nog nooit 
-                    met een plant hebt gewerkt, er is altijd een plek voor je in ons team.         
-                  </p>
-                  <p>
-                    We leren je alles wat je moet weten en zorgen voor de benodigde materialen.
-                    Meld je aan vandaag nog!
-                  </p>
-                  <a href="/geveltuin">Lees meer</a>
-                </article>
-                <div class="card-image-container">
-                  <img src="" alt="">
-                </div>
-        </section> {% endcomment %}
-
+  
   <section>
     <h2>Buurtcampus
       <span>Oost</span>
@@ -90,115 +27,12 @@
 
   <section class="agenda">
     <h2>Agenda</h2>
-    {% comment %} for each agenda item {% endcomment %}
-    {% comment %} <article>
-      <h3>Agenda item</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.    
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </p>
-      <a href="/agenda">Meld je aan</a>
-    </article> {% endcomment %}
-    {% comment %} <div class="agenda-items scroll scroll-horizontal" onmouseover="this.style.overflow='scroll'"
-    onmouseout="this.style.overflow='hidden'"> {% endcomment %}
     <div class="agenda-items scroll scroll-horizontal">
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
+      {% for agendaItem in agendaData %}
+        {% include "partials/agenda.liquid"
+          , {agendaItem} %}
+      {% endfor %}
+      
     </div>
   </section>
 
