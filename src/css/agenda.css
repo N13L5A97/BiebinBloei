@@ -14,7 +14,7 @@ body {
 
 .agenda {
     padding: 1rem 5rem 1rem 5rem;
-    width: 200px
+    padding-left: 204px;
 }
 
 .agenda h2 {
@@ -46,9 +46,9 @@ body {
     grid-template-rows: 2.5rem 2.5rem 2.5rem 1fr;
     width: 513px;
     height: 349px;
-    background-image: 
+    /* background-image: 
         linear-gradient(180deg,rgb(27, 27, 27),transparent),
-        url(../images/voorbeeld-agenda.png);
+        url(../images/voorbeeld-agenda.png); */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -70,7 +70,6 @@ body {
     /* padding: .2rem 0 .2rem .4rem; */
     color: white;
 }
-
 .agenda-items article p:nth-of-type(1) {
     grid-column: 1;
     grid-row: 1;

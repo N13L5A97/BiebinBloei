@@ -5,13 +5,7 @@
     {% include "partials/card.liquid"
       , {card} %}
   {% endfor %}
-
-  {% for item in agendaData %}
-    {% include "partials/card.liquid"
-      , {item} %}
-  {% endfor %}
-
-
+  
   <section>
     <h2>Buurtcampus
       <span>Oost</span>
@@ -33,119 +27,16 @@
 
   <section class="agenda">
     <h2>Agenda</h2>
-    {% comment %} for each agenda item {% endcomment %}
-    {% comment %} <article>
-      <h3>Agenda item</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.    
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </p>
-      <a href="/agenda">Meld je aan</a>
-    </article> {% endcomment %}
-    {% comment %} <div class="agenda-items scroll scroll-horizontal" onmouseover="this.style.overflow='scroll'"
-    onmouseout="this.style.overflow='hidden'"> {% endcomment %}
     <div class="agenda-items scroll scroll-horizontal">
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
-      <article>
-        <p>Zaterdag 3 september 2023</p>
-        <p>OBA Linnaeusstraat</p>
-        <p>Gratis</p>
-        <a href="#">Meld je aan
-          <img class="arrow" src="./images/arrow.png"></img>
-        </a>
-      </article>
+      {% for agendaItem in agendaData %}
+        {% include "partials/agenda.liquid"
+          , {agendaItem} %}
+      {% endfor %}
+      
     </div>
   </section>
 
-  <section>
+  <section class="partners">
     <h2>Partners</h2>
     <p>
       Samenwerking HvA en OBA   
@@ -155,6 +46,11 @@
         In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
         de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
+    <div>
+      <img src="./images/oba_logo.png">
+      <img src="./images/hva_logo.png">
+    </div>
+
   </section>
 
 {% endblock %}
