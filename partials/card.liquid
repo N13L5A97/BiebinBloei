@@ -3,15 +3,13 @@
     <h2>
       {{ card.title }}
     </h2>
-    <div class="p">
-      {{ card.content }}
-    </div>
+    {{ card.content }}
     {% include "partials/button.liquid"
       , button: card.button %}
   </article>
-  <div class="card-image-container">
-    {% if card.image %}
-      <img src=" {{ card.image.src }}" alt=" {{ card.image.alt }} ">
-    {% endif %}
+  <div 
+    class="card-image-container" 
+    style="--background-image: url('{{ card.image.src }}')"
+  >
   </div>
 </section>
