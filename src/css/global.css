@@ -5,6 +5,7 @@
 @import 'google-translate-button.css';
 @import 'agenda.css';
 @import 'scroll-bar.css';
+@import 'partners.css';
 
 :root {
 	--padding-small: 2rem;
