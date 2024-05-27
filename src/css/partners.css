@@ -1,15 +1,12 @@
 .partners {
     padding: 1rem 5rem 1rem 5rem;
     background-color: #3C593E ;
-    width: 100vw;
     height: auto;
     padding-left: 204px;
     justify-content: center;
 }
 
 .partners h2 {
-    font-family: medium;
-    font-size: 90px;
     color: #F9E9C2;
     margin-bottom: 41px;
     margin-top: 100px;
@@ -21,11 +18,7 @@
     margin-bottom: 50px;
     /* padding: .2rem 0 .2rem .4rem; */
     color: white;
-    font-family: medium;
-    font-weight: 500;
-    line-height: 19.78px;
-    font-size: 20px;
-    width: 854px;
+
 }
 
 .partners > div {

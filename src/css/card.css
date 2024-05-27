@@ -34,11 +34,10 @@
 
     p{
         margin-bottom: 1em;
+        max-width: 75ch;
     }
 
     .card-image-container{
-        /* height: 100%;
-        width: 100%; */
         background-image: var(--background-image);
         background-size: cover;
         background-position: center;
@@ -97,5 +96,16 @@
         svg{
             fill: var(--quaternary-color);
         }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .card-image-container{
+        display: none;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+        padding-right: var(--padding-large);
     }
 }

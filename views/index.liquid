@@ -1,12 +1,15 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
+  {% include "partials/image-slider.liquid" %}
+
   {% for card in cardData %}
     {% include "partials/card.liquid"
       , {card} %}
   {% endfor %}
-  
-  <section>
+
+
+  <section id="Buurtcampus">
     <h2>Buurtcampus
       <span>Oost</span>
     </h2>
