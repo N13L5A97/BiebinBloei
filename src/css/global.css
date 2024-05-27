@@ -3,12 +3,11 @@
 @import 'button.css';
 @import 'card.css';
 @import 'agenda.css';
-@import 'scroll-bar.css';
 @import 'google-translate-button.css';
 @import 'transparent-card-test.css';
-@import 'agenda.css';
-@import 'scroll-bar.css';
+/* @import 'scroll-bar.css'; */
 @import 'partners.css';
+@import 'custom-scrollbar.css';
 
 /* import poppins black and medium */
 

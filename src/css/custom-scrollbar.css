@@ -1,0 +1,31 @@
+/* scroll bar cutsomization for every browser */
+
+/* width */
+
+
+body{
+overflow: overlay !important;
+
+    &::-webkit-scrollbar {
+        width: 2em;  /* Total width including `border-width` of scrollbar thumb */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        border: 0.5em solid transparent;  /* Transparent border together with `background-clip: padding-box` does the trick */
+        background-clip: padding-box;
+        -webkit-border-radius: 1em;
+        background-color: var(--tertiary-color);
+        margin: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        margin: 6rem;
+        padding: 1rem 0;
+        background-color: rgba(0, 0, 0, .5);
+        border-radius: 1em;
+    }
+
+    &::-webkit-scrollbar-corner {
+        background-color: transparent;
+    }
+}
