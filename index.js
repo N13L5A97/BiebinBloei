@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, } from './scripts/homepageData.js'
+import { cardData, agendaData } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -32,6 +32,7 @@ app.get('/', (req, res) => {
   console.log(cardData)
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
+    agendaData,
     siteTitle: 'Bieb in Bloei',
     title: 'Samen Groener Leven',
     subtitle: 'Inspireer & Deel je Groene Passie!',
@@ -77,6 +78,10 @@ app.get('/weather-api', async (req, res) => {
     // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
+
+app.get('/transparent-card', async (req, res) => {
+  res.send(renderTemplate('views/transparent-card.liquid'))
+})
 
 
 const renderTemplate = (template, data) => {
