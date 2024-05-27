@@ -21,7 +21,12 @@
 @font-face {
 	font-family: 'Poppins Black';
 	src: url(../fonts/Poppins-Black.ttf);
-	font-weight: 900;
+	type: truetype;
+}
+
+@font-face {
+	font-family: 'Poppins Bold';
+	src: url(../fonts/Poppins-Bold.ttf);
 	type: truetype;
 }
 
@@ -29,6 +34,7 @@
 	--padding-small: 2rem;
 	--padding-medium: 4rem;
 	--padding-large: 6rem;
+	--padding-extra-large: 12rem;
 
 	--margin-small: 2rem;
 	--margin-medium: 4rem;
@@ -39,6 +45,7 @@
 	--font-size-large: clamp(3rem, 8vw ,8rem);
 
 	--font-family-headings: 'Poppins Black', sans-serif;
+	--font-family-footer: 'Poppins Bold', sans-serif;
 	--font-family-text: 'Poppins Medium', sans-serif;
 
 	--primary-color: #3C593E;
@@ -98,7 +105,12 @@ h1, h2, h3, h4, h5, h6{
 	font-family: var(--font-family-headings);
 }
 
+h3{
+	font-size: var(--font-size-medium);
+}
+
 p{
 	font-size: var(--font-size-paragraph);
 	max-width: 75ch;
+	line-height: 1.7;
 }

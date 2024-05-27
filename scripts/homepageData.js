@@ -101,7 +101,7 @@ export const footerData = {
 	contact:
 		{
 			email: 'buurtcampusoost@hva.nl',
-			tel: '0643450198',
+			tel: '06-43450198',
 			btw: '0055.81.205.B01',
 		},
 	samenwerken: "Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar"

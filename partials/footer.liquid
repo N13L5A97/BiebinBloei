@@ -20,8 +20,14 @@
   </article>
   <article>
     <h3>Contact</h3>
-    <a href="mailto:{{ footerData.contact.email }}"> {{ footerData.contact.email }} </a>
-    <a href="tel:{{ footerData.contact.tel }}">{{ footerData.contact.tel }}</a>
+    <p class="email">
+      📮
+      <a href="mailto:{{ footerData.contact.email }}"> {{ footerData.contact.email }} </a>
+    </p>
+    <p class="tel">
+      ☎️
+      <a href="tel:{{ footerData.contact.tel }}">{{ footerData.contact.tel }}</a>
+    </p>
     <p>BTW {{ footerData.contact.btw }}</p>
   </article>
 </footer>

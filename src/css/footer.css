@@ -1,13 +1,11 @@
-footer {
+/* footer {
     padding: 112px 200px 314px 200px;
-    /* padding: 112px 0px 314px 0px; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 3rem;
     color: #4E7141;
     background-color: #F9E9C2;
     align-content: center;
-    /* padding: 2rem; */
 
 	h3 {
 		text-transform: uppercase;
@@ -32,4 +30,37 @@ footer {
         width: 50%;
     }
 
+} */
+
+footer {
+	padding: var(--padding-small) var(--padding-extra-large)
+		var(--padding-extra-large);
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	display: flex;
+	justify-content: center;
+	gap: 8rem;
+
+	p {
+		max-width: 33ch;
+	}
+
+	.email,
+	.tel {
+		white-space: nowrap;
+	}
+
+	h3 {
+		font-family: var(--font-family-footer);
+		text-transform: uppercase;
+	}
+
+	article {
+		min-width: min-content;
+		max-width: 20%;
+
+		a {
+			font-size: var(--font-size-paragraph);
+		}
+	}
 }
