@@ -46,7 +46,7 @@ export const agendaData = [
         "location": "OBA Linnaeusstraat",
         "price": "Gratis",
         "url": "#",
-        "picture": "./images/voorbeeld-agenda.png"
+        "picture": "../images/voorbeeld-agenda.png"
     },
     {
         "date": "",
