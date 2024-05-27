@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, agendaData, pageData } from './scripts/homepageData.js'
+import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -33,6 +33,7 @@ app.get('/', (req, res) => {
     cardData,
     agendaData,
     pageData,
+    footerData,
   }));
 });
 
