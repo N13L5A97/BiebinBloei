@@ -98,3 +98,14 @@
         }
     }
 }
+
+@media screen and (max-width: 1200px){
+    .card-image-container{
+        display: none;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+        padding-right: var(--padding-large);
+    }
+}

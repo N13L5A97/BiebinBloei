@@ -13,13 +13,13 @@
 /* import poppins black and medium */
 
 @font-face {
-	font-family: 'Poppins';
+	font-family: 'Poppins Medium';
 	src: url(../fonts/Poppins-Medium.ttf);
 	type: truetype;
 }
 
 @font-face {
-	font-family: 'Poppins';
+	font-family: 'Poppins Black';
 	src: url(../fonts/Poppins-Black.ttf);
 	font-weight: 900;
 	type: truetype;
@@ -34,11 +34,12 @@
 	--margin-medium: 4rem;
 	--margin-large: 6rem;
 
-	--font-size-small: 1rem;
+	--font-size-paragraph: clamp(1rem, 2vw, 1.4rem);
 	--font-size-medium: 3rem;
 	--font-size-large: clamp(3rem, 8vw ,8rem);
 
-	--font-family: 'Poppins';
+	--font-family-headings: 'Poppins Black', sans-serif;
+	--font-family-text: 'Poppins Medium', sans-serif;
 
 	--primary-color: #3C593E;
 	--secondary-color: #F9E9C2;
@@ -56,7 +57,7 @@
 
 body {
 	background-color: var(--background-color);
-	font-family: var(--font-family);
+	font-family: var(--font-family-text);
 }
 
 .spring {
@@ -94,5 +95,10 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6{
-	font-weight: 700;
+	font-family: var(--font-family-headings);
+}
+
+p{
+	font-size: var(--font-size-paragraph);
+	max-width: 75ch;
 }
