@@ -1,6 +1,8 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
+  {% include "partials/image-slider.liquid" %}
+
   {% for card in cardData %}
     {% include "partials/card.liquid"
       , {card} %}
@@ -31,21 +33,18 @@
     </p>
   </section>
 
-  <section>
+  <section class="agenda">
     <h2>Agenda</h2>
-    {% comment %} for each agenda item {% endcomment %}
-    <article>
-      <h3>Agenda item</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.    
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-      </p>
-      <a href="/agenda">Meld je aan</a>
-    </article>
+    <div class="agenda-items scroll scroll-horizontal">
+      {% for agendaItem in agendaData %}
+        {% include "partials/agenda.liquid"
+          , {agendaItem} %}
+      {% endfor %}
+      
+    </div>
   </section>
 
-  <section>
+  <section class="partners">
     <h2>Partners</h2>
     <p>
       Samenwerking HvA en OBA   
@@ -55,6 +54,11 @@
         In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
         de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
+    <div>
+      <img src="./images/oba_logo.png">
+      <img src="./images/hva_logo.png">
+    </div>
+
   </section>
 
 {% endblock %}

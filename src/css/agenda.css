@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'medium';
+    src: url(../fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'black';
+    src: url(../fonts/Poppins-Black.ttf);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.agenda {
+    padding: 1rem 5rem 1rem 5rem;
+    padding-left: 204px;
+}
+
+.agenda h2 {
+    font-family: medium;
+    font-size: 90px;
+    color: #491B02;
+    margin-bottom: 113px;
+}
+
+
+
+.agenda-items {
+    margin: 0px;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    width: calc(100vw - 10rem - 5px);
+    overflow-x: scroll;
+    transition: smooth;
+}
+
+/* .agenda-items:hover {
+    overflow-x: scroll;
+} */
+
+.agenda-items article {
+    display: grid;
+    grid-template-columns: 513px;
+    grid-template-rows: 2.5rem 2.5rem 2.5rem 1fr;
+    width: 513px;
+    height: 349px;
+    /* background-image: 
+        linear-gradient(180deg,rgb(27, 27, 27),transparent),
+        url(../images/voorbeeld-agenda.png); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: medium;
+    font-size: 25px;
+    font-weight: 700;
+    border-radius: 17px;
+    margin: 0px 2rem 3px 0px;
+    background-image: linear-gradient(180deg,rgb(27, 27, 27),transparent), var(--background-image)
+}
+
+.agenda-items article:last-child {
+    margin: 0px;
+}
+
+.agenda-items article p {
+    /* margin: .2rem 0 .2rem .4rem; */
+    margin-left: 25px;
+    margin-top: 18px;
+    /* padding: .2rem 0 .2rem .4rem; */
+    color: white;
+}
+.agenda-items article p:nth-of-type(1) {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.agenda-items article p:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.agenda-items article p:nth-of-type(3) {
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.agenda-items article a {
+    grid-column: 1;
+    grid-row: 4;
+    justify-self: end;
+    align-self: flex-end;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    background-color: #FF8D06;
+    padding: .5rem 2rem .5rem 2rem;
+    border-radius: 23px;
+    text-decoration: none;
+    color: #491B02;
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+}
+
+.agenda-items article a .arrow {
+/* Vector 16 */
+    width: 17px;
+    height: 19px;
+}
+
+
