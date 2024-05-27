@@ -1,6 +1,8 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
+  {% include "partials/image-slider.liquid" %}
+
   {% for card in cardData %}
     {% include "partials/card.liquid"
       , {card} %}

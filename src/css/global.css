@@ -9,6 +9,7 @@
 @import 'agenda.css';
 @import 'scroll-bar.css';
 @import 'partners.css';
+@import 'image-slider.css';
 
 /* import poppins black and medium */
 
@@ -35,8 +36,8 @@
 	--margin-large: 6rem;
 
 	--font-size-small: 1rem;
-	--font-size-medium: 5rem;
-	--font-size-large: clamp(3rem, 10vw ,9rem);
+	--font-size-medium: 3rem;
+	--font-size-large: clamp(3rem, 8vw ,8rem);
 
 	--font-family: 'Poppins';
 
