@@ -5,9 +5,8 @@
 @import 'agenda.css';
 @import 'scroll-bar.css';
 @import 'google-translate-button.css';
+@import 'buurtcampus.css';
 @import 'transparent-card-test.css';
-@import 'agenda.css';
-@import 'scroll-bar.css';
 @import 'partners.css';
 @import 'image-slider.css';
 
@@ -61,31 +60,31 @@ body {
 }
 
 .spring {
-	--color-primary: #2B4021;
-	--color-secondary: #FFDEF0;
-	--color-tertiary: #FA89B9;
-	--color-quaternary: #1F000D;
+	--primary-color: #2B4021;
+	--secondary-color: #FFDEF0;
+	--tertiary-color: #FA89B9;
+	--quaternary-color: #1F000D;
 }
 
 .summer {
-	--color-primary: #265010;
-	--color-secondary: #F7FFC3;
-	--color-tertiary: #D4EF31;
-	--color-quaternary: #261E00;
+	--primary-color: #265010;
+	--secondary-color: #F7FFC3;
+	--tertiary-color: #D4EF31;
+	--quaternary-color: #261E00;
 }
 
 .fall {
-	--color-primary: #3C593E;
-	--color-secondary: #F9E9C2;
-	--color-tertiary: #FF8D06;
-	--color-quaternary: #491B02;
+	--primary-color: #3C593E;
+	--secondary-color: #F9E9C2;
+	--tertiary-color: #FF8D06;
+	--quaternary-color: #491B02;
 }
 
 .winter {
-	--color-primary: #304849;
-	--color-secondary: #E5EFFF;
-	--color-tertiary: #A9A2F9;
-	--color-quaternary: #03002B;
+	--primary-color: #304849;
+	--secondary-color: #E5EFFF;
+	--tertiary-color: #A9A2F9;
+	--quaternary-color: #03002B;
 }
 
 main {
