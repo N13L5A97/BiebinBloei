@@ -13,7 +13,7 @@ else if (today >= summer && today < fall) {
 else if (today >= fall && today < winter) {
     document.body.classList.add('fall');
 }
-else if (today >= winter && today < spring){
+else {
     document.body.classList.add('winter');
 }
 
