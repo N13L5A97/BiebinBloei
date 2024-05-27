@@ -60,7 +60,35 @@ body {
 	font-family: var(--font-family);
 }
 
-main{
+.spring {
+	--color-primary: #2B4021;
+	--color-secondary: #FFDEF0;
+	--color-tertiary: #FA89B9;
+	--color-quaternary: #1F000D;
+}
+
+.summer {
+	--color-primary: #265010;
+	--color-secondary: #F7FFC3;
+	--color-tertiary: #D4EF31;
+	--color-quaternary: #261E00;
+}
+
+.fall {
+	--color-primary: #3C593E;
+	--color-secondary: #F9E9C2;
+	--color-tertiary: #FF8D06;
+	--color-quaternary: #491B02;
+}
+
+.winter {
+	--color-primary: #304849;
+	--color-secondary: #E5EFFF;
+	--color-tertiary: #A9A2F9;
+	--color-quaternary: #03002B;
+}
+
+main {
 	display: flex;
 	flex-direction: column;
 	gap: 2rem;
