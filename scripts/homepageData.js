@@ -68,25 +68,58 @@ export const cardData = [
 export const agendaData = [
 	{
 		date: "Zaterdag 3 september 2023",
-		location: "OBA Linnaeusstraat",
+		activity: "Stekjes ruilmarkt",
 		price: "Gratis",
 		button: {
 			url: "#",
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-		picture: "../images/voorbeeld-agenda.png",
+		image: "../images/voorbeeld-agenda.png",
 	},
 	{
 		date: "Zaterdag 3 september 2023",
-		location: "OBA Linnaeusstraat",
+		activity: "Stekjes ruilmarkt",
 		price: "Gratis",
 		button: {
 			url: "#",
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-        picture: "../images/voorbeeld-agenda.png"
+        image: "../images/voorbeeld-agenda.png"
+    },
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
+    },
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
+    },
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
     },
 ]
 

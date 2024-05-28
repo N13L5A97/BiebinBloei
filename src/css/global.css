@@ -58,6 +58,10 @@
 	--background-color: #fff;
 }
 
+html{
+	background-color: black;
+}
+
 .spring {
 	--primary-color: #265010;
 	--secondary-color: #F7FFC3;
@@ -96,6 +100,7 @@ body {
 	background-color: var(--background-color);
 	font-family: var(--font-family-text);
 	font-size: var(--font-size-paragraph);
+	z-index: 1;
 }
 
 main {
