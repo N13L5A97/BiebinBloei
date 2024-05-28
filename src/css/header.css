@@ -133,27 +133,108 @@ header.menuOpen nav ul li a {
 		transition: 200ms;
 	}
 
-
-
 	header.menuOpen nav ul {
-		justify-content: center;
+		justify-content: space-evenly;
 		flex-direction: column;
-		align-items: center;
 		position: fixed;
 		inset: 0;
-		margin: 0;
-		padding: 0;
+
 	}
-
-
 
 	header nav button {
 		display: none;
 	}
 
-
-
 	header.menuOpen nav button {
 		display: block;
+	}
+}
+
+
+/* Hamburger menu */
+#hamburger {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+#hamburger .cross {
+	width: 36px;
+	transform-origin: center;
+}
+
+#hamburger div {
+	height: 5px;
+	background-color: white;
+}
+
+#hamburger #middle {
+	margin: 7px 0;
+	display: flex;
+	background-color: transparent;
+}
+
+#middle div {
+	width: 18px;
+}
+
+.menuOpen #hamburger #middle div:first-child {
+	animation: slideLeft .2s forwards;
+}
+
+.menuOpen #hamburger #middle div:last-child {
+	animation: slideRight .2s forwards;
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(1rem);
+		opacity: 0;
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(-1rem);
+		opacity: 0;
+	}
+}
+
+.menuOpen #hamburger .cross:first-child {
+	animation: rotateRight .2s forwards;
+	animation-delay: .2s;
+}
+
+.menuOpen #hamburger .cross:last-child {
+	animation: rotateLeft .2s forwards;
+	animation-delay: .2s;
+}
+
+@keyframes rotateRight {
+	from {
+		transform: translateY(0)rotate(0deg);
+	}
+
+	to {
+		transform: translateY(12px)rotate(45deg);
+	}
+}
+
+@keyframes rotateLeft {
+	from {
+		transform: translateY(0)rotate(0deg);
+	}
+
+	to {
+		transform: translateY(-12px)rotate(-45deg);
 	}
 }
