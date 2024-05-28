@@ -1,0 +1,159 @@
+header {
+	height: 6rem;
+	padding: 1rem 2rem;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: transparent;
+	opacity: 0.9;
+	transition: 0.4s;
+	animation-timeline: scroll();
+	animation-duration: 1ms;
+	animation-name: view;
+	animation-range-start: 10rem;
+	animation-range-end: 15rem;
+	animation-fill-mode: forwards;
+	font-family: poppins;
+	z-index: 100;
+}
+
+@keyframes view {
+	from {
+		background-color: transparent;
+	}
+
+	to {
+		background-color: var(--primary-color);
+	}
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+}
+
+nav a img {
+	height: 100%;
+}
+
+nav ul {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	transform: translateY(-100%);
+	background-color: transparent;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	transition: 200ms;
+	position: fixed;
+	inset: 0 0;
+	width: 100%;
+}
+
+nav ul li {
+	color: white;
+	opacity: 0;
+}
+
+nav ul li a {
+	color: white;
+	text-decoration: none;
+}
+
+nav ul li:hover {
+	transform: scale(1.1);
+}
+
+nav ul li:hover a,
+header.menuOpen nav ul li a:hover {
+	color: var(--tertiary-color);
+}
+
+
+/* remove bullet points */
+ul {
+	list-style-type: none;
+}
+
+
+
+header nav button {
+	border: 0;
+	z-index: 50;
+	background-color: white;
+}
+
+header.menuOpen {
+	opacity: 1;
+}
+
+header nav,
+header nav a {
+	z-index: 150;
+}
+
+header.menuOpen nav ul {
+	transform: translateY(0);
+	font-size: 1em;
+	inset: 0;
+	background-color: var(--primary-color);
+	justify-content: space-evenly;
+	transition: 0ms;
+}
+
+header.menuOpen nav ul li {
+	transition: 200ms;
+	opacity: 1;
+}
+
+header.menuOpen nav ul li a {
+	color: white;
+	font-size: 1.5em;
+	margin-top: 2em;
+}
+
+@media (min-width: 768px) {
+	nav ul {
+		display: flex;
+		position: relative;
+		gap: 1rem;
+		background-color: transparent;
+		justify-content: end;
+		flex-direction: row;
+		transform: translateY(0);
+		inset: unset;
+	}
+
+	nav ul li {
+		opacity: 1;
+		transition: 200ms;
+	}
+
+
+
+	header.menuOpen nav ul {
+		justify-content: center;
+		flex-direction: column;
+		align-items: center;
+		position: fixed;
+		inset: 0;
+		margin: 0;
+		padding: 0;
+	}
+
+
+
+	header nav button {
+		display: none;
+	}
+
+
+
+	header.menuOpen nav button {
+		display: block;
+	}
+}

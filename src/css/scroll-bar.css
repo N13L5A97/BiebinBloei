@@ -1,0 +1,26 @@
+.scroll-horizontal::-webkit-scrollbar {
+    height: 5px;
+    position: absolute;
+    
+}
+
+.scroll-vertical::-webkit-scrollbar {
+    width: 5px;
+}
+      
+/* Track */
+.scroll::-webkit-scrollbar-track {
+    background: transparent;
+}
+       
+/* Handle */
+.scroll::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 5px;
+}
+      
+/* Handle on hover */
+.scroll::-webkit-scrollbar-thumb:hover {
+    background: #555;
+    border-radius: 5px;
+}
