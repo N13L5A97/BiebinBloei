@@ -1,8 +1,7 @@
 .partners {
     padding: var(--v-padding-large) var(--h-padding-large);
-    background-color: #3C593E ;
+    background-color: var(--primary-color);
     height: auto;
-    padding-left: 204px;
     justify-content: center;
 }
 
@@ -11,15 +10,17 @@
 }
 
 .partners > div {
-    display: inline-flex;
-    justify-content: center;
-    flex-direction: row;
+    margin-top: var(--margin-small);
+    display: flex;
+    width: min-content;
+    padding: 1rem;
     background-color: var(--tertiary-color);
-    padding: .5rem 1rem;
-    width: auto;
     border-radius: 17px;
+    gap: 1rem;
+    align-items: center;
 }
 
-.partners > div img {
-    height: 56px;
+.partners > div svg {
+    height: 5rem;
+    fill: white;
 }

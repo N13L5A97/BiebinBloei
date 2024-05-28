@@ -9,7 +9,7 @@
   {% endfor %}
 
 
-  <section id="Buurtcampus">
+  <section class="Buurtcampus">
     <h2 class="smaller">Buurtcampus
       <span>Oost</span>
     </h2>
@@ -50,9 +50,10 @@
         de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
     <div>
-      <img src="./images/oba_logo.png">
-      <img src="./images/hva_logo.png">
+      {% include "partials/oba.liquid"%}
+      {% include "partials/hva.liquid"%}
     </div>
+
 
   </section>
 

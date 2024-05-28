@@ -1,6 +1,7 @@
 .agenda {
-    padding: 1rem 5rem 1rem 5rem;
-    padding-left: 204px;
+    padding: var(--v-padding-large) var(--h-padding-large);
+    background-color: var(--secondary-color);
+    color: white;
 }
 
 .agenda h2 {
@@ -8,10 +9,8 @@
 }
 
 .agenda-items {
-    margin: 0px;
-    width: auto;
     display: flex;
-    flex-direction: row;
+    gap: 2rem;
     width: 100%;
     overflow-x: scroll;
     transition: smooth;
@@ -19,28 +18,17 @@
 
 .agenda-items article {
     display: grid;
-    grid-template-columns: 513px;
+    padding: 0 var(--h-padding-small) var(--h-padding-small);
+    grid-template-columns: 30rem;
     grid-template-rows: 2.5rem 2.5rem 2.5rem 1fr;
-    width: 513px;
-    height: 349px;
+    height: 20rem;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    font-weight: 700;
     border-radius: 17px;
-    margin: 0px 2rem 3px 0px;
     background-image: linear-gradient(180deg,rgb(27, 27, 27),transparent), var(--background-image)
 }
 
-.agenda-items article:last-child {
-    margin: 0px;
-}
-
-.agenda-items article p {
-    margin-left: 25px;
-    margin-top: 18px;
-    color: white;
-}
 .agenda-items article p:nth-of-type(1) {
     grid-column: 1;
     grid-row: 1;
@@ -61,21 +49,8 @@
     grid-row: 4;
     justify-self: end;
     align-self: flex-end;
-    margin-bottom: 25px;
-    margin-right: 25px;
-    background-color: #FF8D06;
-    padding: .5rem 2rem .5rem 2rem;
-    border-radius: 23px;
-    text-decoration: none;
-    color: #491B02;
-    display: flex;
-    align-items: center;
-    gap: .7rem;
-}
-
-.agenda-items article a .arrow {
-    width: 17px;
-    height: 19px;
+    background-color: var(--tertiary-color);
+    color: inherit;
 }
 
 

@@ -88,4 +88,37 @@ export const agendaData = [
 		},
         "picture": "../images/voorbeeld-agenda.png"
     },
+	{
+        "date": "Zaterdag 3 september 2023",
+        "location": "OBA Linnaeusstraat",
+        "price": "Gratis",
+		"button": {
+			"url": "#",
+			"text": "Meer informatie",
+			"aria": "Meer informatie over",
+		},
+        "picture": "../images/voorbeeld-agenda.png"
+    },
+	{
+        "date": "Zaterdag 3 september 2023",
+        "location": "OBA Linnaeusstraat",
+        "price": "Gratis",
+		"button": {
+			"url": "#",
+			"text": "Meer informatie",
+			"aria": "Meer informatie over",
+		},
+        "picture": "../images/voorbeeld-agenda.png"
+    },
+	{
+        "date": "Zaterdag 3 september 2023",
+        "location": "OBA Linnaeusstraat",
+        "price": "Gratis",
+		"button": {
+			"url": "#",
+			"text": "Meer informatie",
+			"aria": "Meer informatie over",
+		},
+        "picture": "../images/voorbeeld-agenda.png"
+    },
 ]
