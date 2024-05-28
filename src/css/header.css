@@ -73,13 +73,10 @@ header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
 }
 
-
 /* remove bullet points */
 ul {
 	list-style-type: none;
 }
-
-
 
 header nav button {
 	border: 0;
