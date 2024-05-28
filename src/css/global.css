@@ -36,7 +36,7 @@
 
 	--font-size-small: 1rem;
 	--font-size-medium: 3rem;
-	--font-size-large: clamp(3rem, 8vw ,8rem);
+	--font-size-large: clamp(3rem, 8vw, 8rem);
 
 	--font-family: 'Poppins';
 
@@ -93,6 +93,11 @@ main {
 	gap: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 700;
 }
