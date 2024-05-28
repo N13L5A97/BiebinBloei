@@ -13,7 +13,6 @@ header {
 	animation-range-start: 10rem;
 	animation-range-end: 15rem;
 	animation-fill-mode: forwards;
-	font-family: poppins;
 	z-index: 100;
 }
 
@@ -62,6 +61,7 @@ nav ul li {
 nav ul li a {
 	color: white;
 	text-decoration: none;
+	font-size: var(--font-size-paragraph);
 }
 
 nav ul li:hover {

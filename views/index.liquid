@@ -9,8 +9,8 @@
   {% endfor %}
 
 
-  <section id="Buurtcampus">
-    <h2>Buurtcampus
+  <section class="Buurtcampus">
+    <h2 class="smaller">Buurtcampus
       <span>Oost</span>
     </h2>
     <p>
@@ -29,7 +29,7 @@
   </section>
 
   <section class="agenda">
-    <h2>Agenda</h2>
+    <h2 class="smaller">Agenda</h2>
     <div class="agenda-items scroll scroll-horizontal">
       {% for agendaItem in agendaData %}
         {% include "partials/agenda.liquid"
@@ -40,7 +40,7 @@
   </section>
 
   <section class="partners">
-    <h2>Partners</h2>
+    <h2 class="smaller">Partners</h2>
     <p>
       Samenwerking HvA en OBA   
 
@@ -50,9 +50,10 @@
         de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
     <div>
-      <img src="./images/oba_logo.png">
-      <img src="./images/hva_logo.png">
+      {% include "partials/oba.liquid"%}
+      {% include "partials/hva.liquid"%}
     </div>
+
 
   </section>
 

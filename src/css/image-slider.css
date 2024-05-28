@@ -7,17 +7,12 @@
 	position: relative;
 	color: white;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .8), transparent);
+	overflow-x: hidden;
 
-	h2 {
-		font-size: var(--font-size-large);
-		line-height: 1em;
+	h2{
+		font-size: calc(var(--font-size-headings) * 0.3);
+		font-family: var(--font-family-alternative);
 	}
-
-	h3 {
-		font-size: calc(var(--font-size-large) / 3);
-		margin-bottom: var(--margin-small);
-	}
-
 }
 
 .image-slider {
