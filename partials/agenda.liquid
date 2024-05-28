@@ -1,7 +1,7 @@
-<article style="--background-image: url({{ agendaItem.picture }})">
-  <a class="link-block" href="{{ agendaItem.button.url }}">
+<article style="--background-image: url({{ agendaItem.image }})">
+  <a class="link-block" href="{{ agendaItem.button.url }}" aria-label="{{ agendaItem.button.aria }} {{ agendaItem.activity }}">
     <p>{{ agendaItem.date }}</p>
-    <p>{{ agendaItem.location }}</p>
+    <p>{{ agendaItem.activity }}</p>
     <p>{{ agendaItem.price }}</p>
     <div class="button">
       <p>
