@@ -59,17 +59,17 @@
 }
 
 .spring {
-	--primary-color: #2B4021;
-	--secondary-color: #FFDEF0;
-	--tertiary-color: #FA89B9;
-	--quaternary-color: #1F000D;
-}
-
-.summer {
 	--primary-color: #265010;
 	--secondary-color: #F7FFC3;
 	--tertiary-color: #D4EF31;
 	--quaternary-color: #261E00;
+}
+
+.summer {
+	--primary-color: #2B4021;
+	--secondary-color: #FFDEF0;
+	--tertiary-color: #FA89B9;
+	--quaternary-color: #1F000D;
 }
 
 .fall {

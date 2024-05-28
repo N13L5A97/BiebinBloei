@@ -22,5 +22,5 @@
 
 .partners > div svg {
     height: 5rem;
-    fill: white;
+    fill: var(--quaternary-color);
 }
