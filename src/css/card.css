@@ -1,13 +1,13 @@
 .card{
     margin: var(--margin-small);
     border-radius: 5rem;
-    padding: var(--padding-small) var(--padding-small) var(--padding-medium);
+    padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium);
     display: grid;
     height: min-content;
     grid-template-columns: 1fr 1fr;
-    padding-left: var(--padding-large);
-    gap: var(--padding-small);
-    margin-top: calc((var(--padding-small) * -2) - (var(--padding-medium) / 2));
+    padding-left: var(--h-padding-large);
+    gap: var(--h-padding-small);
+    margin-top: calc((var(--h-padding-small) * -2) - (var(--h-padding-medium) / 2));
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     article{
@@ -15,7 +15,6 @@
     }
 
     h2{
-        font-size: var(--font-size-large);
         position: relative;
         line-height: 1.1em;
         margin-bottom: .25em;
@@ -24,7 +23,7 @@
             content: "";
             position: absolute;
             top: .5em;
-            left: calc(var(--padding-large) / -2);
+            left: calc(var(--h-padding-large) / -2);
             transform: translate(-50%, -50%);
             height: .25em;
             width: .25em;

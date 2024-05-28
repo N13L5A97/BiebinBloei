@@ -1,39 +1,25 @@
 .partners {
-    padding: 1rem 5rem 1rem 5rem;
+    padding: var(--v-padding-large) var(--h-padding-large);
     background-color: #3C593E ;
     height: auto;
     padding-left: 204px;
     justify-content: center;
 }
 
-.partners h2 {
-    color: #F9E9C2;
-    margin-bottom: 41px;
-    margin-top: 100px;
-}
-
-.partners p {
-    /* margin: .2rem 0 .2rem .4rem; */
-    margin-left: -6px;
-    margin-bottom: 50px;
-    /* padding: .2rem 0 .2rem .4rem; */
+.partners{
     color: white;
-
 }
 
 .partners > div {
     display: inline-flex;
     justify-content: center;
     flex-direction: row;
-    background-color: #F9E9C2;
-    padding: 10px 20px 10px 20px;
+    background-color: var(--tertiary-color);
+    padding: .5rem 1rem;
     width: auto;
     border-radius: 17px;
-    margin-bottom: 100px;
 }
 
 .partners > div img {
-    
     height: 56px;
-    margin: 10px 20px 10px 20px
 }

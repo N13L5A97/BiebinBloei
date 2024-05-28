@@ -4,10 +4,8 @@
 }
 
 .agenda h2 {
-    color: #491B02;
-    margin-bottom: 113px;
+    color: var(--quaternary-color);
 }
-
 
 .agenda-items {
     margin: 0px;
