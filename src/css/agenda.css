@@ -2,10 +2,10 @@
     padding: var(--v-padding-large) var(--h-padding-large);
     background-color: var(--secondary-color);
     color: white;
-}
 
-.agenda h2 {
-    color: var(--quaternary-color);
+    h2 {
+        color: var(--quaternary-color);
+    }
 }
 
 .agenda-items {
@@ -18,7 +18,7 @@
 
 .agenda-items article {
     display: grid;
-    padding: 0 var(--h-padding-small) var(--h-padding-small);
+    padding: var(--h-padding-small);
     grid-template-columns: 30rem;
     grid-template-rows: 2.5rem 2.5rem 2.5rem 1fr;
     height: 20rem;
@@ -29,19 +29,23 @@
     background-image: linear-gradient(180deg,rgb(27, 27, 27),transparent), var(--background-image)
 }
 
-.agenda-items article p:nth-of-type(1) {
-    grid-column: 1;
-    grid-row: 1;
-}
+.agenda-items article p{
+    margin: 0;
 
-.agenda-items article p:nth-of-type(2) {
-    grid-column: 1;
-    grid-row: 2;
-}
+    &:nth-of-type(1) {
+        grid-column: 1;
+        grid-row: 1;
+    }
 
-.agenda-items article p:nth-of-type(3) {
-    grid-column: 1;
-    grid-row: 3;
+    &:nth-of-type(2) {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    &:nth-of-type(3) {
+        grid-column: 1;
+        grid-row: 3;
+    }
 }
 
 .agenda-items article a {
@@ -50,7 +54,11 @@
     justify-self: end;
     align-self: flex-end;
     background-color: var(--tertiary-color);
-    color: inherit;
+    color: var(--quaternary-color);
+
+    svg{
+        fill: var(--quaternary-color);
+    }
 }
 
 
