@@ -30,13 +30,14 @@
 
   <section class="agenda">
     <h2 class="smaller">Agenda</h2>
-    <div class="agenda-items scroll scroll-horizontal">
+    <ol class="agenda-items scroll scroll-horizontal">
       {% for agendaItem in agendaData %}
-        {% include "partials/agenda.liquid"
-          , {agendaItem} %}
-      {% endfor %}
-      
-    </div>
+        <li>
+          {% include "partials/agenda.liquid"
+            , {agendaItem} %}
+        </li>
+      {% endfor %}   
+    </ol>
   </section>
 
   <section class="partners">
