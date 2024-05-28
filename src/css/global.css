@@ -56,18 +56,6 @@
 	--background-color: #fff;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-body {
-	background-color: var(--background-color);
-	font-family: var(--font-family-text);
-	font-size: var(--font-size-paragraph);
-}
-
 .spring {
 	--primary-color: #2B4021;
 	--secondary-color: #FFDEF0;
@@ -96,10 +84,21 @@ body {
 	--quaternary-color: #03002B;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: var(--background-color);
+	font-family: var(--font-family-text);
+	font-size: var(--font-size-paragraph);
+}
+
 main {
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
 }
 
 h1, h2, h3, h4, h5, h6{

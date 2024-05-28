@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr;
     padding-left: var(--h-padding-large);
     gap: var(--h-padding-small);
-    margin-top: calc((var(--h-padding-small) * -2) - (var(--h-padding-medium) / 2));
+    margin-top: calc(var(--margin-small) * -2);
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     article{
