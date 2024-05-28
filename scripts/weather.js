@@ -41,13 +41,21 @@ function checkWeatherCondition(data) {
     if (currentWeatherCondition == '1000') {
         return 'Sunny: '
     } else if (currentWeatherCondition == '1003') {
-
+        var weatherScript = './animations/snee/snee.js'
+        var weatherCSS = './animations/snee/snee.css'
+        return [weatherScript, weatherCSS]
     } else if (currentWeatherCondition == '1006') {
-        
+        var weatherScript = './animations/bloesem/bloesem.js'
+        var weatherCSS = './animations/bloesem/bloesem.css'
+        return [weatherScript, weatherCSS]
     } else if (currentWeatherCondition == '1009') {
-        
+        var weatherScript = './animations/hagel/hagel.js'
+        var weatherCSS = './animations/hagel/hagel.css'
+        return [weatherScript, weatherCSS]
     } else if (currentWeatherCondition == '1030') {
-        
+        var weatherScript = './animations/regen/regen.js'
+        var weatherCSS = './animations/regen/regen.css'
+        return [weatherScript, weatherCSS]
     } else if (currentWeatherCondition == '1063') {
         
     } else if (currentWeatherCondition == '1066') {

@@ -46,7 +46,7 @@ app.get('/weather-api', async (req, res) => {
   console.log(checkWeather)
 
   return res.send(renderTemplate('views/weather-api.liquid', {
-    title: 'Weather API',
+    siteTitle: 'Weather API',
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
@@ -63,6 +63,8 @@ app.get('/weather-api', async (req, res) => {
     moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
     is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    weatherScript: checkWeather[0],
+    weatherCSS: checkWeather[1]
     // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });

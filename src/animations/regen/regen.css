@@ -1,35 +1,25 @@
-body {
-    position: relative;
-    display: grid;
-    place-items: center;
-    margin: 0;
-    overflow: hidden;
-    background: white;
-    width: 100vw;
-    height: 100vh;
-}
-
-.sneeuw {
+.regen {
     position: absolute;
+    top: 0%;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: 1000;
+    pointer-events: none;
 }
 
-/* volkjes */
+/* druppel regen */
 
-.vlok {
+.druppel {
     position: absolute;
     bottom: 100%;
-    width: 20px;
-    height: 20px;
-    background: rgb(242, 170, 255);
-    border-radius: 50%;
+    width: 1px;
+    height: 50px;
+    background: rgb(144, 144, 153);
     opacity: 0.5;
     animation: fall linear infinite;
 }
 
-/* vallen van de vlokken */
+/* vallen van de regen */
 
 @keyframes fall {
     to {

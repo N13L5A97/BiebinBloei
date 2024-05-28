@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const regen = document.querySelector('.bloesem'); // regen div pakken
+    const body = document.querySelector('body'); // regen div pakken
+    const bloesem = document.createElement('div')
+    bloesem.classList.add('bloesem')
     const druppels = 70; // hoeveelheid drops die ik wil
 
     // voor elke drop in hoeveelheid druppels
@@ -16,6 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
         blaadje.style.opacity = `${Math.random() * 1}`;
 
         //voeg de regendruppel toe aan de regencontainer
-        regen.appendChild(blaadje);
+        bloesem.appendChild(blaadje);
     }
+    body.appendChild(bloesem)
 });

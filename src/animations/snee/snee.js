@@ -1,5 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const regen = document.querySelector('.sneeuw'); // regen div pakken
+    const body = document.querySelector('body'); // regen div pakken
+    const sneeuw = document.createElement('div')
+    sneeuw.classList.add('sneeuw')
     const sneeuwVlokken = 70; // hoeveelheid drops die ik wil
 
     // voor elke drop in hoeveelheid druppels
@@ -16,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         vlok.style.opacity = `${Math.random() * 1}`;
 
         //voeg de regendruppel toe aan de regencontainer
-        regen.appendChild(vlok);
+        sneeuw.appendChild(vlok);
     }
+
+    body.appendChild(sneeuw)
 });
