@@ -31,6 +31,8 @@
 }
 
 :root {
+	--v-padding-small: 2rem;
+	--v-padding-medium: 4rem;
 	--v-padding-large: 10rem;
 
 	--h-padding-small: 2rem;
@@ -119,7 +121,16 @@ h2.smaller{
 	font-size: calc(var(--font-size-headings) * 0.4);
 }
 
+h3{
+	font-size: calc(var(--font-size-headings) * 0.3);
+}
+
 p{
 	max-width: 75ch;
 	margin: 1rem 0;
 }
+
+.email,
+.tel {
+		white-space: nowrap;
+	}

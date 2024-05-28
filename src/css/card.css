@@ -44,7 +44,10 @@
     }
 }
 
-.card:nth-of-type(3n + 1){
+/* first card with attribute "card" */
+
+
+.card:nth-of-type(3n + 2){
     background-color: var(--secondary-color);
     color: var(--primary-color);
 
@@ -62,7 +65,7 @@
     }
 }
 
-.card:nth-of-type(3n + 2){
+.card:nth-of-type(3n + 3){
     background-color: var(--tertiary-color);
     color: var(--quaternary-color);
 
@@ -80,7 +83,7 @@
     }
 }
 
-.card:nth-of-type(3n + 3){
+.card:nth-of-type(3n + 4){
     background-color: var(--primary-color);
     color: var(--secondary-color);
 
