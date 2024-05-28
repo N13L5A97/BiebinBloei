@@ -62,6 +62,7 @@ nav ul li {
 nav ul li a {
 	color: white;
 	text-decoration: none;
+	display: none;
 }
 
 nav ul li:hover {
@@ -111,6 +112,7 @@ header.menuOpen nav ul li a {
 	color: white;
 	font-size: 1.5em;
 	margin-top: 2em;
+	display: block;
 }
 
 @media (min-width: 768px) {
@@ -128,6 +130,11 @@ header.menuOpen nav ul li a {
 	nav ul li {
 		opacity: 1;
 		transition: 200ms;
+	}
+
+	nav ul li a {
+		display: block;
+
 	}
 
 	header.menuOpen nav ul {
