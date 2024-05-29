@@ -75,10 +75,19 @@ header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
 }
 
+nav a:focus {
+	border-radius: 0.5rem;
+	outline: 2px solid var(--tertiary-color);
+	outline-offset: 2px;
+}
+
 nav ul li a:focus {
 	padding: 0.5rem;
 	color: var(--quaternary-color);
 	background-color: var(--tertiary-color);
+	border-radius: 0.5rem;
+	/* outline: 4px solid var(--tertiary-color);
+	outline-offset: 4px; */
 }
 
 
