@@ -159,26 +159,44 @@ header.menuOpen nav ul li a {
 #hamburger {
 	background-color: transparent;
 	cursor: pointer;
+
+	&:hover div {
+		background-color: var(--tertiary-color);
+	}
 }
 
 #hamburger .cross {
 	width: 36px;
 	transform-origin: center;
+	border-radius: 5px;
 }
 
 #hamburger div {
 	height: 5px;
 	background-color: white;
+	transition: 200ms;
 }
 
 #hamburger #middle {
 	margin: 7px 0;
 	display: flex;
 	background-color: transparent;
+
+
 }
 
 #middle div {
 	width: 18px;
+
+	&:first-child {
+		border-radius: 5px 0 0 5px;
+	}
+
+	&:last-child {
+		border-radius: 0 5px 5px 0;
+	}
+
+
 }
 
 .menuOpen #hamburger #middle div:first-child {
@@ -196,7 +214,7 @@ header.menuOpen nav ul li a {
 	}
 
 	to {
-		transform: translateY(1rem);
+		transform: translateY(0.7rem);
 		opacity: 0;
 	}
 }
@@ -208,7 +226,7 @@ header.menuOpen nav ul li a {
 	}
 
 	to {
-		transform: translateY(-1rem);
+		transform: translateY(-0.7rem);
 		opacity: 0;
 	}
 }
