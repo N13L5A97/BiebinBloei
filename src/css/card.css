@@ -1,4 +1,7 @@
 .card{
+    --sun-color: rgba(255, 232, 109, 0.8);
+    --moon-color: rgba(199, 238, 255, 0.8);
+
     margin: var(--margin-small);
     border-radius: 5rem;
     padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium);
@@ -37,15 +40,20 @@
     }
 
     .card-image-container{
+        --position-x: 0;
+        --position-y: 0;
+
         background-image: var(--background-image);
         background-size: cover;
         background-position: center;
         border-radius: 3rem;
+        transition: all .8s;
+
+        &:hover{
+            box-shadow: inset var(--box-shadow-color) var(--position-x) var(--position-y) 5rem;
+        }
     }
 }
-
-/* first card with attribute "card" */
-
 
 .card:nth-of-type(3n + 2){
     background-color: var(--secondary-color);

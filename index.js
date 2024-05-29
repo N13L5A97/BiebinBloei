@@ -28,12 +28,15 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  const dataSunMoon = await test.pullDataSunMoon(apiToken)
+
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
     agendaData,
     pageData,
     footerData,
+    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
   }));
 });
 
