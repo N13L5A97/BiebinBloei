@@ -64,6 +64,8 @@ nav ul li a {
 	font-size: var(--font-size-paragraph);
 }
 
+
+
 nav ul li:hover {
 	transform: scale(1.1);
 }
@@ -73,13 +75,20 @@ header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
 }
 
+nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
+}
+
+
+
+
 
 /* remove bullet points */
 ul {
 	list-style-type: none;
 }
-
-
 
 header nav button {
 	border: 0;
@@ -116,6 +125,12 @@ header.menuOpen nav ul li a {
 	margin-top: 2em;
 }
 
+header.menuOpen nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
+}
+
 @media (min-width: 768px) {
 	nav ul {
 		display: flex;
@@ -133,8 +148,6 @@ header.menuOpen nav ul li a {
 		transition: 200ms;
 	}
 
-
-
 	header.menuOpen nav ul {
 		justify-content: center;
 		flex-direction: column;
@@ -145,13 +158,9 @@ header.menuOpen nav ul li a {
 		padding: 0;
 	}
 
-
-
 	header nav button {
 		display: none;
 	}
-
-
 
 	header.menuOpen nav button {
 		display: block;
