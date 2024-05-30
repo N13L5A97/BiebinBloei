@@ -1,4 +1,4 @@
-export const pageData = {
+export const headerData = {
 	title: "Samen Groener <br> Leven ",
 	subtitle: "Inspireer & Deel je Groene Passie!",
 	sliderImages: [
