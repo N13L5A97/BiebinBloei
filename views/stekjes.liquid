@@ -1,0 +1,17 @@
+{% layout "layouts/base.liquid" %}
+
+{% block content %}
+  {% include "partials/image-slider.liquid" %}
+
+  <section class="stekjes">
+    {% for stekje in stekjesData %}
+      {% include "partials/stekjes-card.liquid"
+      , {stekje} %}
+    {% endfor %}
+  </section>
+
+  {% for card in stekjesKastInfo %}
+    {% include "partials/card.liquid"
+      , {card} %}
+  {% endfor %}
+{% endblock %}

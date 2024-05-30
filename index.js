@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -37,6 +37,19 @@ app.get('/', async (req, res) => {
     sliderData,
     footerData,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+  }));
+});
+
+app.get('/stekjes', async (req, res) => {
+  // send title to the template
+  const title = req.query.title;
+
+  return res.send(renderTemplate('views/stekjes.liquid', { 
+    title,
+    sliderData,
+    stekjesData,
+    stekjesKastInfo,
+    footerData,
   }));
 });
 

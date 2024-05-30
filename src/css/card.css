@@ -3,6 +3,7 @@
     --moon-color: rgba(199, 238, 255, 0.8);
 
     margin: var(--margin-small);
+    min-height: 80vh;
     border-radius: 5rem;
     padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium);
     display: grid;
@@ -20,7 +21,10 @@
     background-position: calc(var(--margin-small) + 1rem);
 
     article{
-        height: min-content;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     h2{
