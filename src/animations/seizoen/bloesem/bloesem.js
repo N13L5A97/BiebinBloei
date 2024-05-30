@@ -1,6 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const bloesem = document.querySelector('.bloesem');
-    const bloesemBlaadjes = 70;
+  const body = document.querySelector('body');
+  const bloesem = document.createElement('div')
+  bloesem.classList.add('bloesem')
+  const bloesemBlaadjes = 70;
 
     for (let i = 0; i < bloesemBlaadjes; i++) {
         //maak een nieuw div element voor elk blaadje
@@ -31,4 +33,5 @@ document.addEventListener('DOMContentLoaded', () => {
         //voeg de regendruppel toe aan de regencontainer
         bloesem.appendChild(blaadje);
     }
+    body.appendChild(bloesem)
 });

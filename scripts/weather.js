@@ -52,7 +52,7 @@ function checkSunSet(givenTime) {
 
 function checkWeatherCondition(data) {
     // const currentWeatherCondition = data.current.condition.code
-    const currentWeatherCondition = 1003
+    const currentWeatherCondition = 1006
     
     switch (currentWeatherCondition) {
       case 1000: {
