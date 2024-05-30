@@ -1,4 +1,4 @@
-export const headerData = {
+export const sliderData = {
 	title: "Samen Groener <br> Leven ",
 	subtitle: "Inspireer & Deel je Groene Passie!",
 	sliderImages: [

@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, agendaData, headerData, footerData } from './scripts/pageData.js'
+import { cardData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -34,7 +34,7 @@ app.get('/', async (req, res) => {
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
     agendaData,
-    headerData,
+    sliderData,
     footerData,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
   }));
