@@ -1,14 +1,25 @@
 footer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 3rem;
-    padding: 2rem;
+	padding: var(--v-padding-medium) var(--h-padding-large) var(--v-padding-large);
+	color: var(--primary-color);
+	background-color: var(--secondary-color);
+	display: flex;
+	justify-content: center;
+	gap: 6rem;
+
+	p, a {
+		max-width: 33ch;
+        margin: 0;
+		font-size: calc(var(--font-size-paragraph) * 0.8);
+	}
 
 	h3 {
+		font-family: var(--font-family-alternative);
 		text-transform: uppercase;
+		margin-bottom: .8em;
 	}
-    article{
-        display: flex;
-        flex-direction: column;
-    }
+
+	article {
+		min-width: min-content;
+		max-width: 20%;
+	}
 }
