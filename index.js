@@ -1,4 +1,4 @@
-import * as dotenv from '@tinyhttp/dotenv' 
+import * as dotenv from '@tinyhttp/dotenv'
 import { App } from '@tinyhttp/app'
 import { logger } from '@tinyhttp/logger'
 import { Liquid } from 'liquidjs';
@@ -11,7 +11,7 @@ import { dirname } from 'path';
 import { test } from './scripts/pullDataAPI.js'
 import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
 
-const envFile = dotenv.config({path:'token.env'})
+const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
 
 const engine = new Liquid();
@@ -28,8 +28,31 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
+
+
+
+// const getData = async () => {
+//   const dataBieb = await fetch('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master')
+//   const data = await dataBieb.json()
+//   console.log(data)
+//   return data
+// }
+
+// getData()
+
+
+
+
+
+
+
+
+
+
+
+
 app.get('/', (req, res) => {
-  return res.send(renderTemplate('views/index.liquid', { 
+  return res.send(renderTemplate('views/index.liquid', {
     cardData,
     agendaData,
     pageData,
@@ -70,6 +93,13 @@ app.get('/weather-api', async (req, res) => {
 app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
 })
+
+app.get('/stekjeskast/:id', async (req, res) => {
+  const stekje = req.params.id;
+  res.send(renderTemplate('views/stekjes.liquid', { stekje }))
+})
+
+
 
 
 const renderTemplate = (template, data) => {
