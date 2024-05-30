@@ -3,6 +3,12 @@
     background-color: var(--primary-color);
     height: auto;
     justify-content: center;
+
+    background-image: url(../images/zomer-blad.svg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-blend-mode: soft-light;
+    background-position: 1rem;
 }
 
 .partners{
