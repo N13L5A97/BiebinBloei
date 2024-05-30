@@ -12,6 +12,11 @@
         <script type="text/javascript" src="./js/image-slider.js"></script>
         <script type="text/javascript" src="./js/header.js"></script>
         <script type="text/javascript" src={{ weatherScript }}></script>
+        <style>
+            :root {
+                --amount: {{ amount }}
+            }
+        </style>
 
         <title> {{ siteTitle }} </title>
         {% block head %}{% endblock %}
@@ -24,6 +29,14 @@
         </main>
         {% include  "partials/footer.liquid" %}
 
+        <img class="transition-image normal-fade-in normal" src="./images/zomer-blad.svg">
+        <img class="transition-image mirrored-fade-in mirrored" src="./images/zomer-blad.svg">
+
         <script type="text/javascript" src="./js/seasons.js"></script>
+        <script>
+            window.sunStatus = "{{ is_sun_up }}";
+        </script>
+        <script type="text/javascript" src="./js/sun-moon-hover.js">
+        </script>
     </body>
 </html> 

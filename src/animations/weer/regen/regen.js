@@ -2,7 +2,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body'); // regen div pakken
     const regen = document.createElement('div')
     regen.classList.add('regen')
-    const druppels = 100; // hoeveelheid drops die ik wil
+    var style = getComputedStyle(document.body)
+    console.log(style.getPropertyValue('--amount'))
+    console.log(style.getPropertyValue('--amount') * 30)
+    const druppels = style.getPropertyValue('--amount') * 15; // hoeveelheid drops die ik wil
 
     // voor elke drop in hoeveelheid druppels
     for (let i = 0; i < druppels; i++) {

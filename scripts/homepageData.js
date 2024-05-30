@@ -5,9 +5,9 @@ export const pageData = {
 		{
 			src: "../images/image-slide-1.png",
 		},
-        {
-            src: "../images/image-slide-2.png",
-        },
+		{
+			src: "../images/image-slide-2.png",
+		},
 		{
 			src: "../images/image-slide-3.png",
 		},
@@ -66,17 +66,76 @@ export const cardData = [
 ];
 
 export const agendaData = [
-    {
-        "date": "Zaterdag 3 september 2023",
-        "location": "OBA Linnaeusstraat",
-        "price": "Gratis",
-        "url": "#",
-        "picture": "../images/voorbeeld-agenda.png"
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+		image: "../images/voorbeeld-agenda.png",
+	},
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
     },
-    {
-        "date": "",
-        "location": "",
-        "price": "",
-        "url": ""
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
+    },
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
+    },
+	{
+		date: "Zaterdag 3 september 2023",
+		activity: "Stekjes ruilmarkt",
+		price: "Gratis",
+		button: {
+			url: "#",
+			text: "Meer informatie",
+			aria: "Meer informatie over",
+		},
+        image: "../images/voorbeeld-agenda.png"
     },
 ]
+
+export const footerData = {
+	adres:
+		{
+			name: "OBA Linnaeusstraat",
+			street: "Linnaeusstraat 44",
+			zip: "1092 CL",
+			city: "Amsterdam",
+		},
+	contact:
+		{
+			email: 'buurtcampusoost@hva.nl',
+			tel: '06-43450198',
+			btw: '0055.81.205.B01',
+		},
+	samenwerken: "Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar"
+};

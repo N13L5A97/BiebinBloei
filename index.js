@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/weather.js'
-import { cardData, agendaData, pageData } from './scripts/homepageData.js'
+import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -40,24 +40,6 @@ app.get('/', async (req, res) => {
     cardData,
     agendaData,
     pageData,
-    location: dataWeather.location.name,
-    temperature: dataWeather.current.temp_c,
-    weather_condition: dataWeather.current.condition.text,
-    weather_icon: dataWeather.current.condition.icon,
-    wind_speed: dataWeather.current.wind_kph,
-    precip: dataWeather.current.precip_mm,
-    humidity: dataWeather.current.humidity,
-    cloud: dataWeather.current.cloud,
-    uv: dataWeather.current.uv,
-    sunrise: dataSunMoon.astronomy.astro.sunrise,
-    sunset: dataSunMoon.astronomy.astro.sunset,
-    moonrise: dataSunMoon.astronomy.astro.moonrise,
-    moonset: dataSunMoon.astronomy.astro.moonset,
-    moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
-    is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
-    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
-    weatherScript: checkWeather[0],
-    weatherCSS: checkWeather[1]
   }));
 });
 
@@ -66,9 +48,12 @@ app.get('/weather-api', async (req, res) => {
   const dataWeather = await test.pullDataWeather(apiToken)
   console.log(dataWeather)
   const dataSunMoon = await test.pullDataSunMoon(apiToken)
-  // console.log(dataSunMoon)
+  console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 15
 
   return res.send(renderTemplate('views/weather-api.liquid', {
     siteTitle: 'Weather API',
@@ -89,13 +74,18 @@ app.get('/weather-api', async (req, res) => {
     is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
     weatherScript: checkWeather[0],
-    weatherCSS: checkWeather[1]
+    weatherCSS: checkWeather[1],
+    amount: rainAmount
     // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
 
 app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
+})
+
+app.get('/page-transition', async (req, res) => {
+  res.send(renderTemplate('views/page-transition.liquid'))
 })
 
 
