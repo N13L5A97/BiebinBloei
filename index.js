@@ -28,29 +28,6 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-
-
-
-// const getData = async () => {
-//   const dataBieb = await fetch('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbe0wlb32hx401ui0c2yfm49/master')
-//   const data = await dataBieb.json()
-//   console.log(data)
-//   return data
-// }
-
-// getData()
-
-
-
-
-
-
-
-
-
-
-
-
 app.get('/', (req, res) => {
   return res.send(renderTemplate('views/index.liquid', {
     cardData,
@@ -96,7 +73,11 @@ app.get('/transparent-card', async (req, res) => {
 
 app.get('/stekjeskast/:id', async (req, res) => {
   const stekje = req.params.id;
-  res.send(renderTemplate('views/stekjes.liquid', { stekje }))
+
+  res.send(renderTemplate('views/stekjes.liquid', {
+    stekje,
+
+  }))
 })
 
 
