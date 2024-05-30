@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 // local scripts
-import { test } from './scripts/pullDataAPI.js'
+import { test } from './scripts/weather.js'
 import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})

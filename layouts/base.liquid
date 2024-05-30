@@ -22,12 +22,15 @@
         {% block head %}{% endblock %}
     </head>
 
-    <body class="scroll scroll-vertical fade-in">
+    <body class="scroll scroll-vertical">
         {% include "partials/header.liquid" %}
         <main>
         {% block content %}{% endblock %}
         </main>
         {% include  "partials/footer.liquid" %}
+
+        <img class="transition-image normal-fade-in normal" src="./images/zomer-blad.svg">
+        <img class="transition-image mirrored-fade-in mirrored" src="./images/zomer-blad.svg">
 
         <script type="text/javascript" src="./js/seasons.js"></script>
         <script>
