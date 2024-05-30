@@ -12,12 +12,17 @@
         <script type="text/javascript" src="./js/image-slider.js"></script>
         <script type="text/javascript" src="./js/header.js"></script>
         <script type="text/javascript" src={{ weatherScript }}></script>
+        <style>
+            :root {
+                --amount: {{ amount }}
+            }
+        </style>
 
         <title> {{ siteTitle }} </title>
         {% block head %}{% endblock %}
     </head>
 
-    <body class="scroll scroll-vertical">
+    <body class="scroll scroll-vertical fade-in">
         {% include "partials/header.liquid" %}
         <main>
         {% block content %}{% endblock %}

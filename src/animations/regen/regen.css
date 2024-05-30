@@ -16,7 +16,8 @@
     height: 50px;
     background: rgb(144, 144, 153);
     opacity: 0.5;
-    animation: fall linear infinite;
+    animation: vallen linear infinite;
+    transform: rotate(10deg);
 }
 
 /* vallen van de regen */
@@ -24,6 +25,15 @@
 @keyframes fall {
     to {
         transform: translateY(100vh);
+    }
+}
+
+@keyframes vallen {
+    0%{
+        transform: translateY(0vh) translateX(0em) rotate(10deg);
+    }
+    100%{
+        transform: translateY(100vh) translateX(-10em) rotate(10deg);
     }
 }
 

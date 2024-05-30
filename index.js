@@ -41,9 +41,12 @@ app.get('/weather-api', async (req, res) => {
   const dataWeather = await test.pullDataWeather(apiToken)
   console.log(dataWeather)
   const dataSunMoon = await test.pullDataSunMoon(apiToken)
-  // console.log(dataSunMoon)
+  console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 15
 
   return res.send(renderTemplate('views/weather-api.liquid', {
     siteTitle: 'Weather API',
@@ -64,13 +67,18 @@ app.get('/weather-api', async (req, res) => {
     is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
     weatherScript: checkWeather[0],
-    weatherCSS: checkWeather[1]
+    weatherCSS: checkWeather[1],
+    amount: rainAmount
     // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
 
 app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
+})
+
+app.get('/page-transition', async (req, res) => {
+  res.send(renderTemplate('views/page-transition.liquid'))
 })
 
 
