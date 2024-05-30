@@ -28,11 +28,36 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  const dataWeather = await test.pullDataWeather(apiToken)
+  console.log(dataWeather)
+  const dataSunMoon = await test.pullDataSunMoon(apiToken)
+  // console.log(dataSunMoon)
+  const checkWeather = test.checkWeatherCondition(dataWeather)
+  console.log(checkWeather)
+
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
     agendaData,
     pageData,
+    location: dataWeather.location.name,
+    temperature: dataWeather.current.temp_c,
+    weather_condition: dataWeather.current.condition.text,
+    weather_icon: dataWeather.current.condition.icon,
+    wind_speed: dataWeather.current.wind_kph,
+    precip: dataWeather.current.precip_mm,
+    humidity: dataWeather.current.humidity,
+    cloud: dataWeather.current.cloud,
+    uv: dataWeather.current.uv,
+    sunrise: dataSunMoon.astronomy.astro.sunrise,
+    sunset: dataSunMoon.astronomy.astro.sunset,
+    moonrise: dataSunMoon.astronomy.astro.moonrise,
+    moonset: dataSunMoon.astronomy.astro.moonset,
+    moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
+    is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
+    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    weatherScript: checkWeather[0],
+    weatherCSS: checkWeather[1]
   }));
 });
 

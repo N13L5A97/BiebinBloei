@@ -1,5 +1,5 @@
 .sneeuw {
-    position: absolute;
+    position: fixed;
     top: 0%;
     width: 100vw;
     height: 100vh;
@@ -14,7 +14,7 @@
     bottom: 100%;
     width: 20px;
     height: 20px;
-    background: rgb(242, 170, 255);
+    background: rgb(255, 255, 255);
     border-radius: 50%;
     opacity: 0.5;
     animation: fall linear infinite;
@@ -26,12 +26,4 @@
     to {
         transform: translateY(100vh);
     }
-}
-
-.random{
-    width: 40dvw;
-    aspect-ratio: 1 / 1;
-    border-radius: 50%;
-    background-color: blueviolet;
-    z-index: 1;
 }
