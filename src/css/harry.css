@@ -1,0 +1,428 @@
+#cartoon{
+    width: 8rem;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
+}
+
+path{
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: 200ms;
+}
+
+#harry {
+    #mond{
+        #fluit{
+            opacity: 0;
+        }
+
+        #sip{
+            opacity: 0;
+        }
+
+        #dorst{
+            opacity: 0;
+        }
+
+        #blij{
+            opacity: 0;
+        }
+
+        #neutraal-2{
+            opacity: 1;
+        }
+
+        #gek{
+            opacity: 0;
+        }
+    }
+
+    #ogen{
+        animation: blink 10s infinite;
+        transform-origin: center;
+        #sangry{
+            opacity: 0;
+        }
+
+        #neutraal{
+            opacity: 1;
+        }
+
+
+    }
+
+    #arm_r{
+        animation: wave 20s infinite;
+        transform-origin: left center;
+    }
+}
+
+.boos{
+    #harry {
+        #mond {
+            #fluit {
+                opacity: 0;
+            }
+
+            #sip {
+                opacity: 1;
+            }
+
+            #dorst {
+                opacity: 0;
+            }
+
+            #blij {
+                opacity: 0;
+            }
+
+            #neutraal-2 {
+                opacity: 0;
+            }
+
+            #gek {
+                opacity: 0;
+            }
+        }
+
+        #ogen {
+            #sangry {
+                opacity: 1;
+
+                .oog_l{
+                    transform: rotate(45deg);
+                }
+
+                .oog_r{
+                    transform: rotate(-45deg);
+                }
+            }
+
+            #neutraal {
+                opacity: 0;
+            }
+        }
+
+        /* #arm_r {
+            animation: angry 0.2s infinite;
+            transform-origin: left center;
+            --normaal: 0deg;
+            --tril: 5deg;
+        }
+
+        #arm_l {
+            animation: angry 0.2s infinite;
+            transform-origin: right center;
+            --normaal: 0deg;
+            --tril: -5deg;
+        } */
+
+        #pot{
+            animation: angry 0.3s infinite;
+            transform-origin: center;
+            --normaal: 0deg;
+            --tril: 2deg;
+        }
+    }   
+}
+
+.blij{
+    #harry {
+            #mond {
+                #fluit {
+                    opacity: 0;
+                }
+    
+                #sip {
+                    opacity: 0;
+                }
+    
+                #dorst {
+                    opacity: 0;
+                }
+    
+                #blij {
+                    opacity: 1;
+                }
+    
+                #neutraal-2 {
+                    opacity: 0;
+                }
+    
+                #gek {
+                    opacity: 0;
+                }
+            }
+    
+            #ogen {
+                #sangry {
+                    opacity: 0;
+                }
+    
+                #neutraal {
+                    opacity: 1;
+                } 
+            }
+        }
+}
+
+.verdrietig{
+    #harry {
+            #mond {
+                #fluit {
+                    opacity: 0;
+                }
+    
+                #sip {
+                    opacity: 1;
+                }
+    
+                #dorst {
+                    opacity: 0;
+                }
+    
+                #blij {
+                    opacity: 0;
+                }
+    
+                #neutraal-2 {
+                    opacity: 0;
+                }
+    
+                #gek {
+                    opacity: 0;
+                }
+            }
+    
+            #ogen {
+                #sangry {
+                    opacity: 1;
+                }
+    
+                #neutraal {
+                    opacity: 0;
+                }
+            }
+
+            #arm_r, #arm_l {
+                animation: shoulders 5s infinite;
+            }
+        
+            #pot {
+                animation: sad 5s infinite;
+                transform-origin: center;
+            }
+        }
+}
+
+.gek{
+
+    #harry {
+        #mond {
+            #fluit {
+                opacity: 0;
+            }
+
+            #sip {
+                opacity: 0;
+            }
+
+            #dorst {
+                opacity: 0;
+            }
+
+            #blij {
+                opacity: 0;
+            }
+
+            #neutraal-2 {
+                opacity: 0;
+            }
+
+            #gek {
+                opacity: 1;
+            }
+        }
+
+        #ogen {
+            animation: blink 10s infinite;
+            transform-origin: center;
+
+            #sangry {
+                opacity: 0;
+            }
+
+            #neutraal {
+                opacity: 1;
+            }
+
+
+        }
+    }
+}
+
+.dorst{
+#harry {
+        #mond {
+            #fluit {
+                opacity: 0;
+            }
+
+            #sip {
+                opacity: 0;
+            }
+
+            #dorst {
+                opacity: 1;
+            }
+
+            #blij {
+                opacity: 0;
+            }
+
+            #neutraal-2 {
+                opacity: 0;
+            }
+
+            #gek {
+                opacity: 0;
+            }
+        }
+
+        #ogen {
+            animation: blink 10s infinite;
+            transform-origin: center;
+
+            #sangry {
+                opacity: 0;
+            }
+
+            #neutraal {
+                opacity: 1;
+            }
+
+
+        }
+    }
+}
+
+@keyframes wave{
+    0% {    
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(0deg);
+    }
+
+    30% {
+        transform: rotate(-130deg) translateY(30px);
+    }
+
+    31% {
+        transform: rotate(-95deg) translateY(30px);
+    }
+
+    32% {
+        transform: rotate(-130deg) translateY(30px);
+    }
+
+    35% {
+        transform: rotate(0deg);    
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes angry{
+    0% {
+        transform: rotate(var(--normaal));
+    }
+
+    50% {
+        transform: rotate(var(--tril));
+    }
+
+    100% {
+        transform: rotate(var(--normaal));
+    }
+}
+
+@keyframes blink{
+    0% {
+        transform: scaleY(1);
+    }
+
+    2% {
+        transform: scaleY(0.1);
+    }
+    4% {
+        transform: scaleY(1);
+    }
+
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+@keyframes sad{
+    0% {
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    45% {
+        transform: scale(1.01);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    55% {
+        transform: scale(1.01);
+    }
+
+    60% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: rotate(1);
+    }
+}
+
+@keyframes shoulders{
+    0%{
+        transform: translateY(0);
+    }
+
+    40%{
+        transform: translateY(0);
+    }
+
+    45%{
+        transform: translateY(5px);
+    }
+
+    50%{
+        transform: translateY(0);
+    }
+
+    55%{
+        transform: translateY(5px);
+    }
+
+    60%{
+        transform: translateY(0);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+

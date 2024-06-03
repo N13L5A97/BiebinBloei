@@ -9,6 +9,8 @@
 @import 'transparent-card-test.css';
 @import 'partners.css';
 @import 'image-slider.css';
+@import 'harry.css';
+@import 'stekje.css';
 
 /* import poppins black and medium */
 
@@ -46,9 +48,9 @@
 	--font-size-paragraph: clamp(1rem, 2vw, 1.2rem);
 	--font-size-headings: clamp(3rem, 8vw ,8rem);
 
-	--font-family-headings: 'Poppins Black', sans-serif;
-	--font-family-alternative: 'Poppins Bold', sans-serif;
-	--font-family-text: 'Poppins Medium', sans-serif;
+	--font-family-headings: 'Poppins Black', Arial black, sans-serif;
+	--font-family-alternative: 'Poppins Bold', Arial bold, sans-serif;
+	--font-family-text: 'Poppins Medium', Arial , sans-serif;
 
 	--primary-color: #3C593E;
 	--secondary-color: #F9E9C2;

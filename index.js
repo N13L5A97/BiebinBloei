@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, agendaData, headerData, footerData } from './scripts/pageData.js'
+import { cardData, agendaData, headerData, footerData, stekjesData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
@@ -36,7 +36,7 @@ app.get('/', async (req, res) => {
     agendaData,
     headerData,
     footerData,
-    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    // is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
   }));
 });
 
@@ -74,14 +74,21 @@ app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
 })
 
-app.get('/stekjeskast/:id', async (req, res) => {
-  const stekje = req.params.id;
+app.get('/stekjeskast/:name', (req, res) => {
+  const plantName = req.params.name;
+  const plantData = stekjesData[plantName];
+        console.log(plantData)
 
-  res.send(renderTemplate('views/stekjes.liquid', {
-    stekje,
+  if (plantData) {
+   res.send(renderTemplate('views/stekjes.liquid', {
+        plant: plantData,
+      }))
 
-  }))
+  } else {
+    res.status(404).send('Plant not found');
+  }
 })
+
 
 
 
