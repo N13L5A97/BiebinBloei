@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
+import { cardData, agendaData, headerData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -28,12 +28,15 @@ app
   .set('view engine', 'liquid')
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
+  const dataSunMoon = await test.pullDataSunMoon(apiToken)
+
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
     agendaData,
-    pageData,
+    headerData,
     footerData,
+    is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
   }));
 });
 
