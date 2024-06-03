@@ -106,7 +106,7 @@ app.get('/stekjeskast/:name', (req, res) => {
         console.log(plantData)
 
   if (plantData) {
-   res.send(renderTemplate('views/stekjes.liquid', {
+   res.send(renderTemplate('views/stekjes_detail.liquid', {
         plant: plantData,
       }))
 
