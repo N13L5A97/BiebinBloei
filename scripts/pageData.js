@@ -1,6 +1,6 @@
-export const headerData = {
-	title: "Samen Groener <br> Leven ",
-	subtitle: "Inspireer & Deel je Groene Passie!",
+export const sliderData = {
+	title: "Samen Groen bij <br> de Buurtcampus ",
+	subtitle: "<span>Ruilen</span><span>Leren</span><span>Inspireren</span>",
 	sliderImages: [
 		{
 			src: "../images/image-slide-1.png",
@@ -86,7 +86,7 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-		image: "../images/voorbeeld-agenda.png"
+		image: "../images/voorbeeld-agenda.png",
 	},
 	{
 		date: "Zaterdag 3 september 2023",
@@ -97,7 +97,7 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-		image: "../images/voorbeeld-agenda.png"
+		image: "../images/voorbeeld-agenda.png",
 	},
 	{
 		date: "Zaterdag 3 september 2023",
@@ -108,7 +108,7 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-		image: "../images/voorbeeld-agenda.png"
+		image: "../images/voorbeeld-agenda.png",
 	},
 	{
 		date: "Zaterdag 3 september 2023",
@@ -119,77 +119,115 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-		image: "../images/voorbeeld-agenda.png"
+		image: "../images/voorbeeld-agenda.png",
 	},
-]
+];
 
 export const footerData = {
-	adres:
-	{
+	adres: {
 		name: "OBA Linnaeusstraat",
 		street: "Linnaeusstraat 44",
 		zip: "1092 CL",
 		city: "Amsterdam",
 	},
-	contact:
-	{
-		email: 'buurtcampusoost@hva.nl',
-		tel: '06-43450198',
-		btw: '0055.81.205.B01',
+	contact: {
+		email: "buurtcampusoost@hva.nl",
+		tel: "06-43450198",
+		btw: "0055.81.205.B01",
 	},
-	samenwerken: "Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar"
+	samenwerken:
+		"Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar",
 };
 
-export const stekjesData = {
-	gynura:
+
+export const stekjesKastInfo = [
 	{
-		name: "<h2>Gynura ‘Fluweelplant’</h2>",
-		description: "<p>De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.</p>",
-		origin: "<p>Indonesië</p>",
-		difficulty: "<p>Makkelijk</p>",
-		watering: "<p>Een keer per week een goede scheut water; maar laat de grond wel licht opdrogen voordat je de volgende scheut geeft - zolang de grond maar niet helemaal uitdroogt. In de winter heeft de Gynura een stuk minder water nodig.</p>",
-		feeding: "<p>In de lente en zomer elke maand plantvoeding geven.</p>",
-		toxicity: "<p>De Gynura is giftig voor huisdieren</p>",
-		temp: "<p>In de winter minimaal 12 graden celsius en in de zomer maximaal 22°C.</p>",
-		sunlight: "<p>Hoe meer zonlicht (maar niet direct in de zon!) de bladeren krijgen, hoe paarser ze kleuren.</p>",
-		cutting: "<p>De Gynura blijft het mooist als je ‘m regelmatig topt en stekt, op die manier houd je de plant compact en bossig. Knip met een schone schaar de bovenkant van een stengel (met een aantal blaadjes er aan) af en zet deze in een vaasje met water op een lichte, warme plek. Zodra de worteltjes een paar centimeter lang zijn, kun je deze in een potje met aarde zetten.</p>",
+		title: "Hoe de kast is gemaakt",
+		content:
+			"<p>Natuurlijk! Workshops zijn fantastische leermogelijkheden waarbij deelnemers praktische vaardigheden kunnen verwerven, nieuwe kennis kunnen opdoen en vaak ook nieuwe mensen kunnen ontmoeten. Het idee achter jouw website om een overzicht te bieden van beschikbare workshops is geweldig.</p>",
 		image: {
-			src: "../images/gynura.jpeg",
-			alt: "Gynura ‘Fluweelplant’",
-		}
+			src: "../images/plant1.png",
+			alt: "planten potjes",
+		},
+		button: {
+			url: "/stekjeskast",
+			text: "De kast",
+			aria: "Bekijk de stekjeskast",
+		},
 	},
-	plantje2:
+];
+
+export const stekjesData = [
 	{
-		name: "<h2>Gynura ‘Fluweelplant’<h2>",
-		description: "<p>De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.</p>",
-		origin: "<p>Indonesië</p>",
-		difficulty: "<p>Makkelijk</p>",
-		watering: "<p>Een keer per week een goede scheut water; maar laat de grond wel licht opdrogen voordat je de volgende scheut geeft - zolang de grond maar niet helemaal uitdroogt. In de winter heeft de Gynura een stuk minder water nodig.</p>",
-		feeding: "<p>In de lente en zomer elke maand plantvoeding geven.</p>",
-		toxicity: "<p>De Gynura is giftig voor huisdieren</p>",
-		temp: "<p>In de winter minimaal 12 graden celsius en in de zomer maximaal 22°C.</p>",
-		sunlight: "<p>Hoe meer zonlicht (maar niet direct in de zon!) de bladeren krijgen, hoe paarser ze kleuren.</p>",
-		cutting: "<p>De Gynura blijft het mooist als je ‘m regelmatig topt en stekt, op die manier houd je de plant compact en bossig. Knip met een schone schaar de bovenkant van een stengel (met een aantal blaadjes er aan) af en zet deze in een vaasje met water op een lichte, warme plek. Zodra de worteltjes een paar centimeter lang zijn, kun je deze in een potje met aarde zetten.</p>",
-		image: {
-			src: "../images/gynura.jpg",
-			alt: "Gynura ‘Fluweelplant’",
-		}
+		name: "Monstera",
+		image: "../images/monstera.png",
+		button: {
+			url: "/stekjes/monstera",
+			text: "Bekijk stekje",
+			aria: "Bekijk monstera stekje",
+		},
 	},
-	plantje3:
 	{
-		name: "<h2>Gynura ‘Fluweelplant’<h2>",
-		description: "<p>De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.</p>",
-		origin: "<p>Indonesië</p>",
-		difficulty: "<p>Makkelijk</p>",
-		watering: "<p>Een keer per week een goede scheut water; maar laat de grond wel licht opdrogen voordat je de volgende scheut geeft - zolang de grond maar niet helemaal uitdroogt. In de winter heeft de Gynura een stuk minder water nodig.</p>",
-		feeding: "<p>In de lente en zomer elke maand plantvoeding geven.</p>",
-		toxicity: "<p>De Gynura is giftig voor huisdieren</p>",
-		temp: "<p>In de winter minimaal 12 graden celsius en in de zomer maximaal 22°C.</p>",
-		sunlight: "<p>Hoe meer zonlicht (maar niet direct in de zon!) de bladeren krijgen, hoe paarser ze kleuren.</p>",
-		cutting: "<p>De Gynura blijft het mooist als je ‘m regelmatig topt en stekt, op die manier houd je de plant compact en bossig. Knip met een schone schaar de bovenkant van een stengel (met een aantal blaadjes er aan) af en zet deze in een vaasje met water op een lichte, warme plek. Zodra de worteltjes een paar centimeter lang zijn, kun je deze in een potje met aarde zetten.</p>",
-		image: {
-			src: "../images/gynura.jpg",
-			alt: "Gynura ‘Fluweelplant’",
-		}
+		name: "Pilea",
+		image: "../images/pilea.png",
+		button: {
+			url: "/stekjes/pilea",
+			text: "Bekijk stekje",
+			aria: "Bekijk pilea stekje",
+		},
 	},
-};
+	{
+		name: "Calathea",
+		image: "../images/calathea.png",
+		button: {
+			url: "/stekjes/calathea",
+			text: "Bekijk stekje",
+			aria: "Bekijk calathea stekje",
+		},
+	},
+	{
+		name: "Alocasia",
+		image: "../images/alocasia.png",
+		button: {
+			url: "/stekjes/alocasia",
+			text: "Bekijk stekje",
+			aria: "Bekijk alocasia stekje",
+		},
+	},
+	{
+		name: "Calathea",
+		image: "../images/calathea.png",
+		button: {
+			url: "/stekjes/calathea",
+			text: "Bekijk stekje",
+			aria: "Bekijk calathea stekje",
+		},
+	},
+	{
+		name: "Alocasia",
+		image: "../images/alocasia.png",
+		button: {
+			url: "/stekjes/alocasia",
+			text: "Bekijk stekje",
+			aria: "Bekijk alocasia stekje",
+		},
+	},
+	{
+		name: "Monstera",
+		image: "../images/monstera.png",
+		button: {
+			url: "/stekjes/monstera",
+			text: "Bekijk stekje",
+			aria: "Bekijk monstera stekje",
+		},
+	},
+	{
+		name: "Pilea",
+		image: "../images/pilea.png",
+		button: {
+			url: "/stekjes/pilea",
+			text: "Bekijk stekje",
+			aria: "Bekijk pilea stekje",
+		},
+	},
+]
