@@ -29,6 +29,7 @@
 }
 
 #care{
-    background-color:var(--primary-color);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     padding: var(--margin-small);
 }
