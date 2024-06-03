@@ -1,8 +1,8 @@
 <section class="image-slider-section">
-  <h2>{{ pageData.title }}</h2>
-  <h3>{{ pageData.subtitle }}</h3>
+  <h1>{{ headerData.title }}</h1>
+  <h2>{{ headerData.subtitle }}</h2>
   <div class="image-slider" id="imageSlider">
-    {% for slide in pageData.sliderImages %}
+    {% for slide in headerData.sliderImages %}
       <div class="slide" style="--background-image: url('{{ slide.src }}')"></div>
     {% endfor %}
   </div>

@@ -1,13 +1,16 @@
 .card{
+    --sun-color: rgba(255, 232, 109, 0.8);
+    --moon-color: rgba(199, 238, 255, 0.8);
+
     margin: var(--margin-small);
     border-radius: 5rem;
-    padding: var(--padding-small) var(--padding-small) var(--padding-medium);
+    padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium);
     display: grid;
     height: min-content;
     grid-template-columns: 1fr 1fr;
-    padding-left: var(--padding-large);
-    gap: var(--padding-small);
-    margin-top: calc((var(--padding-small) * -2) - (var(--padding-medium) / 2));
+    padding-left: var(--h-padding-large);
+    gap: var(--h-padding-small);
+    margin-top: calc(var(--margin-small) * -2);
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     article{
@@ -15,7 +18,6 @@
     }
 
     h2{
-        font-size: var(--font-size-large);
         position: relative;
         line-height: 1.1em;
         margin-bottom: .25em;
@@ -24,7 +26,7 @@
             content: "";
             position: absolute;
             top: .5em;
-            left: calc(var(--padding-large) / -2);
+            left: calc(var(--h-padding-large) / -2);
             transform: translate(-50%, -50%);
             height: .25em;
             width: .25em;
@@ -38,14 +40,22 @@
     }
 
     .card-image-container{
+        --position-x: 0;
+        --position-y: 0;
+
         background-image: var(--background-image);
         background-size: cover;
         background-position: center;
         border-radius: 3rem;
+        transition: all .8s;
+
+        &:hover{
+            box-shadow: inset var(--box-shadow-color) var(--position-x) var(--position-y) 5rem;
+        }
     }
 }
 
-.card:nth-of-type(3n + 1){
+.card:nth-of-type(3n + 2){
     background-color: var(--secondary-color);
     color: var(--primary-color);
 
@@ -63,7 +73,7 @@
     }
 }
 
-.card:nth-of-type(3n + 2){
+.card:nth-of-type(3n + 3){
     background-color: var(--tertiary-color);
     color: var(--quaternary-color);
 
@@ -81,7 +91,7 @@
     }
 }
 
-.card:nth-of-type(3n + 3){
+.card:nth-of-type(3n + 4){
     background-color: var(--primary-color);
     color: var(--secondary-color);
 
@@ -96,5 +106,16 @@
         svg{
             fill: var(--quaternary-color);
         }
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .card-image-container{
+        display: none;
+    }
+
+    .card{
+        grid-template-columns: 1fr;
+        padding-right: var(--padding-large);
     }
 }
