@@ -9,6 +9,8 @@
 @import 'transparent-card-test.css';
 @import 'partners.css';
 @import 'image-slider.css';
+@import 'stekjes.css';
+@import 'link-block.css';
 
 /* import poppins black and medium */
 
@@ -58,10 +60,6 @@
 	--background-color: #fff;
 }
 
-html{
-	background-color: black;
-}
-
 .spring {
 	--primary-color: #265010;
 	--secondary-color: #F7FFC3;
@@ -88,6 +86,10 @@ html{
 	--secondary-color: #E5EFFF;
 	--tertiary-color: #A9A2F9;
 	--quaternary-color: #03002B;
+}
+
+html{
+	background-color: black;
 }
 
 * {
