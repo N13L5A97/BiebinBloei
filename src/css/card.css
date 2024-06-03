@@ -20,6 +20,7 @@
     background-blend-mode: soft-light;
     background-position: calc(var(--margin-small) + 1rem);
 
+
     article{
         height: 100%;
         display: flex;
@@ -27,12 +28,12 @@
         justify-content: center;
     }
 
-    h2{
+    h2 {
         position: relative;
         line-height: 1.1em;
         margin-bottom: .25em;
 
-        &:before{
+        &:before {
             content: "";
             position: absolute;
             top: .5em;
@@ -44,7 +45,7 @@
         }
     }
 
-    p{
+    p {
         margin-bottom: 1em;
         max-width: 75ch;
     }
@@ -65,55 +66,91 @@
     }
 }
 
-.card:nth-of-type(3n + 2){
+svg {
+    transition: 200ms;
+}
+
+.card {
+    .button {
+        transition: 200ms;
+
+        &:hover {
+            padding: .5rem 1.5rem;
+
+            svg {
+                transform: translateX(0.5rem);
+            }
+        }
+    }
+}
+
+/* first card with attribute "card" */
+
+
+.card:nth-of-type(3n + 2) {
     background-color: var(--secondary-color);
     color: var(--primary-color);
 
-    h2:before{
-      background-color: var(--tertiary-color);
+    h2:before {
+        background-color: var(--tertiary-color);
     }
 
-    .button{
+    .button {
         background-color: var(--primary-color);
         color: var(--secondary-color);
 
-        svg{
+        &:focus {
+            outline: 4px dashed var(--tertiary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
             fill: var(--secondary-color);
         }
     }
 }
 
-.card:nth-of-type(3n + 3){
+.card:nth-of-type(3n + 3) {
     background-color: var(--tertiary-color);
     color: var(--quaternary-color);
 
-    h2:before{
-      background-color: var(--secondary-color);
+    h2:before {
+        background-color: var(--secondary-color);
     }
 
-    .button{
+    .button {
         background-color: var(--quaternary-color);
         color: var(--secondary-color);
 
-        svg{
+        &:focus {
+            outline: 4px dashed var(--secondary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
             fill: var(--secondary-color);
         }
     }
 }
 
-.card:nth-of-type(3n + 4){
+.card:nth-of-type(3n + 4) {
     background-color: var(--primary-color);
     color: var(--secondary-color);
 
-    h2:before{
-      background-color: var(--tertiary-color);
+    h2:before {
+        background-color: var(--tertiary-color);
     }
 
-    .button{
+    .button {
         background-color: var(--secondary-color);
         color: var(--quaternary-color);
 
-        svg{
+        &:focus {
+            outline: 4px dashed var(--secondary-color);
+            outline-offset: 4px;
+        }
+
+        svg {
             fill: var(--quaternary-color);
         }
     }
@@ -124,7 +161,7 @@
         display: none;
     }
 
-    .card{
+    .card {
         grid-template-columns: 1fr;
         padding-right: var(--padding-large);
     }

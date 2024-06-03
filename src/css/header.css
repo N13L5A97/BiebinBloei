@@ -64,6 +64,8 @@ nav ul li a {
 	font-size: var(--font-size-paragraph);
 }
 
+
+
 nav ul li:hover {
 	transform: scale(1.1);
 }
@@ -71,6 +73,21 @@ nav ul li:hover {
 nav ul li:hover a,
 header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
+}
+
+nav a:focus {
+	border-radius: 0.5rem;
+	outline: 2px solid var(--tertiary-color);
+	outline-offset: 2px;
+}
+
+nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
+	border-radius: 0.5rem;
+	/* outline: 4px solid var(--tertiary-color);
+	outline-offset: 4px; */
 }
 
 /* remove bullet points */
@@ -114,6 +131,12 @@ header.menuOpen nav ul li a {
 	display: block;
 }
 
+header.menuOpen nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
+}
+
 @media (min-width: 768px) {
 	nav ul {
 		display: flex;
@@ -133,15 +156,15 @@ header.menuOpen nav ul li a {
 
 	nav ul li a {
 		display: block;
-
 	}
-
+  
 	header.menuOpen nav ul {
 		justify-content: space-evenly;
 		flex-direction: column;
 		position: fixed;
 		inset: 0;
-
+		margin: 0;
+		padding: 0;
 	}
 
 	header nav button {
