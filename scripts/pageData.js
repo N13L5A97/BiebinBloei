@@ -1,6 +1,6 @@
 export const sliderData = {
-	title: "Samen Groener <br> Leven ",
-	subtitle: "Inspireer & Deel je Groene Passie!",
+	title: "Samen Groen bij <br> de Buurtcampus ",
+	subtitle: "<span>Ruilen</span><span>Leren</span><span>Inspireren</span>",
 	sliderImages: [
 		{
 			src: "../images/image-slide-1.png",
