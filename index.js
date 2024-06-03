@@ -66,7 +66,7 @@ app.get('/weather-api', async (req, res) => {
     moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
     is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
-    // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
+    check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
 
