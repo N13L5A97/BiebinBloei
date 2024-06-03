@@ -4,11 +4,17 @@
     height: auto;
     justify-content: center;
 
-    background-image: url(../images/zomer-blad.svg);
+    /* background-image: url(../images/zomer-blad.svg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
     background-blend-mode: soft-light;
-    background-position: 1rem;
+    background-position: 1rem; */
+
+    background-image: url(../images/spring-pattern.svg);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
 }
 
 .partners{
