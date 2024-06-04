@@ -15,14 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
       slider.style.setProperty("transition-duration", "0s");
       translateX = 0;
       currentSlide = 0;
-      slider.style.setProperty("--translateX", translateX);
+	  
+	  setTimeout(() => {
+      	slider.style.setProperty("--translateX", translateX);
+		
+		  setTimeout(() => {
+			currentSlide++;
+			translateX = (100 / totalSlides) * currentSlide;
+			slider.style.setProperty("transition-duration", "1s");
+			slider.style.setProperty("--translateX", translateX);
+		  }, 10);
+	  }, 10);
 
-      setTimeout(() => {
-        currentSlide++;
-        translateX = (100 / totalSlides) * currentSlide;
-        slider.style.setProperty("transition-duration", "1s");
-        slider.style.setProperty("--translateX", translateX);
-      }, 10);
 
 			// if the current slide is greater or equal to 0, move to the next slide
 		} else if (currentSlide < totalSlides) {
