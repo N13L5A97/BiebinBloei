@@ -31,15 +31,17 @@
 }
 
 .image-slider {
+	--translateX: 0;
+
 	display: flex;
 	position: absolute;
 	z-index: -1;
-	background-color: aqua;
 	height: 100%;
 	min-width: 100%;
 	overflow: hidden;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
-	transition: transform 1s ease-in-out; /* Apply transition to the slider */
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), var(--background-image);
+	transition: transform 1s ease-in-out; 
+	transform: translateX(calc(var(--translateX) * -1%));
 }
 
 .slide {
@@ -49,8 +51,4 @@
 	height: 100%;
 	width: 100vw;
 	flex-shrink: 0;
-}
-
-.image-slider.sliding {
-	transition: transform 2s ease-in-out;
 }
