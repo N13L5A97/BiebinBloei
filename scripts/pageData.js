@@ -1,6 +1,6 @@
-export const pageData = {
-	title: "Samen Groener <br> Leven ",
-	subtitle: "Inspireer & Deel je Groene Passie!",
+export const sliderData = {
+	title: "Samen Groen bij <br> de Buurtcampus ",
+	subtitle: "<span>Ruilen</span><span>Leren</span><span>Inspireren</span>",
 	sliderImages: [
 		{
 			src: "../images/image-slide-1.png",
@@ -89,8 +89,8 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-        image: "../images/voorbeeld-agenda.png"
-    },
+		image: "../images/voorbeeld-agenda.png",
+	},
 	{
 		date: "Zaterdag 3 september 2023",
 		activity: "Stekjes ruilmarkt",
@@ -100,8 +100,8 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-        image: "../images/voorbeeld-agenda.png"
-    },
+		image: "../images/voorbeeld-agenda.png",
+	},
 	{
 		date: "Zaterdag 3 september 2023",
 		activity: "Stekjes ruilmarkt",
@@ -111,8 +111,8 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-        image: "../images/voorbeeld-agenda.png"
-    },
+		image: "../images/voorbeeld-agenda.png",
+	},
 	{
 		date: "Zaterdag 3 september 2023",
 		activity: "Stekjes ruilmarkt",
@@ -122,23 +122,115 @@ export const agendaData = [
 			text: "Meer informatie",
 			aria: "Meer informatie over",
 		},
-        image: "../images/voorbeeld-agenda.png"
-    },
-]
+		image: "../images/voorbeeld-agenda.png",
+	},
+];
 
 export const footerData = {
-	adres:
-		{
-			name: "OBA Linnaeusstraat",
-			street: "Linnaeusstraat 44",
-			zip: "1092 CL",
-			city: "Amsterdam",
-		},
-	contact:
-		{
-			email: 'buurtcampusoost@hva.nl',
-			tel: '06-43450198',
-			btw: '0055.81.205.B01',
-		},
-	samenwerken: "Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar"
+	adres: {
+		name: "OBA Linnaeusstraat",
+		street: "Linnaeusstraat 44",
+		zip: "1092 CL",
+		city: "Amsterdam",
+	},
+	contact: {
+		email: "buurtcampusoost@hva.nl",
+		tel: "06-43450198",
+		btw: "0055.81.205.B01",
+	},
+	samenwerken:
+		"Wil jij met andere organisaties, buurtbewoners en studenten samenwerken aan de stedelijke uitdagingen van Amsterdam Oost? Stuur een e-mail naar",
 };
+
+
+export const stekjesKastInfo = [
+	{
+		title: "Hoe de kast is gemaakt",
+		content:
+			"<p>Natuurlijk! Workshops zijn fantastische leermogelijkheden waarbij deelnemers praktische vaardigheden kunnen verwerven, nieuwe kennis kunnen opdoen en vaak ook nieuwe mensen kunnen ontmoeten. Het idee achter jouw website om een overzicht te bieden van beschikbare workshops is geweldig.</p>",
+		image: {
+			src: "../images/plant1.png",
+			alt: "planten potjes",
+		},
+		button: {
+			url: "/stekjeskast",
+			text: "De kast",
+			aria: "Bekijk de stekjeskast",
+		},
+	},
+];
+
+export const stekjesData = [
+	{
+		name: "Monstera",
+		image: "../images/monstera.png",
+		button: {
+			url: "/stekjes/monstera",
+			text: "Bekijk stekje",
+			aria: "Bekijk monstera stekje",
+		},
+	},
+	{
+		name: "Pilea",
+		image: "../images/pilea.png",
+		button: {
+			url: "/stekjes/pilea",
+			text: "Bekijk stekje",
+			aria: "Bekijk pilea stekje",
+		},
+	},
+	{
+		name: "Calathea",
+		image: "../images/calathea.png",
+		button: {
+			url: "/stekjes/calathea",
+			text: "Bekijk stekje",
+			aria: "Bekijk calathea stekje",
+		},
+	},
+	{
+		name: "Alocasia",
+		image: "../images/alocasia.png",
+		button: {
+			url: "/stekjes/alocasia",
+			text: "Bekijk stekje",
+			aria: "Bekijk alocasia stekje",
+		},
+	},
+	{
+		name: "Calathea",
+		image: "../images/calathea.png",
+		button: {
+			url: "/stekjes/calathea",
+			text: "Bekijk stekje",
+			aria: "Bekijk calathea stekje",
+		},
+	},
+	{
+		name: "Alocasia",
+		image: "../images/alocasia.png",
+		button: {
+			url: "/stekjes/alocasia",
+			text: "Bekijk stekje",
+			aria: "Bekijk alocasia stekje",
+		},
+	},
+	{
+		name: "Monstera",
+		image: "../images/monstera.png",
+		button: {
+			url: "/stekjes/monstera",
+			text: "Bekijk stekje",
+			aria: "Bekijk monstera stekje",
+		},
+	},
+	{
+		name: "Pilea",
+		image: "../images/pilea.png",
+		button: {
+			url: "/stekjes/pilea",
+			text: "Bekijk stekje",
+			aria: "Bekijk pilea stekje",
+		},
+	},
+]
