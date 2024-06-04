@@ -53,18 +53,23 @@ app.get('/stekjes', async (req, res) => {
   }));
 });
 
-app.get('/stekjes', async (req, res) => {
-  // send title to the template
-  const title = req.query.title;
+app.get('/stekjes/:name', (req, res) => {
+  const plantName = req.params.name;
+  const plantData = plantjesData[plantName];
+        console.log(plantData)
 
-  return res.send(renderTemplate('views/stekjes.liquid', { 
-    title,
-    sliderData,
-    stekjesData,
-    stekjesKastInfo,
-    footerData,
-  }));
-});
+  if (plantData) {
+   res.send(renderTemplate('views/stekjes_detail.liquid', {
+        plant: plantData,
+        footerData,
+        plantName,
+      }))
+
+  } else {
+    res.status(404).send('Plant not found');
+  }
+    return plantData;
+})
 
 app.get('/weather-api', async (req, res) => {
 
@@ -100,21 +105,7 @@ app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
 })
 
-app.get('/stekjeskast/:name', (req, res) => {
-  const plantName = req.params.name;
-  const plantData = plantjesData[plantName];
-        console.log(plantData)
 
-  if (plantData) {
-   res.send(renderTemplate('views/stekjes_detail.liquid', {
-        plant: plantData,
-        footerData,
-      }))
-
-  } else {
-    res.status(404).send('Plant not found');
-  }
-})
 
 
 
