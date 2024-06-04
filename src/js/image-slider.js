@@ -1,29 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const slider = document.getElementById('imageSlider');
-  const slides = Array.from(slider.querySelectorAll('.slide'));
+document.addEventListener("DOMContentLoaded", function () {
+  const slider = document.getElementById("imageSlider");
+  const slides = Array.from(document.querySelectorAll(".slide"));
   const totalSlides = slides.length;
-  const slideWidth = slides[0].clientWidth;
   let currentSlide = 0;
-  let direction = 1; // 1 for forward, -1 for backward
-
-  function showSlide(index) {
-    const offset = -index * slideWidth;
-    slider.style.transition = 'transform 1s ease-in-out';
-    slider.style.transform = `translateX(${offset}px)`;
-  }
-
-  function nextSlide() {
-    currentSlide += direction;
-    if (currentSlide >= totalSlides) {
-      direction = -1;
-      currentSlide = totalSlides - 1;
-    } else if (currentSlide < 0) {
-      direction = 1;
+  let translateX = 0;
+  let value = 3000
+ 
+  setInterval(() => {
+    console.log("current slide:", currentSlide);
+    // after 3 seconds go to next slide
+    currentSlide++;
+ 
+    // if the current slide is equal to the total slides, go back to the first slide
+    if (currentSlide === totalSlides) {
+      value = 0
       currentSlide = 0;
-    }
-    showSlide(currentSlide);
-  }
-
-  setInterval(nextSlide, 3000);
-  showSlide(currentSlide);
+      let translateX = 0;
+      slider.style.setProperty("transition-duration", "0s");
+      slider.style.setProperty("--translateX", translateX);
+ 
+      // if the current slide is greater or equal to 0, move to the next slide
+    } else if (currentSlide === totalSlides - 1) {
+      value = 0
+      let translateX = (100 / totalSlides) * currentSlide;
+      slider.style.setProperty("transition-duration", "1s");
+      slider.style.setProperty("--translateX", translateX);
+    } else if (currentSlide < totalSlides) {
+      value = 3000
+      let translateX = (100 / totalSlides) * currentSlide;
+      slider.style.setProperty("transition-duration", "1s");
+      slider.style.setProperty("--translateX", translateX);
+    } 
+  }, value);
 });
