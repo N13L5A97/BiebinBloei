@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
@@ -102,12 +102,13 @@ app.get('/transparent-card', async (req, res) => {
 
 app.get('/stekjeskast/:name', (req, res) => {
   const plantName = req.params.name;
-  const plantData = stekjesData[plantName];
+  const plantData = plantjesData[plantName];
         console.log(plantData)
 
   if (plantData) {
    res.send(renderTemplate('views/stekjes_detail.liquid', {
         plant: plantData,
+        footerData,
       }))
 
   } else {

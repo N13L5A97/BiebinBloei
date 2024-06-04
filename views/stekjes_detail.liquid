@@ -1,10 +1,13 @@
+{% layout "layouts/base.liquid" %}
+
+
 {% block content %}
   {% include "partials/image-slider.liquid" %}
 
 
   <section class="plantinfo">
 
-    {{ plant.name }}
+    <h2>{{ plant.name }}</h2>
 
     <div id="info">
       <article id="general">
@@ -13,11 +16,11 @@
         <div>
           <h3>Algemene informatie</h3>
           <h4>Beschrijving</h4>
-          {{ plant.description }}
+          <p>{{ plant.description }}</p>
           <h4>Land van herkomst</h4>
-          {{ plant.origin }}
+          <p>{{ plant.origin }}</p>
           <h4>Giftig</h4>
-          {{ plant.toxicity }}
+          <p>{{ plant.toxicity }}</p>
 
         </div>
       </article>
@@ -225,14 +228,14 @@
   </svg>
 </div>
 <h4>Moeilijkheidsgraad</h4>
-{{ plant.difficulty }}
+<p>{{ plant.difficulty }}</p>
 <h4>Temperatuur</h4>
-{{ plant.temp }}
+<p>{{ plant.temp }}</p>
 <h4>Zonlicht</h4>
-{{ plant.sunlight }}
+<p>{{ plant.sunlight }}</p>
 <h4>Stekken</h4>
-{{ plant.cutting }}
+<p>{{ plant.cutting }}</p>
 <h4>Water geven</h4>
-{{ plant.watering }}
+<p>{{ plant.watering }}</p>
 <h4>Voeding</h4>
-{{ plant.feeding }}</article></div></section><script type="text/javascript" src="/js/harry.js"></script>{% endblock %}
+<p>{{ plant.feeding }}</p></article></div></section><script type="text/javascript" src="/js/harry.js"></script>{% endblock %}
