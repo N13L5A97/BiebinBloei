@@ -7,18 +7,25 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	setInterval(() => {
 		console.log("current slide:", currentSlide);
-		// every 3 seconds go to next slide
+		// after 3 seconds go to next slide
 		currentSlide++;
 
-		// if the current slide is greater than the total slides, go back to the first slide
+		// if the current slide is equal to the total slides, go back to the first slide
 		if (currentSlide === totalSlides) {
+			slider.style.setProperty("transition-duration", "0s");
 			currentSlide = 0;
 			let translateX = 0;
-			slider.style.setProperty("transition-duration", "0s");
 			slider.style.setProperty("--translateX", translateX);
 
-			// if the current slide is greater than 1, move to the next slide
-		} else if (currentSlide >= 0) {
+      setTimeout(() => {
+        currentSlide++;
+        slider.style.setProperty("transition-duration", "1s");
+        slider.style.setProperty("--translateX", -100);
+      }, 10);
+
+
+			// if the current slide is greater or equal to 0, move to the next slide
+		} else if (currentSlide < totalSlides) {
 			let translateX = (100 / totalSlides) * currentSlide;
 			slider.style.setProperty("transition-duration", "1s");
 			slider.style.setProperty("--translateX", translateX);
