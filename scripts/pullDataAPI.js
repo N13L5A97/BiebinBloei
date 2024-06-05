@@ -35,6 +35,15 @@ function checkSunSet(givenTime) {
     // }
 }
 
+function pullTemperature(data) {
+  
+  const teeest = 2;
+  return data.current.temp_c;
+  return teeest;
+
+}
+console.log(pullTemperature);
+
 function useData(data) {
     console.log(data.location.name)
 }
@@ -44,4 +53,5 @@ export const test = {
     pullDataSunMoon,
     checkSunSet,
     useData,
+    pullTemperature,
 }

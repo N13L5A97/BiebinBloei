@@ -1,8 +1,3 @@
-import { plantData } from '../index.js'
-
-console.log(plantData)
-
-
 let latitude = "52.35818441704516";
 let longitude = "4.926244883772008";
 
@@ -373,4 +368,5 @@ export const test = {
   pullDataSunMoon,
   checkSunSet,
   checkWeatherCondition,
+
 };

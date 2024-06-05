@@ -9,7 +9,8 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData } from './scripts/pageData.js'
+import { testharry } from './scripts/harry.js'
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData, plantenTips } from './scripts/pageData.js'
 
 const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
@@ -53,22 +54,30 @@ app.get('/stekjes', async (req, res) => {
   }));
 });
 
-app.get('/stekjes/:name', (req, res) => {
+app.get('/stekjes/:name', async (req, res) => {
   const plantName = req.params.name;
   const plantData = plantjesData[plantName];
-        console.log(plantData)
+  const plant = plantenTips.harry.uitleg;
+  console.log(plant)  
+  const dataWeather = await test.pullDataWeather(apiToken);
+  console.log(dataWeather)
+
+  // const harry = testharry.checkTemp(test, plantjesData);
+  const harry = testharry.checkTemp();
+  console.log(test)
 
   if (plantData) {
    res.send(renderTemplate('views/stekjes_detail.liquid', {
         plant: plantData,
         footerData,
         plantName,
+        harry
+
       }))
 
   } else {
     res.status(404).send('Plant not found');
   }
-    return plantData;
 })
 
 app.get('/weather-api', async (req, res) => {
