@@ -9,6 +9,9 @@
 @import 'transparent-card-test.css';
 @import 'partners.css';
 @import 'image-slider.css';
+@import 'stekjes.css';
+@import 'link-block.css';
+@import 'hero.css';
 @import 'page-transition.css';
 
 /* import poppins black and medium */
@@ -57,10 +60,8 @@
 	--quaternary-color: #491B02;
 
 	--background-color: #fff;
-}
-
-html{
-	background-color: black;
+	--leaf-image: url(../images/zomer-blad.svg);
+	--leaf-pattern: url(../images/summer-pattern.svg);
 }
 
 .spring {
@@ -68,6 +69,8 @@ html{
 	--secondary-color: #F7FFC3;
 	--tertiary-color: #D4EF31;
 	--quaternary-color: #261E00;
+	--leaf-image: url(../images/lente-blad.svg);
+	--leaf-pattern: url(../images/spring-pattern.svg);
 }
 
 .summer {
@@ -75,6 +78,8 @@ html{
 	--secondary-color: #FFDEF0;
 	--tertiary-color: #FA89B9;
 	--quaternary-color: #1F000D;
+	--leaf-image: url(../images/zomer-blad.svg);
+	--leaf-pattern: url(../images/summer-pattern.svg);
 }
 
 .fall {
@@ -82,6 +87,8 @@ html{
 	--secondary-color: #F9E9C2;
 	--tertiary-color: #FF8D06;
 	--quaternary-color: #491B02;
+	--leaf-image: url(../images/herfst-blad.svg);
+	--leaf-pattern: url(../images/fall-pattern.svg);
 }
 
 .winter {
@@ -89,6 +96,12 @@ html{
 	--secondary-color: #E5EFFF;
 	--tertiary-color: #A9A2F9;
 	--quaternary-color: #03002B;
+	--leaf-image: url(../images/winter-blad.svg);
+	--leaf-pattern: url(../images/winter-pattern.svg);
+}
+
+html{
+	background-color: black;
 }
 
 * {

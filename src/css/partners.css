@@ -3,6 +3,12 @@
     background-color: var(--primary-color);
     height: auto;
     justify-content: center;
+
+    background-image: var(--leaf-pattern);
+    background-repeat: repeat;
+    background-size: 20%;
+    background-blend-mode: soft-light;
+    background-attachment: fixed;
 }
 
 .partners{

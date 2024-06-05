@@ -8,8 +8,8 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 // local scripts
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 import { test } from './scripts/weather.js'
-import { cardData, agendaData, pageData, footerData } from './scripts/homepageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -42,6 +42,8 @@ app.get('/', async (req, res) => {
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
     agendaData,
+    sliderData,
+    footerData,
     pageData,
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
@@ -62,6 +64,30 @@ app.get('/', async (req, res) => {
     weatherScript: checkWeather[0],
     weatherCSS: checkWeather[1],
     amount: rainAmount
+  }));
+});
+
+app.get('/stekjes', async (req, res) => {
+  // send url path to the template without the '/'
+  const pageTitle = req.url.slice(1);
+
+  return res.send(renderTemplate('views/stekjes.liquid', { 
+    pageTitle,
+    stekjesData,
+    stekjesKastInfo,
+    footerData,
+  }));
+});
+
+app.get('/stekjes', async (req, res) => {
+  // send url path to the template without the '/'
+  const pageTitle = req.url.slice(1);
+
+  return res.send(renderTemplate('views/stekjes.liquid', { 
+    pageTitle,
+    stekjesData,
+    stekjesKastInfo,
+    footerData,
   }));
 });
 
@@ -97,8 +123,8 @@ app.get('/weather-api', async (req, res) => {
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
     weatherScript: checkWeather[0],
     weatherCSS: checkWeather[1],
-    amount: rainAmount
-    // check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
+    amount: rainAmount,
+    check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
 

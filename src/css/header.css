@@ -64,6 +64,8 @@ nav ul li a {
 	font-size: var(--font-size-paragraph);
 }
 
+
+
 nav ul li:hover {
 	transform: scale(1.1);
 }
@@ -73,13 +75,25 @@ header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
 }
 
+nav a:focus {
+	border-radius: 0.5rem;
+	outline: 2px solid var(--tertiary-color);
+	outline-offset: 2px;
+}
+
+nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
+	border-radius: 0.5rem;
+	/* outline: 4px solid var(--tertiary-color);
+	outline-offset: 4px; */
+}
 
 /* remove bullet points */
 ul {
 	list-style-type: none;
 }
-
-
 
 header nav button {
 	border: 0;
@@ -114,6 +128,13 @@ header.menuOpen nav ul li a {
 	color: white;
 	font-size: 1.5em;
 	margin-top: 2em;
+	display: block;
+}
+
+header.menuOpen nav ul li a:focus {
+	padding: 0.5rem;
+	color: var(--quaternary-color);
+	background-color: var(--tertiary-color);
 }
 
 @media (min-width: 768px) {
@@ -133,27 +154,131 @@ header.menuOpen nav ul li a {
 		transition: 200ms;
 	}
 
-
-
+	nav ul li a {
+		display: block;
+	}
+  
 	header.menuOpen nav ul {
-		justify-content: center;
+		justify-content: space-evenly;
 		flex-direction: column;
-		align-items: center;
 		position: fixed;
 		inset: 0;
 		margin: 0;
 		padding: 0;
 	}
 
-
-
 	header nav button {
 		display: none;
 	}
 
-
-
 	header.menuOpen nav button {
 		display: block;
+	}
+}
+
+
+/* Hamburger menu */
+#hamburger {
+	background-color: transparent;
+	cursor: pointer;
+
+	&:hover div {
+		background-color: var(--tertiary-color);
+	}
+}
+
+#hamburger .cross {
+	width: 36px;
+	transform-origin: center;
+	border-radius: 5px;
+}
+
+#hamburger div {
+	height: 5px;
+	background-color: white;
+	transition: 200ms;
+}
+
+#hamburger #middle {
+	margin: 7px 0;
+	display: flex;
+	background-color: transparent;
+
+
+}
+
+#middle div {
+	width: 18px;
+
+	&:first-child {
+		border-radius: 5px 0 0 5px;
+	}
+
+	&:last-child {
+		border-radius: 0 5px 5px 0;
+	}
+
+
+}
+
+.menuOpen #hamburger #middle div:first-child {
+	animation: slideLeft .2s forwards;
+}
+
+.menuOpen #hamburger #middle div:last-child {
+	animation: slideRight .2s forwards;
+}
+
+@keyframes slideRight {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(0.7rem);
+		opacity: 0;
+	}
+}
+
+@keyframes slideLeft {
+	from {
+		transform: translateY(0);
+		opacity: 1;
+	}
+
+	to {
+		transform: translateY(-0.7rem);
+		opacity: 0;
+	}
+}
+
+.menuOpen #hamburger .cross:first-child {
+	animation: rotateRight .2s forwards;
+	animation-delay: .2s;
+}
+
+.menuOpen #hamburger .cross:last-child {
+	animation: rotateLeft .2s forwards;
+	animation-delay: .2s;
+}
+
+@keyframes rotateRight {
+	from {
+		transform: translateY(0)rotate(0deg);
+	}
+
+	to {
+		transform: translateY(12px)rotate(45deg);
+	}
+}
+
+@keyframes rotateLeft {
+	from {
+		transform: translateY(0)rotate(0deg);
+	}
+
+	to {
+		transform: translateY(-12px)rotate(-45deg);
 	}
 }

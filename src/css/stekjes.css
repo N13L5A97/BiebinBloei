@@ -1,0 +1,15 @@
+.stekjes-section{
+    padding: 3rem;
+}
+
+.stekjes{
+    display: grid;
+    gap: 3rem;
+    padding-bottom: var(--v-padding-large);
+    grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr));
+}
+
+.link-block.stek-item{
+    height: 60vh;
+    grid-template-columns: 1fr;
+}
