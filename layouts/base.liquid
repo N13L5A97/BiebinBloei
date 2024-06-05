@@ -25,8 +25,47 @@
     <body class="scroll scroll-vertical">
         {% include "partials/header.liquid" %}
         <main>
+
         {% block content %}{% endblock %}
         </main>
+        <div class="accessibilityMenu">
+            <div class="accessibilityContent">
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" id="">
+                            Dark Mode
+                        </label>
+                    </li>
+                    <li>                        
+                        <label>
+                            <input type="checkbox" id="">
+                            Reduced Motion
+                        </label>
+                    </li>
+                    <li>                        
+                        <label>
+                            <input type="checkbox" id="">
+                            Groter font
+                        </label>
+                    </li>
+                    <li>                        
+                        <label>
+                            <input type="checkbox" id="">
+                            High Contrast
+                        </label>
+                    </li>
+                    <li id="google_translate_element">Vertaal de site
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <label class="accessibilityIcon">
+                <input type="checkbox" id="menu">
+                <img src="./images/accessibility.png">
+            </label>
+        </div>
         {% include  "partials/footer.liquid" %}
 
         {% comment %} <img class="transition-image normal-fade-in normal" src="./images/zomer-blad.svg">

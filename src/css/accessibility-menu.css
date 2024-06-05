@@ -1,0 +1,49 @@
+.accessibilityMenu {
+    width: calc(13rem + 5rem);
+    height: 300px;
+    position: fixed;
+    top: 20vh;
+    left: -208px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    transition: left .3s;
+}
+
+.accessibilityMenu:has(.accessibilityIcon input:checked) {
+    transition: left .3s;
+    left: 0px;
+}
+
+.accessibilityContent {
+    width: 13rem;
+    height: 300px;
+    background-color: white;
+    border-radius: 0px 0px 10px 0px;
+}
+
+
+
+.accessibilityContent ul li {
+    margin: .2rem 0rem .2rem .4rem
+}
+
+.accessibilityIcon {
+    width: 5rem;
+    height: 5rem;
+    background-color: white;
+    border-radius: 0px 10px 10px 0px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.accessibilityIcon label img {
+    width: 4rem;
+    align-self: center;
+}
+
+input[type="checkbox"][id^="menu"] {
+    display: none;
+}

@@ -8,7 +8,7 @@ import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 // local scripts
-import { test } from './scripts/pullDataAPI.js'
+import { test } from './scripts/weather.js'
 import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
@@ -35,6 +35,8 @@ app.get('/', async (req, res) => {
   console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+
+  
 
   // const rainAmount = dataWeather.current.precip_mm 
   const rainAmount = 150

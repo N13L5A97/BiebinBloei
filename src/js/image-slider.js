@@ -5,8 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   let currentSlide = 0;
   let translateX = 0;
   let value = 3000
+  let repeat = 10000;
  
-  setInterval(() => {
+  setTimeout(() => {
     console.log("current slide:", currentSlide);
     // after 3 seconds go to next slide
     currentSlide++;
