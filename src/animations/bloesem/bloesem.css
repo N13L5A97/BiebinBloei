@@ -1,19 +1,10 @@
-body {
-    position: relative;
-    display: grid;
-    place-items: center;
-    margin: 0;
-    overflow: hidden;
-    background: #0c0c0c;
-    width: 100vw;
-    height: 100vh;
-}
-
 .bloesem {
     position: absolute;
+    top: 0%;
     width: 100vw;
     height: 100vh;
-    z-index: -1;
+    z-index: 1000;
+    pointer-events: none;
 }
 
 /* druppel regen */

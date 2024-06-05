@@ -1,0 +1,29 @@
+.sneeuw {
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* volkjes */
+
+.vlok {
+    position: absolute;
+    bottom: 100%;
+    width: 20px;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: fall linear infinite;
+}
+
+/* vallen van de vlokken */
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
