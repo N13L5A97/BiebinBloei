@@ -1,12 +1,12 @@
 <section class="image-slider-section">
   <h1>{{ sliderData.title }}</h1>
   <h2>{{ sliderData.subtitle }}</h2>
-  <div class="image-slider" id="imageSlider" style="--background-image: url('{{ sliderData.sliderImages[0].src}}')">
+  <div class="image-slider" id="imageSlider">
     {% if sliderData.sliderImages.length > 1 %}
       {% for slide in sliderData.sliderImages %}
-        <div class="slide" style="--background-image: url('{{ slide.src }}')"></div>
+        <img class="slide" src="{{ slide.src }}" />
       {% endfor %}
-      <div class="slide" style="--background-image: url('{{ sliderData.sliderImages[0].src }}')"></div>
+      <img class="slide" src="{{ sliderData.sliderImages[0].src }}" />
     {% endif %}
-  </div> 
+  </div>
 </section>
