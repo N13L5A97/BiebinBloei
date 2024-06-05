@@ -44,7 +44,6 @@ app.get('/', async (req, res) => {
     agendaData,
     sliderData,
     footerData,
-    pageData,
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
