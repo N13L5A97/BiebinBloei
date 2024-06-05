@@ -57,22 +57,19 @@ app.get('/stekjes', async (req, res) => {
 app.get('/stekjes/:name', async (req, res) => {
   const plantName = req.params.name;
   const plantData = plantjesData[plantName];
-  const plant = plantenTips.harry.uitleg;
-  console.log(plant)  
+  // const plant = plantenTips.harry.uitleg;
+  // console.log(plant)  
   const dataWeather = await test.pullDataWeather(apiToken);
   console.log(dataWeather)
 
   // const harry = testharry.checkTemp(test, plantjesData);
-  const harry = testharry.checkTemp();
-  console.log(test)
-
+  const harry = testharry.checkTemp(dataWeather, plantData, plantenTips);
   if (plantData) {
    res.send(renderTemplate('views/stekjes_detail.liquid', {
         plant: plantData,
         footerData,
         plantName,
-        harry
-
+        harry: harry
       }))
 
   } else {

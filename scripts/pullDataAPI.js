@@ -8,9 +8,9 @@ function pullDataWeather(token) {
 
 function pullDataSunMoon(token) {
     let currentDate = new Date().toLocaleDateString('en-CA');
-    console.log(currentDate)
+    // console.log(currentDate)
     var fetchUrl = 'http://api.weatherapi.com/v1/astronomy.json?key=' + token + '&q=' + latitude + ', ' + longitude + '&dt=' + currentDate
-    console.log(fetchUrl)
+    // console.log(fetchUrl)
     return fetch(fetchUrl).then(res => res.json())
 }
 
@@ -42,10 +42,10 @@ function pullTemperature(data) {
   return teeest;
 
 }
-console.log(pullTemperature);
+// console.log(pullTemperature);
 
 function useData(data) {
-    console.log(data.location.name)
+    console.log('')
 }
 
 export const test = {
