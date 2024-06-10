@@ -246,6 +246,7 @@ export const plantjesData = {
 		minTemp: "12",
 		maxTemp: "22",
 		sunlight: "Hoe meer zonlicht (maar niet direct in de zon!) de bladeren krijgen, hoe paarser ze kleuren.",
+		sunlightAmount: "gemiddeld",
 		cutting: "De Gynura blijft het mooist als je ‘m regelmatig topt en stekt, op die manier houd je de plant compact en bossig. Knip met een schone schaar de bovenkant van een stengel (met een aantal blaadjes er aan) af en zet deze in een vaasje met water op een lichte, warme plek. Zodra de worteltjes een paar centimeter lang zijn, kun je deze in een potje met aarde zetten.",
 		image: {
 			src: "../images/gynura.jpeg",
@@ -255,13 +256,13 @@ export const plantjesData = {
 }
 
 export const plantenTips = {
-	harry:{
-		uitleg: "Ik ben Harry jouw stekjesspecialist. Ik geef je graag wat tips over het stekken en onderhouden van planten! Hieronder lees je nog wat extra informatie over de plant.",
-	},
+	voeding:{
+		geven: "Geef me alsjeblieft een keer per maand wat plantenvoeding. Ook ik heb mijn vitamientjes nodig!",
+	},	
 
 	zonlicht: {
 		veel: "Hey hallo, mag ik even bijbruinen? Ik ben dol op zonlicht!",
-		gemiddeld: "Ik hou van een beetje zonlicht, maar niet te fel!",
+		gemiddeld: "Ik hou van een beetje zonlicht, maar niet direct, dat is me te fel!",
 		weinig: "Aaah wat fel! Ik hou van schaduw!",
 	},
 

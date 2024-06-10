@@ -280,3 +280,30 @@ g{
     }
 }
 
+#tips{
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column; 
+    padding: 1rem;
+    position: relative;
+    min-width: 25ch + 2rem;    
+    outline: black solid 0.2rem;
+    z-index: 2;
+    p{
+        max-width: 32ch;
+        color: var(--primary-color);
+        font-size: 1em;
+    }
+    &:before{
+        content: " ";
+        background-image: url(../images/spraak.svg);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 50%;
+        left: -1.8rem;
+        filter: drop-shadow(-3px 2px 0px rgba(0, 0, 0, 1));
+        z-index: 1;
+    }
+}

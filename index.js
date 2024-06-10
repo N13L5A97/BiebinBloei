@@ -9,7 +9,7 @@ import { dirname } from 'path';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
-import { testharry } from './scripts/harry.js'
+import { harrycontent } from './scripts/harry.js'
 import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData, plantenTips } from './scripts/pageData.js'
 
 const envFile = dotenv.config({ path: 'token.env' })
@@ -63,13 +63,19 @@ app.get('/stekjes/:name', async (req, res) => {
   console.log(dataWeather)
 
   // const harry = testharry.checkTemp(test, plantjesData);
-  const harry = testharry.checkTemp(dataWeather, plantData, plantenTips);
+  const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
+  const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
+  const voeding = harrycontent.checkVoeding(plantenTips);
   if (plantData) {
    res.send(renderTemplate('views/stekjes_detail.liquid', {
         plant: plantData,
         footerData,
         plantName,
-        harry: harry
+        harry:{ 
+          temp, 
+          weer,
+          voeding,
+        },
       }))
 
   } else {

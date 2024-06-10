@@ -25,11 +25,9 @@
         </div>
       </article>
       <article id="care">
+        <h3>Verzorging</h3>
 
         <div>
-          <h3>Verzorging</h3>
-          <p> {{ harry.uitleg }}</p>
-          <p> {{ harry.temperatuur }}</p>
           <svg
             id="cartoon"
             xmlns="http://www.w3.org/2000/svg"
@@ -228,6 +226,19 @@
       </g>
     </g>
   </svg>
+  <span id="tips">
+
+    {% if harry.temp %}
+      <p>{{ harry.temp }}</p>
+    {% endif %}
+    {% if harry.weer %}
+      <p>{{ harry.weer }}</p>
+    {% endif %}
+    {% if harry.voeding %}
+      <p>{{ harry.voeding }}</p>
+    {% endif %}
+
+  </span>
 </div>
 <h4>Moeilijkheidsgraad</h4>
 <p>{{ plant.difficulty }}</p>
