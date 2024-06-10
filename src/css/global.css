@@ -115,6 +115,7 @@ body {
 	font-family: var(--font-family-text);
 	font-size: var(--font-size-paragraph);
 	z-index: 1;
+	color-scheme: light dark;
 }
 
 main {

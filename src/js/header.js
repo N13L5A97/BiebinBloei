@@ -1,4 +1,5 @@
 // Show/hide header on scroll
+const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 let prevScrollPos = window.scrollY;
 const minWidth = 768;
 
@@ -15,8 +16,11 @@ function handleScroll() {
 }
 
 console.log(prevScrollPos);
-window.onscroll = handleScroll;
-window.onresize = handleScroll;
+if (isReduced === false) {
+    window.onscroll = handleScroll;
+    window.onresize = handleScroll;
+}
+
 
 // Open/close hamburgermenu
 document.addEventListener("DOMContentLoaded", function () {
