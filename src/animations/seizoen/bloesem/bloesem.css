@@ -23,9 +23,15 @@
     height: 20px;
     background-image: var(--bladKleur);
     clip-path: var(--bladVorm);
-    border-radius: 50%;
-    opacity: 0.5;
+    /* border-radius: 50%;
+    opacity: 0.5; */
     animation: dwarrelen ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .blaadje {
+        animation: dwarrelen ease-in-out infinite paused;
+    }
 }
 
 /* vallen van de bloesem */

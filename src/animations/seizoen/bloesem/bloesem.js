@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
   bloesem.classList.add('bloesem')
   const bloesemBlaadjes = 70;
 
-  if (isReduced != true) {
+
     for (let i = 0; i < bloesemBlaadjes; i++) {
       //maak een nieuw div element voor elk blaadje
       const blaadje = document.createElement('div');
@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // willekeurige positie, animatie duratie, de delay en opacity
       blaadje.style.left = `${Math.random() * 100}vw`;
       blaadje.style.animationDuration = `${duration}s`;
-      blaadje.style.animationDelay = `${Math.random() * 3}s`;
+      if (isReduced != true) {
+        blaadje.style.animationDelay = `${Math.random() * 3}s`;
+      } else if (isReduced == true) {
+        blaadje.style.animationDelay = `${Math.random() * -3}s`;
+      }
       blaadje.style.opacity = `${Math.random() * 1}`;
 
       // zet de --randomRotation property in de css
@@ -35,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
       
       //voeg de regendruppel toe aan de regencontainer
       bloesem.appendChild(blaadje);
-  }
   }
     
     body.appendChild(bloesem)

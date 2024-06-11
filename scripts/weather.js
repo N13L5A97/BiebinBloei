@@ -52,7 +52,7 @@ function checkSunSet(givenTime) {
 
 function checkWeatherCondition(data) {
     // const currentWeatherCondition = data.current.condition.code
-    const currentWeatherCondition = 1030
+    const currentWeatherCondition = 1063
     
     switch (currentWeatherCondition) {
       case 1000: {
@@ -90,6 +90,8 @@ function checkWeatherCondition(data) {
   
       case 1063: {
         // plaatselijk regen mogelijk
+        var weatherScript = "./animations/seizoen/herfstblaadjes/herfst.js";
+        var weatherCSS = "./animations/seizoen/herfstblaadjes/herfst.css";
         return [weatherScript, weatherCSS];
       }
   

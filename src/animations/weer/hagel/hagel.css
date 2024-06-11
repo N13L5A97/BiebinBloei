@@ -20,6 +20,12 @@
     transform: rotate(20deg);
 }
 
+@media (prefers-reduced-motion) {
+    .druppelHagel {
+        animation: bounces linear infinite paused;
+    }
+}
+
 /* .druppelHagel:before{
     content: '';
     position: absolute;

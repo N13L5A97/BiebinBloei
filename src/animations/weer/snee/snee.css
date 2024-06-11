@@ -20,6 +20,12 @@
     animation: fall linear infinite;
 }
 
+@media (prefers-reduced-motion) {
+    .vlok {
+        animation: fall linear infinite paused;
+    }
+}
+
 /* vallen van de vlokken */
 
 @keyframes fall {

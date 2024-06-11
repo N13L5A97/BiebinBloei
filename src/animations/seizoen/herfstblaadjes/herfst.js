@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-  console.log(isReduced)
-    const herfst = document.querySelector('.herfst');
+  const body = document.querySelector('body'); // regen div pakken
+  const herfst = document.createElement('div')
+  herfst.classList.add('herfst')
     const herfstBladeren = 70;
 
-    if (isReduced != true) {
       for (let i = 0; i < herfstBladeren; i++) {
         //maak een nieuw div element voor elk blaadje
         const blaadje = document.createElement('div');
@@ -17,7 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
         // willekeurige positie, animatie duratie en de delay
         blaadje.style.left = `${Math.random() * 100}vw`;
         blaadje.style.animationDuration = `${duration}s`;
-        blaadje.style.animationDelay = `${Math.random() * 3}s`;
+        if (isReduced != true) {
+          blaadje.style.animationDelay = `${Math.random() * 3}s`;
+        } else if (isReduced == true) {
+          blaadje.style.animationDelay = `${Math.random() * -3}s`;
+        }
         blaadje.style.opacity = `${Math.random() * 1}`;
 
         // zet de --randomRotation property in de css
@@ -29,11 +33,10 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             blaadje.style.animationName = 'dwarrelen';
           }
+
+          herfst.appendChild(blaadje)
         
         //voeg de regendruppel toe aan de regencontainer
-        herfst.appendChild(blaadje);
+        body.appendChild(herfst);
     }
-    }
-
-    
 });

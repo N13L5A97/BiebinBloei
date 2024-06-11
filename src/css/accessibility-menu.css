@@ -19,6 +19,8 @@
     height: max-content;
     background-color: var(--background-color);
     border-radius: 0px 0px 10px 0px;
+    /* border: 1px solid lightblue; */
+    /* box-shadow: 10px 5px 5px black; */
 }
 
 .accessibilityContent ul li {
@@ -43,6 +45,8 @@
     display: flex;
     justify-content: center;
     cursor: pointer;
+    /* border: 1px solid lightblue; */
+    /* box-shadow: 5px 5px 5px black; */
 }
 
 .accessibilityIcon label img {

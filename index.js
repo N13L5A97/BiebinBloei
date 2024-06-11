@@ -42,8 +42,8 @@ app.get('/', async (req, res) => {
 
   
 
-  // const rainAmount = dataWeather.current.precip_mm 
-  const rainAmount = 40
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 40
 
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,

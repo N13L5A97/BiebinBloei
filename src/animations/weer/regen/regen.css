@@ -21,6 +21,12 @@
     transform: rotate(10deg);
 }
 
+@media (prefers-reduced-motion) {
+    .druppel {
+        animation: vallen linear infinite paused;
+    }
+}
+
 /* vallen van de regen */
 
 @keyframes fall {
