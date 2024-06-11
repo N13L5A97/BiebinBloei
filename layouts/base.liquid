@@ -12,7 +12,11 @@
             }
         </style>
 
-        <title> {{ siteTitle }} </title>
+        <title> Bieb in Bloei 
+            {% if pageTitle %}
+            | {{ pageTitle }} 
+            {% endif %}
+        </title>
         {% block head %}{% endblock %}
     </head>
 
