@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             drop.classList.add('druppel');
 
             // willekeurige positie, animatie duratie en de delay
-            drop.style.left = `${Math.random() * 100}vw`;
+            drop.style.left = `${Math.random() * 120}vw`;
             drop.style.animationDuration = `${Math.random() * 0.1 + 1}s`;
             drop.style.animationDelay = `${Math.random() * 1}s`;
             drop.style.opacity = `${Math.random() * 1}`;

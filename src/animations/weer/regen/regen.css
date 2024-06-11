@@ -1,7 +1,8 @@
 .regen {
     position: absolute;
     top: 0%;
-    width: 99vw;
+    left: -5%;
+    width: 140vw;
     height: 100vh;
     z-index: 1000;
     pointer-events: none;
