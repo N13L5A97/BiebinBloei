@@ -23,8 +23,42 @@
     <body class="scroll scroll-vertical">
         {% include "partials/header.liquid" %}
         <main>
+
         {% block content %}{% endblock %}
         </main>
+        <div class="accessibilityMenu">
+            <div class="accessibilityContent">
+                <ul>
+                    <li>
+                        <label>
+                            <input type="checkbox" id="toggle-darkmode">
+                            Dark Mode
+                        </label>
+                    </li>
+                    {% comment %} not used anymore {% endcomment %}
+                    {% comment %} <li>                        
+                        <label>
+                            <input type="checkbox" id="reducedMotion" onclick = "reducedMotion()">
+                            Reduced Motion
+                        </label>
+                    </li> {% endcomment %}
+                    <li>                        
+                        <label>
+                            <input type="checkbox" id="font-size">
+                            Groter font
+                        </label>
+                    </li>
+                    <li id="google_translate_element">Vertaal de site
+                        
+                    </li>
+                </ul>
+            </div>
+
+            <label class="accessibilityIcon">
+                <input type="checkbox" id="menu">
+                <img src="./images/accessibility.png">
+            </label>
+        </div>
         {% include  "partials/footer.liquid" %}
         {% include  "components/scripts.liquid" %}
     </body>

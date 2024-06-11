@@ -13,6 +13,7 @@
 @import 'link-block.css';
 @import 'hero.css';
 @import 'page-transition.css';
+@import 'accessibility-menu.css';
 
 /* import poppins black and medium */
 
@@ -115,6 +116,7 @@ body {
 	font-family: var(--font-family-text);
 	font-size: var(--font-size-paragraph);
 	z-index: 1;
+	color-scheme: light dark;
 }
 
 main {

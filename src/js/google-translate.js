@@ -1,7 +1,7 @@
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'nl',
-        includedLanguages: 'en,es,fr,de,zh,ja,nl',  // Add more languages as needed
+        includedLanguages: 'en,es,fr,de,zh,ja,nl,sp,pt,pl,tr,ko,zh,af,sq,lb,mk,lt,ln,it,ga,id,et,da,cs,no,,ro,ru.sv.uk',  // Add more languages as needed
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE
     }, 'google_translate_element');
 }

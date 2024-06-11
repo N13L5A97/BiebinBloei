@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
+  console.log(isReduced)
     const herfst = document.querySelector('.herfst');
     const herfstBladeren = 70;
 
-    for (let i = 0; i < herfstBladeren; i++) {
+    if (isReduced != true) {
+      for (let i = 0; i < herfstBladeren; i++) {
         //maak een nieuw div element voor elk blaadje
         const blaadje = document.createElement('div');
         // maak een duration variabele aan zodat ik een if statement kan maken op basis van de duration
@@ -31,4 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //voeg de regendruppel toe aan de regencontainer
         herfst.appendChild(blaadje);
     }
+    }
+
+    
 });

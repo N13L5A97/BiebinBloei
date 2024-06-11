@@ -8,8 +8,8 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // local scripts
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 import { test } from './scripts/weather.js'
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -40,8 +40,10 @@ app.get('/', async (req, res) => {
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
 
-  // const rainAmount = dataWeather.current.precip_mm 
-  const rainAmount = 150
+  
+
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 150
 
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
@@ -71,23 +73,12 @@ app.get('/', async (req, res) => {
 });
 
 app.get('/stekjes', async (req, res) => {
-  // send url path to the template without the '/'
-  const pageTitle = req.url.slice(1);
+  // send title to the template
+  const title = req.query.title;
 
   return res.send(renderTemplate('views/stekjes.liquid', { 
-    pageTitle,
-    stekjesData,
-    stekjesKastInfo,
-    footerData,
-  }));
-});
-
-app.get('/stekjes', async (req, res) => {
-  // send url path to the template without the '/'
-  const pageTitle = req.url.slice(1);
-
-  return res.send(renderTemplate('views/stekjes.liquid', { 
-    pageTitle,
+    title,
+    sliderData,
     stekjesData,
     stekjesKastInfo,
     footerData,
