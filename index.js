@@ -4,8 +4,8 @@ import { logger } from '@tinyhttp/logger'
 import { Liquid } from 'liquidjs';
 import serveStatic from 'serve-static';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 // local scripts
 import { test } from './scripts/weather.js'
@@ -19,6 +19,10 @@ const app = new App()
 
 const __filename = fileURLToPath(import.meta.url); // Convert the URL of the current module to a file path
 const __dirname = dirname(__filename); // Get the directory name of the current module
+
+const renderTemplate = (template, data) => {
+  return engine.renderFileSync(template, data)
+}
 
 app
   .use(logger())
@@ -38,8 +42,8 @@ app.get('/', async (req, res) => {
 
   
 
-  // const rainAmount = dataWeather.current.precip_mm 
-  const rainAmount = 150
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 150
 
   return res.send(renderTemplate('views/index.liquid', { 
     cardData,
@@ -125,8 +129,3 @@ app.get('/transparent-card', async (req, res) => {
 app.get('/page-transition', async (req, res) => {
   res.send(renderTemplate('views/page-transition.liquid'))
 })
-
-
-const renderTemplate = (template, data) => {
-  return engine.renderFileSync(template, data)
-}

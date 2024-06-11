@@ -2,16 +2,21 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="./css/global.css">
+        <link rel="stylesheet" href="/css/global.css">
         <link rel="stylesheet" href= {{ weatherCSS }}>
         <link rel="icon" type="image/x-icon" href="">
-
+        
         <style>
             :root {
                 --amount: {{ amount }}
             }
         </style>
-        <title> {{ siteTitle }} </title>
+
+        <title> Bieb in Bloei 
+            {% if pageTitle %}
+            | {{ pageTitle }} 
+            {% endif %}
+        </title>
         {% block head %}{% endblock %}
     </head>
 
@@ -55,6 +60,6 @@
             </label>
         </div>
         {% include  "partials/footer.liquid" %}
-        {% include  "partials/scripts.liquid" %}
+        {% include  "components/scripts.liquid" %}
     </body>
 </html> 
