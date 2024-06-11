@@ -6,11 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	let currentSlide = 0;
 	let translateX = 0;
 
-	if (isReduced === true) {
-		console.log('Andere slider.')
-	} else if (isReduced === false) {
+	if (isReduced != true) {
 		setInterval(() => {
-			console.log("current slide:", currentSlide);
+			// console.log("current slide:", currentSlide);
 			//go to next slide
 			currentSlide++;
 	

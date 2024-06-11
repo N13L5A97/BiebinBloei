@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const regen = document.createElement('div')
     regen.classList.add('regen')
     var style = getComputedStyle(document.body)
-    console.log(style.getPropertyValue('--amount'))
-    console.log(style.getPropertyValue('--amount') * 30)
     const druppels = style.getPropertyValue('--amount') * 15; // hoeveelheid drops die ik wil
 
     if (isReduced != true) {

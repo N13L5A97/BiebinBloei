@@ -15,12 +15,10 @@ function handleScroll() {
     prevScrollPos = currentScrollPos;
 }
 
-console.log(prevScrollPos);
 if (isReduced === false) {
     window.onscroll = handleScroll;
     window.onresize = handleScroll;
 }
-
 
 // Open/close hamburgermenu
 document.addEventListener("DOMContentLoaded", function () {
@@ -33,5 +31,3 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
-
-

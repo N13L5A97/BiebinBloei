@@ -86,10 +86,29 @@
     }
 }
 
+@media (prefers-reduced-motion) {
+    .transition-image {
+        display: none;
+    }
+}
+
+.transition-container {
+    width: 99vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
 .transition-image {
     z-index: 10000;
-    position: fixed;
     height: 130vh;
+    overflow: hidden;
+    top: 49vh;
+    animation-direction: reverse;
+    transform-origin: center;
+    position: fixed;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    rotate: 5deg;
 }
 
 .normal {
@@ -109,13 +128,7 @@
 }
 
 .single {
-    top: 49vh;
-    animation-direction: reverse;
-    transform-origin: center;
-    position: absolute;
-    left: 50vw;
-    transform: translate(-50%, -50%);
-    rotate: 5deg;
+
     
 }
 

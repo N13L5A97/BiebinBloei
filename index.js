@@ -74,10 +74,11 @@ app.get('/', async (req, res) => {
 
 app.get('/stekjes', async (req, res) => {
   // send title to the template
-  const title = req.query.title;
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
 
   return res.send(renderTemplate('views/stekjes.liquid', { 
-    title,
+    pageTitle,
     sliderData,
     stekjesData,
     stekjesKastInfo,

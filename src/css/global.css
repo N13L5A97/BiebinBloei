@@ -117,6 +117,7 @@ body {
 	font-size: var(--font-size-paragraph);
 	z-index: 1;
 	color-scheme: light dark;
+	overflow-x: hidden;
 }
 
 main {
@@ -127,10 +128,12 @@ main {
 h1, h2, h3, h4, h5, h6{
 	font-family: var(--font-family-headings);
 	line-height: 1.1;
+	text-transform: capitalize;
 }
 
 h1{
 	font-size: var(--font-size-headings);
+	z-index: 1;
 }
 
 h2{

@@ -9,11 +9,25 @@
 	background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5), transparent);
 	overflow-x: hidden;
 
+	.image-slider-gradient {
+		background: linear-gradient(to bottom, rgba(0, 0, 0, .8), rgba(0, 0, 0, .5), transparent);
+		z-index: 1;
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		top: 0;
+	}
+
+	h1 {
+		z-index: 1;
+	}
+
 	h2{
 		font-size: calc(var(--font-size-headings) * 0.3);
 		font-family: var(--font-family-alternative);
 		text-align: center;
 		margin-top: 1em;
+		z-index: 1;
 	}
 
 	span{
@@ -35,7 +49,7 @@
 
 	display: flex;
 	position: absolute;
-	z-index: -1;
+	z-index: 0;
 	height: 100%;
 	min-width: 100%;
 	overflow: hidden;
@@ -51,4 +65,5 @@
 	height: 100%;
 	width: 100vw;
 	flex-shrink: 0;
+	z-index: 1;
 }
