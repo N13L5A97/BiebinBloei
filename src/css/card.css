@@ -5,6 +5,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: var(--h-padding-small);
+    z-index: 1;
     
     height: min-content;
     max-width: clamp(30rem, 100%, 100rem);

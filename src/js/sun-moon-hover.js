@@ -1,6 +1,6 @@
-const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+// const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
 
-if (isReduced != false) {
+if (isReduced != true) {
 	const sunStatus = window.sunStatus;
 	// const sunStatus = 1;
 	

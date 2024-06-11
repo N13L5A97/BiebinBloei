@@ -17,9 +17,6 @@ export const sliderData = {
 		{
 			src: "./images/zaad1.png",
 		},
-		{
-			src: "../images/image-slide-1.png",
-		},
 	],
 };
 
