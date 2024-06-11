@@ -1,7 +1,8 @@
 .regen {
     position: absolute;
     top: 0%;
-    width: 99vw;
+    left: -5%;
+    width: 140vw;
     height: 100vh;
     z-index: 1000;
     pointer-events: none;
@@ -18,6 +19,12 @@
     opacity: 0.5;
     animation: vallen linear infinite;
     transform: rotate(10deg);
+}
+
+@media (prefers-reduced-motion) {
+    .druppel {
+        animation: vallen linear infinite paused;
+    }
 }
 
 /* vallen van de regen */
