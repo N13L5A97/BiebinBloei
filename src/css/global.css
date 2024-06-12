@@ -168,6 +168,10 @@ p{
 	margin: 1rem 0;
 }
 
+a{
+	color: inherit;
+}
+
 .email,
 .tel {
 		white-space: nowrap;
