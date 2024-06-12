@@ -8,7 +8,7 @@ import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 // local scripts
-import { test } from './scripts/pullDataAPI.js'
+import { test } from './scripts/weather.js'
 import { harrycontent } from './scripts/harry.js'
 import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData, plantenTips } from './scripts/pageData.js'
 
@@ -104,6 +104,7 @@ app.get('/stekjes/:name', async (req, res) => {
         plant: plantData,
         footerData,
         plantName,
+        pageTitle: plantName,
         harry:{ 
           temp, 
           weer,
