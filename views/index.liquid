@@ -1,5 +1,14 @@
 {% layout "layouts/base.liquid" %}
 
+{% block head %}
+  <style>
+    :root {
+        --amount: {{ amount }};
+        --cloud: {{ cloud }}
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   {% include "partials/image-slider.liquid" %}
 

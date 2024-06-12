@@ -9,7 +9,7 @@ import { fileURLToPath } from 'url';
 
 // local scripts
 import { test } from './scripts/weather.js'
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { cardData, stekjesKastInfo, stekjesData, zadenKastInfo, zadenData, agendaData, sliderData, footerData } from './scripts/pageData.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -43,6 +43,9 @@ app.get('/', async (req, res) => {
   
 
   const rainAmount = dataWeather.current.precip_mm 
+  // current.cloud komt terug als percentage, des te hoger het getal, des te meer bewolkt het is. met hsl is 0% het donkerst en 100% het lichtst, dus er moet een berekening plaats vinden.
+  const cloud = 100 - dataWeather.current.cloud + '%'
+  // const cloud = 100 - 25 + '%'
   // const rainAmount = 40
 
   return res.send(renderTemplate('views/index.liquid', { 
@@ -57,7 +60,7 @@ app.get('/', async (req, res) => {
     wind_speed: dataWeather.current.wind_kph,
     precip: dataWeather.current.precip_mm,
     humidity: dataWeather.current.humidity,
-    cloud: dataWeather.current.cloud,
+    cloud: cloud,
     uv: dataWeather.current.uv,
     sunrise: dataSunMoon.astronomy.astro.sunrise,
     sunset: dataSunMoon.astronomy.astro.sunset,
@@ -82,6 +85,32 @@ app.get('/stekjes', async (req, res) => {
     sliderData,
     stekjesData,
     stekjesKastInfo,
+    footerData,
+  }));
+});
+
+app.get('/zaden', async (req, res) => {
+  // send title to the template
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
+
+  return res.send(renderTemplate('views/zaden.liquid', { 
+    pageTitle,
+    sliderData,
+    zadenData,
+    zadenKastInfo,
+    footerData,
+  }));
+});
+
+app.get('/geveltuin', async (req, res) => {
+  // send title to the template
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
+
+  return res.send(renderTemplate('views/geveltuin.liquid', { 
+    pageTitle,
+    sliderData,
     footerData,
   }));
 });

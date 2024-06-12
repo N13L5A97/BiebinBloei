@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body'); // regen div pakken
     const hagel = document.createElement('div')
     hagel.classList.add('hagel')
-    const druppelsHagel = 40; // hoeveelheid drops die ik wil
+    var style = getComputedStyle(document.body)
+    // const druppelsHagel = 40; // hoeveelheid drops die ik wil
+    const druppelsHagel = style.getPropertyValue('--amount') * 15; // hoeveelheid drops die ik wil
 
         // voor elke drop in hoeveelheid druppels
         for (let i = 0; i < druppelsHagel; i++) {
