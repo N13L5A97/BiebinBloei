@@ -3,14 +3,12 @@
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
-path{
+path, g{
     transform-box: fill-box;
-    transform-origin: center;
-    transition: 200ms;
 }
 
-g{
-    transform-box: fill-box;
+
+#cartoon g, #cartoon path{
     transform-origin: center;
     transition: 200ms;
 }
@@ -286,6 +284,7 @@ g{
     display: flex;
     flex-direction: column; 
     padding: 1rem;
+    width: fit-content;
     position: relative;
     min-width: 25ch + 2rem;    
     outline: black solid 0.2rem;
