@@ -1,4 +1,4 @@
-import * as dotenv from '@tinyhttp/dotenv' 
+import * as dotenv from '@tinyhttp/dotenv'
 import { App } from '@tinyhttp/app'
 import { logger } from '@tinyhttp/logger'
 import { Liquid } from 'liquidjs';
@@ -9,9 +9,10 @@ import { fileURLToPath } from 'url';
 
 // local scripts
 import { test } from './scripts/weather.js'
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { harrycontent } from './scripts/harry.js'
+import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData, plantjesData, plantenTips } from './scripts/pageData.js'
 
-const envFile = dotenv.config({path:'token.env'})
+const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
 
 const engine = new Liquid();
@@ -45,7 +46,7 @@ app.get('/', async (req, res) => {
   const rainAmount = dataWeather.current.precip_mm 
   // const rainAmount = 40
 
-  return res.send(renderTemplate('views/index.liquid', { 
+  return res.send(renderTemplate('views/index.liquid', {
     cardData,
     agendaData,
     sliderData,
@@ -85,6 +86,36 @@ app.get('/stekjes', async (req, res) => {
     footerData,
   }));
 });
+
+app.get('/stekjes/:name', async (req, res) => {
+  const plantName = req.params.name;
+  const plantData = plantjesData[plantName];
+  // const plant = plantenTips.harry.uitleg;
+  // console.log(plant)  
+  const dataWeather = await test.pullDataWeather(apiToken);
+  console.log(dataWeather)
+
+  // const harry = testharry.checkTemp(test, plantjesData);
+  const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
+  const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
+  const voeding = harrycontent.checkVoeding(plantenTips);
+  if (plantData) {
+   res.send(renderTemplate('views/stekjes_detail.liquid', {
+        plant: plantData,
+        footerData,
+        plantName,
+        pageTitle: plantName,
+        harry:{ 
+          temp, 
+          weer,
+          voeding,
+        },
+      }))
+
+  } else {
+    res.status(404).send('Plant not found');
+  }
+})
 
 app.get('/weather-api', async (req, res) => {
 
@@ -126,6 +157,7 @@ app.get('/weather-api', async (req, res) => {
 app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
 })
+
 
 app.get('/page-transition', async (req, res) => {
   res.send(renderTemplate('views/page-transition.liquid'))

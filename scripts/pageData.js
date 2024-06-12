@@ -231,3 +231,56 @@ export const stekjesData = [
 		},
 	},
 ]
+
+export const plantjesData = {
+	gynura:
+	{
+		name: "Gynura ‘Fluweelplant’",
+		description: "De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.",
+		origin: "Indonesië",
+		difficulty: "Makkelijk",
+		watering: "Een keer per week een goede scheut water; maar laat de grond wel licht opdrogen voordat je de volgende scheut geeft - zolang de grond maar niet helemaal uitdroogt. In de winter heeft de Gynura een stuk minder water nodig.",
+		feeding: "In de lente en zomer elke maand plantvoeding geven.",
+		toxicity: "De Gynura is giftig voor huisdieren",
+		temp: "In de winter minimaal 12 graden celsius en in de zomer maximaal 22°C.",
+		minTemp: "12",
+		maxTemp: "22",
+		sunlight: "Hoe meer zonlicht (maar niet direct in de zon!) de bladeren krijgen, hoe paarser ze kleuren.",
+		sunlightAmount: "gemiddeld",
+		cutting: "De Gynura blijft het mooist als je ‘m regelmatig topt en stekt, op die manier houd je de plant compact en bossig. Knip met een schone schaar de bovenkant van een stengel (met een aantal blaadjes er aan) af en zet deze in een vaasje met water op een lichte, warme plek. Zodra de worteltjes een paar centimeter lang zijn, kun je deze in een potje met aarde zetten.",
+		image: {
+			src: "../images/gynura.jpeg",
+			alt: "Gynura ‘Fluweelplant’",
+		}
+	}
+}
+
+export const plantenTips = {
+	voeding:{
+		geven: "Geef me alsjeblieft een keer per maand wat plantenvoeding. Ook ik heb mijn vitamientjes nodig!",
+	},	
+
+	zonlicht: {
+		veel: "Hey hallo, mag ik even bijbruinen? Ik ben dol op zonlicht!",
+		gemiddeld: "Ik hou van een beetje zonlicht, maar niet direct, dat is me te fel!",
+		weinig: "Aaah wat fel! Ik hou van schaduw!",
+	},
+
+	bewolkt:{
+		veel: "Eindelijk een dagje geen zon! Ik hou van bewolking.",
+		gemiddeld: "Bewolkt of zonnig, ik vind het allemaal prima!",
+		weinig: "Bleh, ik hou niet van bewolking. Geef mij maar zon!",
+	},
+
+	water: {
+		veel: "Ik drink er op los! Vergeet me geen water te geven.",
+		gemiddeld: "Hé, ik ben geen cactus! ik hou van een watertje op z'n tijd.",
+		weinig: "Ik ben een beetje een droogkloot, ik hou van weinig water.",
+	},
+
+	temperatuur: {
+		hoog: "Dit is me te heet! Mag het aub wat koeler?",
+		gemiddeld: "Deze temperatuur is perfect voor mij!",
+		laag: "Brrr, ik heb het koud! Mag ik naar binnen?"
+	}
+}

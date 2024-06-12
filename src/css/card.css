@@ -65,7 +65,7 @@
         border-radius: 3rem;
         transition: all .8s;
 
-        &:hover{
+        &:hover {
             box-shadow: inset var(--box-shadow-color) var(--position-x) var(--position-y) 5rem;
         }
     }
