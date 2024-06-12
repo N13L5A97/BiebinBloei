@@ -1,0 +1,53 @@
+.regen {
+    position: absolute;
+    top: 0%;
+    left: -5%;
+    width: 140vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* druppel regen */
+
+.druppel {
+    position: absolute;
+    bottom: 100%;
+    width: 1px;
+    height: 50px;
+    background: rgb(144, 144, 153);
+    opacity: 0.5;
+    animation: vallen linear infinite;
+    transform: rotate(10deg);
+}
+
+@media (prefers-reduced-motion) {
+    .druppel {
+        animation: vallen linear infinite paused;
+    }
+}
+
+/* vallen van de regen */
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh);
+    }
+}
+
+@keyframes vallen {
+    0%{
+        transform: translateY(0vh) translateX(0em) rotate(10deg);
+    }
+    100%{
+        transform: translateY(100vh) translateX(-10em) rotate(10deg);
+    }
+}
+
+.random{
+    width: 40dvw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: blueviolet;
+    z-index: 1;
+}

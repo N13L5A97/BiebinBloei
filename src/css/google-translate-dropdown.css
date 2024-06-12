@@ -1,3 +1,26 @@
+@font-face {
+	font-family: 'Poppins Medium';
+	src: url(../fonts/Poppins-Medium.ttf);
+	type: truetype;
+}
+
+:root {
+    --font-family-text: 'Poppins Medium', sans-serif;
+}
+
+.VIpgJd-ZVi9od-vH1Gmf-ibnC6b {
+    overflow-y: scroll;
+    position: relative;
+    height: 400px !important;
+}
+
+.VIpgJd-ZVi9od-vH1Gmf {
+    overflow-y: scroll;
+    width: 400px !important;
+    /* position: relative; */
+    /* height: 400px; */
+}
+
 .VIpgJd-ZVi9od-vH1Gmf-ibnC6b div .text {
-    color: red;
+    font-family: var(--font-family-text);
 }

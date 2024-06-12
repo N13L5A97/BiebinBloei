@@ -2,13 +2,13 @@
     padding: var(--v-padding-large) var(--h-padding-large);
     background-color: var(--secondary-color);
     color: white;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;    
 
-    background-image: url(../images/zomer-blad.svg);
+    /* background-image: url(../images/zomer-blad.svg);
 	background-repeat: no-repeat;
 	background-attachment: fixed;
     background-blend-mode: soft-light;
-    background-position: calc(100% - 1rem);
+    background-position: calc(100% - 1rem); */
 
     h2 {
         color: var(--quaternary-color);
@@ -21,7 +21,8 @@
     gap: 2rem;
     width: 100%;
     overflow-x: scroll;
-    padding: 1rem;
+    padding-bottom: 1rem;
+    list-style-type: none;
 }
 
 .agenda-card {

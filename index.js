@@ -4,8 +4,8 @@ import { logger } from '@tinyhttp/logger'
 import { Liquid } from 'liquidjs';
 import serveStatic from 'serve-static';
 import path from 'path';
-import { fileURLToPath } from 'url';
 import { dirname } from 'path';
+import { fileURLToPath } from 'url';
 
 // local scripts
 import { test } from './scripts/pullDataAPI.js'
@@ -21,6 +21,10 @@ const app = new App()
 const __filename = fileURLToPath(import.meta.url); // Convert the URL of the current module to a file path
 const __dirname = dirname(__filename); // Get the directory name of the current module
 
+const renderTemplate = (template, data) => {
+  return engine.renderFileSync(template, data)
+}
+
 app
   .use(logger())
   .use(serveStatic(path.join(__dirname, 'src')))
@@ -30,23 +34,52 @@ app
   .listen(8080, () => console.log(`Listening on http://localhost:8080`))
 
 app.get('/', async (req, res) => {
+  const dataWeather = await test.pullDataWeather(apiToken)
+  console.log(dataWeather)
   const dataSunMoon = await test.pullDataSunMoon(apiToken)
+  console.log(dataSunMoon)
+  const checkWeather = test.checkWeatherCondition(dataWeather)
+  console.log(checkWeather)
+
+  
+
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 40
 
   return res.send(renderTemplate('views/index.liquid', {
     cardData,
     agendaData,
     sliderData,
     footerData,
+    location: dataWeather.location.name,
+    temperature: dataWeather.current.temp_c,
+    weather_condition: dataWeather.current.condition.text,
+    weather_icon: dataWeather.current.condition.icon,
+    wind_speed: dataWeather.current.wind_kph,
+    precip: dataWeather.current.precip_mm,
+    humidity: dataWeather.current.humidity,
+    cloud: dataWeather.current.cloud,
+    uv: dataWeather.current.uv,
+    sunrise: dataSunMoon.astronomy.astro.sunrise,
+    sunset: dataSunMoon.astronomy.astro.sunset,
+    moonrise: dataSunMoon.astronomy.astro.moonrise,
+    moonset: dataSunMoon.astronomy.astro.moonset,
+    moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
+    is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    weatherScript: checkWeather[0],
+    weatherCSS: checkWeather[1],
+    amount: rainAmount
   }));
 });
 
 app.get('/stekjes', async (req, res) => {
   // send title to the template
-  const title = req.query.title;
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
 
   return res.send(renderTemplate('views/stekjes.liquid', { 
-    title,
+    pageTitle,
     sliderData,
     stekjesData,
     stekjesKastInfo,
@@ -89,10 +122,14 @@ app.get('/weather-api', async (req, res) => {
   console.log(dataWeather)
   const dataSunMoon = await test.pullDataSunMoon(apiToken)
   console.log(dataSunMoon)
-  test.useData(dataWeather)
+  const checkWeather = test.checkWeatherCondition(dataWeather)
+  console.log(checkWeather)
+
+  const rainAmount = dataWeather.current.precip_mm 
+  // const rainAmount = 15
 
   return res.send(renderTemplate('views/weather-api.liquid', {
-    title: 'Weather API',
+    siteTitle: 'Weather API',
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
@@ -109,6 +146,9 @@ app.get('/weather-api', async (req, res) => {
     moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
     is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
     is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
+    weatherScript: checkWeather[0],
+    weatherCSS: checkWeather[1],
+    amount: rainAmount,
     check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset)
   }));
 });
@@ -118,11 +158,6 @@ app.get('/transparent-card', async (req, res) => {
 })
 
 
-
-
-
-
-
-const renderTemplate = (template, data) => {
-  return engine.renderFileSync(template, data)
-}
+app.get('/page-transition', async (req, res) => {
+  res.send(renderTemplate('views/page-transition.liquid'))
+})

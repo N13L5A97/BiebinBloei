@@ -15,7 +15,7 @@ function pullDataWeather(token) {
 
 function pullDataSunMoon(token) {
   let currentDate = new Date().toLocaleDateString("en-CA");
-  // console.log(currentDate);
+  console.log(currentDate);
   var fetchUrl =
     "http://api.weatherapi.com/v1/astronomy.json?key=" +
     token +
@@ -25,7 +25,7 @@ function pullDataSunMoon(token) {
     longitude +
     "&dt=" +
     currentDate;
-  // console.log(fetchUrl);
+  console.log(fetchUrl);
   return fetch(fetchUrl).then((res) => res.json());
 }
 
@@ -57,7 +57,7 @@ function checkWeatherCondition(data) {
     switch (currentWeatherCondition) {
       case 1000: {
         // zonnig | sunny
-        return "Sunny: ";
+        return "Sunny";
       }
   
       case 1003: {
@@ -90,6 +90,8 @@ function checkWeatherCondition(data) {
   
       case 1063: {
         // plaatselijk regen mogelijk
+        var weatherScript = "./animations/seizoen/herfstblaadjes/herfst.js";
+        var weatherCSS = "./animations/seizoen/herfstblaadjes/herfst.css";
         return [weatherScript, weatherCSS];
       }
   
@@ -368,5 +370,4 @@ export const test = {
   pullDataSunMoon,
   checkSunSet,
   checkWeatherCondition,
-
 };

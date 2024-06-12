@@ -1,0 +1,124 @@
+.accessibilityMenu {
+    width: calc(13rem + 5rem);
+    position: fixed;
+    top: 20vh;
+    left: -208px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: row;
+    transition: left .3s;
+}
+
+.accessibilityMenu:has(.accessibilityIcon input:checked) {
+    transition: left .3s;
+    left: 0px;
+}
+
+.accessibilityContent {
+    width: 13rem;
+    height: max-content;
+    background-color: var(--background-color);
+    border-radius: 0px 0px 10px 0px;
+    /* border: 1px solid lightblue; */
+    /* box-shadow: 10px 5px 5px black; */
+}
+
+.accessibilityContent ul li {
+    margin: .2rem 0rem .2rem .4rem;
+}
+
+.accessibilityContent ul li label:has(input[type="checkbox"]) {
+    cursor: pointer;
+}
+
+.accessibilityContent ul li label input {
+    cursor: pointer;
+}
+
+.accessibilityIcon {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--background-color);
+    border-radius: 0px 10px 10px 0px;
+    margin: 0px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    /* border: 1px solid lightblue; */
+    /* box-shadow: 5px 5px 5px black; */
+}
+
+.accessibilityIcon label img {
+    width: 4rem;
+    align-self: center;
+}
+
+input[type="checkbox"][id^="menu"] {
+    display: none;
+}
+
+.darkMode {
+    background-color: Canvas;
+    color: CanvasText;
+}
+
+body:has(.accessibilityMenu div ul li:nth-of-type(1) label input[type=checkbox]:checked) {
+    background-color: Canvas;
+    color: CanvasText;
+}
+
+.accessibilityMenu:has(div ul li:nth-of-type(1) label input[type=checkbox]:checked) > * {
+    background-color: Canvas;
+    color: CanvasText;
+}
+
+@media (prefers-reduced-motion) {
+    .accessibilityMenu {
+        transition: left 0s;
+    }
+    
+    .accessibilityMenu:has(.accessibilityIcon input:checked) {
+        transition: left 0s;
+    }
+
+    .header {
+        transition: 0s;
+    }
+
+    nav ul {
+        transition: 0s;
+    }
+
+    nav ul li {
+        transition: 0s;
+    }
+
+    header.menuOpen nav ul {
+        transition: 0s;
+    }
+
+    header.menuOpen nav ul li {
+        transition: 0s;
+    }
+
+    #hamburger div {
+        transition: 0s;
+    }
+
+    nav ul li:hover {
+        transform: scale(1);
+    }
+}
+
+/* not used anymore */
+.reduced-motion > * {
+    animation: none;
+    transition: 0s;
+    transform: scale(1)
+}
+
+/* if checkbox is checked */
+html:has(#font-size:checked){
+    --font-size-paragraph: calc(clamp(1rem, 2vw, 1.2rem) * 1.5);
+}

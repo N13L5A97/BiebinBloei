@@ -1,0 +1,75 @@
+.hagel {
+    position: absolute;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* druppel regen */
+
+.druppelHagel {
+    position: absolute;
+    bottom: 100%;
+    width: 5px;
+    height: 5px;
+    background: white;
+    opacity: 0.5;
+    animation: bounces cubic-bezier(.5,.56,.97,.58) infinite;
+    transform: rotate(20deg);
+}
+
+@media (prefers-reduced-motion) {
+    .druppelHagel {
+        animation: bounces linear infinite paused;
+    }
+}
+
+/* .druppelHagel:before{
+    content: '';
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    width: 1px;
+    height: 50px;
+    background: rgb(144, 144, 153);
+    opacity: 0.5;
+} */
+
+/* vallen van de hagel */
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) translateX(-10em) rotate(20deg);
+    }
+}
+
+@keyframes bounces {
+    0%{
+        transform: translateY(0vh) translateX(0em) rotate(20deg);
+    }
+    50%{
+        transform: translateY(90vh) translateX(-10em) rotate(20deg);
+    }
+    70%{
+        transform: translateY(70vh) translateX(-20em) rotate(-60deg);
+    }
+    90%{
+        transform: translateY(90vh) translateX(-30em) rotate(-60deg);
+    }
+    95%{
+        transform: translateY(85vh) translateX(-35em) rotate(-80deg);
+    }
+    100%{
+        transform: translateY(90vh) translateX(-40em) rotate(-80deg);
+    }
+}
+
+.random{
+    width: 40dvw;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: blueviolet;
+    z-index: 1;
+}

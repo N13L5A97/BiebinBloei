@@ -1,17 +1,23 @@
 œ{% layout "layouts/base.liquid" %}
 
 {% block content %}
-  {% include "partials/image-slider.liquid" %}
-
-  <section class="stekjes">
+{% include "partials/hero.liquid" %}
+<section class="stekjes-section">
+  <h2>Stekjes Ruilen</h2>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+  </p>
+  <div class="stekjes">
     {% for stekje in stekjesData %}
-      {% include "partials/stekjes-card.liquid"
-        , {stekje} %}
+    {% include "components/stekjes-card.liquid"
+    , {stekje} %}
     {% endfor %}
-  </section>
+  </div>
+</section>
 
-  {% for card in stekjesKastInfo %}
-    {% include "partials/card.liquid"
-      , {card} %}
-  {% endfor %}
+{% for card in stekjesKastInfo %}
+{% include "partials/card.liquid"
+, {card} %}
+{% endfor %}
 {% endblock %}

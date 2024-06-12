@@ -1,0 +1,213 @@
+.normal-fade-in {
+    animation: normal-fade-in 1s ease-in forwards;
+}
+
+@keyframes normal-fade-in {
+    0% {
+        transform: translateX(-110%)
+        rotate(-90deg)
+    }
+
+    100% {
+        transform: translateX(-20%)
+        rotate(0deg)
+    }
+}
+
+.normal-fade-out {
+    animation: normal-fade-out 1s ease-out forwards;
+}
+
+@keyframes normal-fade-out {
+    0% {
+        transform: translateX(-20%)
+        rotate(0deg)
+    }
+
+    100% {
+        transform: translateX(-110%)
+        rotate(-90deg)
+    }
+}
+
+.mirrored-fade-in {
+    animation: mirrored-fade-in 1s ease-in forwards;
+}
+
+@keyframes mirrored-fade-in {
+    0% {
+        transform: translateX(110vw) scaleX(-1) rotate(-90deg);
+    }
+
+    100% {
+        transform: translateX(50vw) scaleX(-1) rotate(0deg);
+    }
+}
+
+.mirrored-fade-out {
+    animation: mirrored-fade-out 1s ease-out forwards;
+}
+
+@keyframes mirrored-fade-out {
+    0% {
+        transform: translateX(50vw) scaleX(-1) rotate(0deg);
+    }
+
+    100% {
+        transform: translateX(110vw) scaleX(-1) rotate(-90deg);
+    }
+}
+
+.fade-in {
+    animation: fade-in .5s ease-in forwards;
+}
+
+@keyframes fade-in {
+    0% {
+        transform: translate(-50%, -50%)  scale(0);
+    }
+
+    100% {
+        transform: translate(-50%, -50%)  scale(5);
+    }
+}
+
+.fade-out {
+    animation: fade-out .5s ease-out forwards;
+}
+
+@keyframes fade-out {
+    0% {
+        transform: translate(-50%, -50%)  scale(5);
+    }
+
+    100% {
+        transform: translate(-50%, -50%)  scale(0);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .transition-image {
+        display: none;
+    }
+}
+
+.transition-container {
+    width: 99vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.transition-image {
+    z-index: 10000;
+    height: 130vh;
+    overflow: hidden;
+    top: 49vh;
+    animation-direction: reverse;
+    transform-origin: center;
+    position: fixed;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    rotate: 5deg;
+}
+
+.normal {
+    top: 0%;
+    animation-direction: reverse;
+}
+
+.mirrored {
+    top: 0%;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipV;
+    -ms-filter: "FlipV";
+    animation-direction: reverse;
+}
+
+/* 
+@keyframes fade-in {
+    0% {
+        background-color: aqua;
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        background-color: white;
+    }
+
+    100% {
+        background-color: aqua;
+    }
+} */
+
+/* @keyframes fade-in {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 50%;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: -50%;
+    }
+} */
+
+/* @keyframes normal-fade-in {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes normal-fade-out {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+
+@keyframes mirrored-fade-in {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes mirrored-fade-out {
+    0% {
+        right: 0%;
+    }
+
+    100% {
+        right: -100%;
+    }
+} */
+
+
+

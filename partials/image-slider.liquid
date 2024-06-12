@@ -1,9 +1,13 @@
 <section class="image-slider-section">
+  <div class="image-slider-gradient"></div>
   <h1>{{ sliderData.title }}</h1>
   <h2>{{ sliderData.subtitle }}</h2>
   <div class="image-slider" id="imageSlider">
-    {% for slide in sliderData.sliderImages %}
-      <div class="slide" style="--background-image: url('{{ slide.src }}')"></div>
-    {% endfor %}
+    {% if sliderData.sliderImages.length > 1 %}
+      {% for slide in sliderData.sliderImages %}
+        <img class="slide" src="{{ slide.src }}" />
+      {% endfor %}
+      <img class="slide" src="{{ sliderData.sliderImages[0].src }}" />
+    {% endif %}
   </div>
 </section>

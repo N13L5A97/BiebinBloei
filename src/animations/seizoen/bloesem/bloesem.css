@@ -1,0 +1,93 @@
+:root {
+    --timingFunction: ease-in;
+    --bladVorm: polygon(100% 0, 100% 50%, 100% 99%, 0% 100%, 25% 50%, 0% 0%);
+    --bladKleur:linear-gradient(to right, pink 20%, hotpink 80% 100%);
+}
+
+.bloesem {
+    position: fixed;
+    top: 0%;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1000;
+    pointer-events: none;
+}
+
+/* bloesem blaadje */
+
+.blaadje {
+    --randomRotation: 0;
+    position: absolute;
+    bottom: 100%;
+    width: 30px;
+    height: 20px;
+    background-image: var(--bladKleur);
+    clip-path: var(--bladVorm);
+    border-radius: 50%;
+    animation: dwarrelen ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .blaadje {
+        animation: dwarrelen ease-in-out infinite paused;
+    }
+}
+
+/* vallen van de bloesem */
+
+@keyframes dwarrelen {
+    0%{
+        transform: translateY(0vh) translateX(2em) rotateX(0turn) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    10%{
+        transform: translateY(10vh) translateX(-2em) rotateX(1turn) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    20%{
+        transform: translateY(20vh) translateX(2em) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    30%{
+        transform: translateY(30vh) translateX(-2em);
+        animation-timing-function: var(--timingFunction) var(--randomRotation);
+    }
+    40%{
+        transform: translateY(40vh) translateX(2em) rotateX(1turn) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    50%{
+        transform: translateY(50vh) translateX(-2em) rotateX(3turn);
+        animation-timing-function: var(--timingFunction);
+    }
+    60%{
+        transform: translateY(60vh) translateX(2em) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    70%{
+        transform: translateY(70vh) translateX(-2em) rotateX(2turn);
+        animation-timing-function: var(--timingFunction);
+    }
+    80%{
+        transform: translateY(80vh) translateX(2em) rotateX(2turn) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+    90%{
+        transform: translateY(90vh) translateX(-2em);
+        animation-timing-function: var(--timingFunction);
+    }
+    100%{
+        transform: translateY(100vh) translateX(2em) rotateX(4turn) var(--randomRotation);
+        animation-timing-function: var(--timingFunction);
+    }
+}
+
+@keyframes dwarrelRecht{
+    0%{
+        transform: translateY(0vh) translateX(2em) rotateX(0turn);
+        animation-timing-function: var(--timingFunction);
+    }
+    100%{
+        transform: translateY(100vh) translateX(-2em) rotateX(4turn);
+    }
+}

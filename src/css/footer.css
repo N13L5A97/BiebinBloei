@@ -6,12 +6,6 @@ footer {
 	justify-content: center;
 	gap: 6rem;
 
-	background-image: url(../images/zomer-blad.svg);
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-    background-blend-mode: soft-light;
-    background-position: calc(100% - 1rem) calc(100% - 1rem);
-
 	p, a {
 		max-width: 33ch;
         margin: 0;

@@ -3,19 +3,19 @@ export const sliderData = {
 	subtitle: "<span>Ruilen</span><span>Leren</span><span>Inspireren</span>",
 	sliderImages: [
 		{
-			src: "../images/image-slide-1.png",
+			src: "./images/image-slide-1.png",
 		},
 		{
-			src: "../images/image-slide-2.png",
+			src: "./images/image-slide-2.png",
 		},
 		{
-			src: "../images/image-slide-3.png",
+			src: "./images/image-slide-3.png",
 		},
 		{
-			src: "../images/stekjes1.png",
+			src: "./images/stekjes1.png",
 		},
 		{
-			src: "../images/zaad1.png",
+			src: "./images/zaad1.png",
 		},
 	],
 };

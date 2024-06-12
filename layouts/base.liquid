@@ -1,39 +1,77 @@
 <html lang="nl-NL">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/global.css">
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="">
+    <link rel="stylesheet" href={{ weatherCSS }}>
+    <link rel="icon" type="image/x-icon" href="">
 
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script type="text/javascript" src="/js/google-translate.js"></script>
-    <script type="text/javascript" src="/js/transparent-card.js"></script>
-    <script type="text/javascript" src="/js/image-slider.js"></script>
-    <script type="text/javascript" src="/js/header.js"></script>
+    <style>
+        :root {
+            --amount: {
+                    {
+                    amount
+                }
+            }
+        }
+    </style>
 
-    <title>
-      {{ siteTitle }}
+    <title> Bieb in Bloei
+        {% if pageTitle %}
+        | {{ pageTitle }}
+        {% endif %}
     </title>
-    {% block head %}
-    {% endblock %}
-  </head>
+    {% block head %}{% endblock %}
+</head>
 
-  <body class="scroll scroll-vertical">
+<body class="scroll scroll-vertical">
     {% include "partials/header.liquid" %}
     <main>
-      {% block content %}
-      {% endblock %}
-    </main>
-    {% include "partials/footer.liquid" %}
 
-    <script type="text/javascript" src="/js/seasons.js"></script>
-    <script>
-            window.sunStatus = "{{ is_sun_up }}";
-    </script>
-    <script type="text/javascript" src="/js/sun-moon-hover.js"></script>
-    <script type="text/javascript" src="/js/tips.js"></script>
-  </body>
+        {% block content %}{% endblock %}
+    </main>
+    <div class="accessibilityMenu">
+        <div class="accessibilityContent">
+            <ul>
+                <li>
+                    <label>
+                        <input type="checkbox" id="toggle-darkmode">
+                        Dark Mode
+                    </label>
+                </li>
+                {% comment %} not used anymore {% endcomment %}
+                {% comment %} <li>
+                    <label>
+                        <input type="checkbox" id="reducedMotion" onclick="reducedMotion()">
+                        Reduced Motion
+                    </label>
+                </li> {% endcomment %}
+                <li>
+                    <label>
+                        <input type="checkbox" id="font-size">
+                        Groter Font
+                    </label>
+                </li>
+                <li id="google_translate_element">Vertaal de site
+
+                </li>
+            </ul>
+        </div>
+
+        <label class="accessibilityIcon">
+            <input type="checkbox" id="menu">
+            <img src="./images/accessibility.png">
+        </label>
+    </div>
+    {% comment %} <div class="transition-container"> {% endcomment %}
+        <img class="transition-image fade-in" src="./images/leaf.svg">
+        {% comment %}
+    </div> {% endcomment %}
+
+
+    {% include "partials/footer.liquid" %}
+    {% include "components/scripts.liquid" %}
+</body>
+
 </html>
