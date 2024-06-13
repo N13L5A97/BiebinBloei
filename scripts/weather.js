@@ -51,8 +51,8 @@ function checkSunSet(givenTime) {
 }
 
 function checkWeatherCondition(data) {
-    // const currentWeatherCondition = data.current.condition.code
-    const currentWeatherCondition = 1006
+    const currentWeatherCondition = data.current.condition.code
+    // const currentWeatherCondition = 1006
     
     const today = new Date();
     const spring = new Date(today.getFullYear(), 3, 21);
@@ -84,8 +84,8 @@ function checkWeatherCondition(data) {
   
       case 1003: {
         // licht bewolkt | partly cloudy
-        var weatherScript = "./animations/weer/regen/regen.js";
-        var weatherCSS = "./animations/weer/regen/regen.css";
+        var weatherScript = "./animations/weer/wolken/wolken.js";
+        var weatherCSS = "./animations/weer/wolken/wolken.css";
         return [weatherScript, weatherCSS];
       }
   
