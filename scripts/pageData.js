@@ -73,7 +73,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -84,7 +84,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -95,7 +95,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -106,7 +106,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -117,7 +117,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
