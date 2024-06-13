@@ -149,11 +149,6 @@ export const stekjesKastInfo = [
 			src: "../images/plant1.png",
 			alt: "planten potjes",
 		},
-		button: {
-			url: "/stekjeskast",
-			text: "De kast",
-			aria: "Bekijk de stekjeskast",
-		},
 	},
 ];
 
