@@ -23,7 +23,7 @@
 	}
 
 	h2{
-		font-size: calc(var(--font-size-headings) * 0.3);
+		font-size: calc(var(--font-size-h1) * 0.3);
 		font-family: var(--font-family-alternative);
 		text-align: center;
 		margin-top: 1em;
