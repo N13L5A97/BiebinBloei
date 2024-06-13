@@ -154,15 +154,19 @@ svg {
         padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
         grid-template-columns: 1fr 1fr;
 
-        h2:before {
-            content: "";
-            position: absolute;
-            top: .5em;
-            left: calc(var(--h-padding-large) / -2);
-            transform: translate(-50%, -50%);
-            height: .4em;
-            width: .4em;
-            border-radius: 50%;
+        h2{
+            max-width: 7ch;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: .5em;
+                left: calc(var(--h-padding-large) / -2);
+                transform: translate(-50%, -50%);
+                height: .4em;
+                width: .4em;
+                border-radius: 50%;
+            }
         }
     }
 }
