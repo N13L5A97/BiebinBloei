@@ -10,6 +10,7 @@ import { fileURLToPath } from 'url';
 // local scripts
 import { test } from './scripts/weather.js'
 import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { seasons } from './scripts/seasons.js'
 
 const envFile = dotenv.config({path:'token.env'})
 var apiToken = process.env.API_TOKEN
@@ -39,6 +40,7 @@ app.get('/', async (req, res) => {
   console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+  const transition_image = seasons.checkSeason()
 
   
 
@@ -50,6 +52,7 @@ app.get('/', async (req, res) => {
     agendaData,
     sliderData,
     footerData,
+    transition_image,
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
@@ -76,6 +79,7 @@ app.get('/stekjes', async (req, res) => {
   // send title to the template
   const pageTitle = req.url.slice(1);
   console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
 
   return res.send(renderTemplate('views/stekjes.liquid', { 
     pageTitle,
@@ -83,6 +87,7 @@ app.get('/stekjes', async (req, res) => {
     stekjesData,
     stekjesKastInfo,
     footerData,
+    transition_image,
   }));
 });
 
@@ -94,6 +99,7 @@ app.get('/weather-api', async (req, res) => {
   console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+  
 
   const rainAmount = dataWeather.current.precip_mm 
   // const rainAmount = 15
