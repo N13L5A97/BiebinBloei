@@ -37,16 +37,15 @@ footer {
 		display: flex;
 		width: max-content;
 		padding: 1rem;
-		background-color: var(--tertiary-color);
+		background-color: var(--primary-color);
 		border-radius: 17px;
 		gap: 1rem;
 		align-items: center;
+		color: var(--secondary-color);
 	
 		svg {
 			height: 5rem;
-			fill: var(--quaternary-color);
+			fill: var(--secondary-color);
 		}
 	}
-
-	
 }
