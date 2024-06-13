@@ -1,95 +1,132 @@
-#cartoon{
-    width: 8rem;
+.harryknop{
+    background-color: transparent;
+    border: none;
+}
+
+
+
+.halloharry .harryknop{
+    position: absolute;
+    z-index: 1;
+    right: 7vw;
+    top: calc(50vh - var(--margin-large) - 3rem);
+    transform: rotate(20deg);
+    transition: 200ms;
+    animation-timeline: view();
+    animation-name: hide;
+    animation-fill-mode: forwards;
+    animation-range-start: 80vh;
+    animation-range-end: 100vh;
+
+    &:hover{
+        transform: rotate(20deg) translate(.3rem, -.5rem);
+    }
+    .cartoon{
+        width: 8rem;
+    }
+}
+
+.cartoon{
+    width: 16rem;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.3));
 }
 
-path, g{
+.cartoon g, .cartoon path{
     transform-box: fill-box;
-}
-
-
-#cartoon g, #cartoon path{
     transform-origin: center;
     transition: 200ms;
 }
 
-#harry {
-    #fluit, #sip, #dorst, #blij, #neutraal-2, #gek, #sangry, #neutraal, #bril, #sombrero, #sjaal{
+.harry {
+    .fluit, .sip, .dorst, .blij, .neutraal-2, .gek, .sangry, .neutraal, .bril, .sombrero, .sjaal, .billen{
         opacity: 0;    
     }
 
-    #sangry, #neutraal{
+    .sangry, .neutraal{
         transform-origin: center;
         animation: blink 10s infinite;
     }
-}
 
-#harry[data-mood="neutraal"]{
-    #neutraal-2{
-        opacity: 1;
+    .arm_l, .arm_r ,.been_l ,.been_r {
+            stroke-width: 6px;
+            stroke-miterlimit: 10;
+            fill: #c17052;
+            stroke: black;
+        }
+    .arm_l{
+        transform: translateY(-20px) translateX(-10px) rotate(-55deg);
+        transform-origin: right center;
     }
-
-    #neutraal{
-        opacity: 1;
-    }
-
-    #arm_r {
-        animation: wave 20s infinite;
+    .arm_r{
+        transform: translateY(-20px) translateX(10px) rotate(55deg);
         transform-origin: left center;
     }
 }
 
-#harry[data-mood="blij"]{
-    #blij{
+.harry[data-mood="neutraal"]{
+    .neutraal-2{
         opacity: 1;
     }
 
-    #neutraal{
+    .neutraal{
         opacity: 1;
     }
 
-    #arm_r {
+    .arm_r {
         animation: wave 20s infinite;
-        transform-origin: left center;
     }
 }
 
-#harry[data-mood="dorst"]{
-    #dorst{
+.harry[data-mood="blij"]{
+    .blij{
         opacity: 1;
     }
 
-    #neutraal{
+    .neutraal{
+        opacity: 1;
+    }
+
+    .arm_r {
+        animation: wave 20s infinite;
+    }
+}
+
+.harry[data-mood="dorst"]{
+    .dorst{
+        opacity: 1;
+    }
+
+    .neutraal{
         opacity: 1;
     }
 }
 
-#harry[data-mood="verdrietig"]{
-    #sip{
+.harry[data-mood="verdrietig"]{
+    .sip{
         opacity: 1;
     }
 
-    #sangry{
+    .sangry{
         opacity: 1;
     }
 
-    #arm_r,
-    #arm_l {
+    .arm_r,
+    .arm_l {
         animation: shoulders 5s infinite;
     }
 
-    #pot {
+    .pot {
         animation: sad 5s infinite;
         transform-origin: center;
     }
 }
 
-#harry[data-mood="boos"]{
-    #sip {
+.harry[data-mood="boos"]{
+    .sip {
             opacity: 1;
     }
     
-    #sangry {
+    .sangry {
         opacity: 1;
 
         .oog_l {
@@ -115,7 +152,7 @@ path, g{
         --tril: -5deg;
     } */
 
-    #pot {
+    .pot {
         animation: angry 0.3s infinite;
         transform-origin: center;
         --normaal: 0deg;
@@ -123,67 +160,67 @@ path, g{
     }
 }
 
-#harry[data-mood="gek"]{
-    #gek{
+.harry[data-mood="gek"]{
+    .gek{
         opacity: 1;
     }
 
-    #neutraal{
+    .neutraal{
         opacity: 1;
     }
 }
 
-#harry[data-environment="zonnig"]{
-    #sombrero{
+.harry[data-environment="zonnig"]{
+    .sombrero{
         opacity: 1;
     }
-    #plant{
+    .plant{
         opacity: 0;
     }
 }
 
-#harry[data-environment="koud"]{
-    #sjaal{
+.harry[data-environment="koud"]{
+    .sjaal{
         opacity: 1;
     }
-    #mond{
+    .mond{
         opacity: 0;
     }
 }
 
-#harry[data-environment="fel"]{
-    #bril{
+.harry[data-environment="fel"]{
+    .bril{
         opacity: 1;
     }
 }
 
 @keyframes wave{
     0% {    
-        transform: rotate(0deg);
+        transform: translateY(-20px) translateX(10px) rotate(55deg);
     }
 
     25% {
-        transform: rotate(0deg);
+        transform: translateY(-20px) translateX(10px) rotate(55deg);
     }
 
     30% {
-        transform: rotate(-130deg) translateY(30px);
+        transform: translateY(-20px) translateX(10px) rotate(-45deg);
     }
 
     31% {
-        transform: rotate(-95deg) translateY(30px);
+        transform: translateY(-20px) translateX(10px) rotate(-25deg);
     }
 
     32% {
-        transform: rotate(-130deg) translateY(30px);
+        transform: translateY(-20px) translateX(10px) rotate(-45deg);
     }
 
     35% {
-        transform: rotate(0deg);    
+        transform: translateY(-20px) translateX(10px) rotate(55deg);    
     }
 
     100% {
-        transform: rotate(0deg);
+        transform: translateY(-20px) translateX(10px) rotate(55deg);
     }
 }
 
@@ -278,6 +315,17 @@ path, g{
     }
 }
 
+@keyframes hide{
+    0%{
+    transform: rotate(20deg) translate(0);    
+    }
+
+    100%{
+       transform: rotate(20deg) translate(-2vw, 3rem);    
+    }
+
+}
+
 #tips{
     background-color: white;
     border-radius: 1rem;
@@ -292,7 +340,6 @@ path, g{
     p{
         max-width: 32ch;
         color: var(--primary-color);
-        font-size: 1em;
     }
     &:before{
         content: " ";

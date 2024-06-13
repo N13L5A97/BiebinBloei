@@ -88,34 +88,38 @@ app.get('/stekjes', async (req, res) => {
 });
 
 app.get('/stekjes/:name', async (req, res) => {
-  const plantName = req.params.name;
-  const plantData = plantjesData[plantName];
-  // const plant = plantenTips.harry.uitleg;
-  // console.log(plant)  
-  const dataWeather = await test.pullDataWeather(apiToken);
-  console.log(dataWeather)
+const plantName = req.path.slice(1).split('/')[1];  
+const plantData = plantjesData[plantName];
 
-  // const harry = testharry.checkTemp(test, plantjesData);
-  const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
-  const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
-  const voeding = harrycontent.checkVoeding(plantenTips);
-  if (plantData) {
-   res.send(renderTemplate('views/stekjes_detail.liquid', {
-        plant: plantData,
-        footerData,
-        plantName,
-        pageTitle: plantName,
-        harry:{ 
-          temp, 
-          weer,
-          voeding,
-        },
-      }))
-
-  } else {
-    res.status(404).send('Plant not found');
+  if (!plantData) {
+    return res.status(404).send('Plant not found');
   }
-})
+
+  try {
+    const dataWeather = await test.pullDataWeather(apiToken);
+
+    const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
+    const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
+    const voeding = harrycontent.checkVoeding(plantenTips);
+
+    res.send(renderTemplate('views/stekjes_detail.liquid', {
+      plant: plantData,
+      footerData,
+      plantName,
+      pageTitle: plantName,
+      harry: { 
+        temp, 
+        weer,
+        voeding,
+      },
+    }));
+  } catch (error) {
+    console.error(error);
+    res.status(500).send('An error occurred while processing your request');
+  }
+});
+
+
 
 app.get('/weather-api', async (req, res) => {
 
