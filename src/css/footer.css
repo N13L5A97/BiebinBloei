@@ -9,7 +9,7 @@ footer {
 	p, a {
 		max-width: 33ch;
         margin: 0;
-		font-size: calc(var(--font-size-paragraph) * 0.8);
+		font-size: calc(var(--font-size-p) * 0.8);
 	}
 
 	h3 {

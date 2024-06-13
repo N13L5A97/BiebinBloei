@@ -118,7 +118,7 @@ html{
 body {
 	background-color: var(--background-color);
 	font-family: var(--font-family-text);
-	font-size: var(--font-size-paragraph);
+	font-size: var(--font-size-p);
 	z-index: 1;
 	color-scheme: light dark;
 	overflow-x: hidden;
