@@ -98,6 +98,7 @@ app.get('/zaden', async (req, res) => {
   // send title to the template
   const pageTitle = req.url.slice(1);
   console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
 
   return res.send(renderTemplate('views/zaden.liquid', { 
     pageTitle,
@@ -113,6 +114,7 @@ app.get('/geveltuin', async (req, res) => {
   // send title to the template
   const pageTitle = req.url.slice(1);
   console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
 
   return res.send(renderTemplate('views/geveltuin.liquid', { 
     pageTitle,
