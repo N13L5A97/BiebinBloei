@@ -87,38 +87,64 @@ app.get('/stekjes', async (req, res) => {
   }));
 });
 
-app.get('/stekjes/:name', async (req, res) => {
-const plantName = req.path.slice(1).split('/')[1];  
-const plantData = plantjesData[plantName];
 
-  if (!plantData) {
-    return res.status(404).send('Plant not found');
-  }
+
+app.get('/stekjes/:name', async (req, res) => {
+  const plantName = req.params.name;
+  const plantData = plantjesData[plantName];
 
   try {
+    if (!plantData) {
+      // Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
+      const mood = "verdrietig";
+      const fout = "404";
+      const reden = "De plant die u zocht is niet beschikbaar.";
+
+      return res.status(404).send(renderTemplate('views/error.liquid', {
+        fout,
+        reden,
+        harry: {
+          mood,
+        },
+      }));
+    }
+
+    // Voer verdere asynchrone operaties uit en wacht op hun resultaten
     const dataWeather = await test.pullDataWeather(apiToken);
+    const temp = await harrycontent.checkTemp(dataWeather, plantData, plantenTips);
+    const weer = await harrycontent.checkSunny(dataWeather, plantData, plantenTips);
+    const voeding = await harrycontent.checkVoeding(plantenTips);
+    const mood = "neutraal";
 
-    const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
-    const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
-    const voeding = harrycontent.checkVoeding(plantenTips);
-
+    // Stuur de respons naar de client
     res.send(renderTemplate('views/stekjes_detail.liquid', {
       plant: plantData,
       footerData,
       plantName,
-      pageTitle: plantName,
-      harry: { 
-        temp, 
+      pageTitle: plantData.name,
+      harry: {
+        temp,
         weer,
         voeding,
+        mood,
       },
     }));
   } catch (error) {
-    console.error(error);
-    res.status(500).send('An error occurred while processing your request');
+    console.error('Error processing plant data:', error);
+    // Stuur een 500-fout met een aangepaste foutpagina
+    const mood = "verdrietig";
+    const fout = "500";
+    const reden = "Er is een interne serverfout opgetreden.";
+
+    res.status(500).send(renderTemplate('views/error.liquid', {
+      fout,
+      reden,
+      harry: {
+        mood,
+      },
+    }));
   }
 });
-
 
 
 app.get('/weather-api', async (req, res) => {
@@ -165,4 +191,18 @@ app.get('/transparent-card', async (req, res) => {
 
 app.get('/page-transition', async (req, res) => {
   res.send(renderTemplate('views/page-transition.liquid'))
+})
+
+app.use((req, res) => {
+  const mood = "twerk"
+  const fout = "404"
+  const reden = "Exuses voor het ongemak, deze pagina bestaat niet."
+
+  res.status(404).send(renderTemplate('views/error.liquid', {
+    fout,
+    reden,
+      harry:{ 
+        mood,
+      },
+    }))
 })
