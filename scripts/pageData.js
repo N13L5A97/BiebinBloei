@@ -22,7 +22,7 @@ export const sliderData = {
 
 export const cardData = [
 	{
-		title: "Onze <br> Stekjes <br> Bieb",
+		title: "Onze Stekjes Bieb",
 		content:
 			"<p>Bij Buurtcampus Oost kun je de stekjeskast bezoeken om stekjes te ruilen, je kunt ook op onze website inzien welke stekjes beschikbaar zijn. Dit is een geweldige manier voor plantenliefhebbers om met elkaar in contact te komen en planten te delen.</p><p>Het maakt het gemakkelijk om je favoriete stekjes te vinden en te ruilen met anderen in de buurt, zonder gedoe. Kom langs bij Buurtcampus Oost en ontmoet mede-plantenliefhebbers!</p>",
 		image: {
@@ -36,7 +36,7 @@ export const cardData = [
 		},
 	},
 	{
-		title: "Onze <br> Zaden <br> Bieb",
+		title: "Onze Zaden Bieb",
 		content:
 			"<p>Bij Buurtcampus Oost kun je de zadenkast bezoeken om zaadjes te kunnen ruilen, je kunt ook op onze website inzien welke stekjes beschikbaar zijn. Dit is een geweldige manier voor plantenliefhebbers om met elkaar in contact te komen en planten te delen.</p><p>Het maakt het gemakkelijk om je favoriete stekjes te vinden en te ruilen met anderen in de buurt, zonder gedoe. Kom langs bij Buurtcampus Oost en ontmoet mede-plantenliefhebbers!</p>",
 		image: {
@@ -50,7 +50,7 @@ export const cardData = [
 		},
 	},
 	{
-		title: "Onze <br> Gevel <br> Tuinen",
+		title: "Onze Gevel Tuinen",
 		content:
 			"<p>Bij Buurtcampus Oost kan je deelnemen aan de geveltuin projecten. Het geveltuinproject is een geweldige manier om je steentje bij te dragen aan een mooier, groener en socialer Amsterdam. Of je nu een ervaren tuinier bent of nog nooit met een plant hebt gewerkt, er is altijd een plek voor je in ons team.</p> <p>We leren je alles wat je moet weten en zorgen voor de benodigde materialen. Meld je aan vandaag nog!</p>",
 		image: {
@@ -73,7 +73,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -84,7 +84,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -95,7 +95,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -106,7 +106,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -117,7 +117,7 @@ export const agendaData = [
 		button: {
 			url: "#",
 			text: "Meer informatie",
-			aria: "Meer informatie over",
+			aria: "Meer informatie over de Stekjes ruilmarkt",
 		},
 		image: "../images/voorbeeld-agenda.png",
 	},
@@ -148,11 +148,6 @@ export const stekjesKastInfo = [
 		image: {
 			src: "../images/plant1.png",
 			alt: "planten potjes",
-		},
-		button: {
-			url: "/stekjeskast",
-			text: "De kast",
-			aria: "Bekijk de stekjeskast",
 		},
 	},
 ];
