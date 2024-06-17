@@ -1,13 +1,14 @@
 <footer>
+  <div>
   <article>
     <h3>Adres</h3>
-    <p>
+    <p class="notranslate">
       {{ footerData.adres.name }}
     </p>
-    <p>
+    <p class="notranslate">
       {{ footerData.adres.street }}
     </p>
-    <p>
+    <p class="notranslate">
       {{ footerData.adres.zip }} {{ footerData.adres.city }}
     </p>
   </article>
@@ -15,19 +16,24 @@
     <h3>Samenwerken</h3>
     <p>
       {{ footerData.samenwerken }}
-      <a href="mailto:{{ footerData.contact.email }}" > {{ footerData.contact.email }}</a>.
+      <a class="notranslate" href="mailto:{{ footerData.contact.email }}" > {{ footerData.contact.email }}</a>.
     </p>
   </article>
   <article>
     <h3>Contact</h3>
-    <p class="email">
-      📮
+    <p class="email notranslate">
       <a href="mailto:{{ footerData.contact.email }}"> {{ footerData.contact.email }} </a>
     </p>
-    <p class="tel">
-      ☎️
+    <p class="tel notranslate">
       <a href="tel:{{ footerData.contact.tel }}">{{ footerData.contact.tel }}</a>
     </p>
     <p>BTW {{ footerData.contact.btw }}</p>
   </article>
+  </div>
+  
+  <div>
+    Bieb in Bloei wordt mogelijk gemaakt door:
+    {% include "components/oba.liquid"%}
+    {% include "components/hva.liquid"%}
+  </div>
 </footer>

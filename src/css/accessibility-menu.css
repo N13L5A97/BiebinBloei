@@ -2,16 +2,16 @@
     width: calc(13rem + 5rem);
     position: fixed;
     top: 20vh;
-    left: -208px;
+    left: -14rem;
     z-index: 10000;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     transition: left .3s;
 }
 
 .accessibilityMenu:has(.accessibilityIcon input:checked) {
     transition: left .3s;
-    left: 0px;
+    left: -1rem;
 }
 
 .accessibilityContent {
@@ -49,13 +49,29 @@
     /* box-shadow: 5px 5px 5px black; */
 }
 
+.accessibilityIcon:has(input:focus) img {
+    border-radius: 0.5rem;
+	outline: 2px solid var(--tertiary-color);
+	outline-offset: 2px;
+}
+
+.accessibilityMenu:not(:has(.accessibilityIcon input:checked)) > .accessibilityContent ul {
+    display: none;
+    transition: left .3s;
+}
+
+.accessibilityMenu:not(:has(.accessibilityIcon input:checked)) > .accessibilityContent {
+    height: 117.781px;
+}
+
 .accessibilityIcon label img {
     width: 4rem;
     align-self: center;
 }
 
 input[type="checkbox"][id^="menu"] {
-    display: none;
+    position: absolute;
+    left: -50%;
 }
 
 .darkMode {
@@ -120,5 +136,5 @@ body:has(.accessibilityMenu div ul li:nth-of-type(1) label input[type=checkbox]:
 
 /* if checkbox is checked */
 html:has(#font-size:checked){
-    --font-size-paragraph: calc(clamp(1rem, 2vw, 1.2rem) * 1.5);
+    --font-size-p: calc(clamp(1rem, 2vw, 1.2rem) * 1.5);
 }

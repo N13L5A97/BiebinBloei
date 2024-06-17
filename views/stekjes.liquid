@@ -3,11 +3,7 @@
 {% block content %}
 {% include "partials/hero.liquid" %}
 <section class="stekjes-section">
-  <h2>Stekjes Ruilen</h2>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-  </p>
+  <h2 class="smaller">Vind jouw favoriet in onze collectie geliefde <span class="invert">stekjes</span></h2>
   <div class="stekjes">
     {% for stekje in stekjesData %}
     {% include "components/stekjes-card.liquid"

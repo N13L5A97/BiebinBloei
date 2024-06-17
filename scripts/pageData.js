@@ -285,3 +285,50 @@ export const plantenTips = {
 		laag: "Brrr, ik heb het koud! Mag ik naar binnen?"
 	}
 }
+
+export const zadenKastInfo = [
+	{
+		title: "Hoe de kast is gemaakt",
+		content:
+			"Natuurlijk! Workshops zijn fantastische leermogelijkheden waarbij deelnemers praktische vaardigheden kunnen verwerven, nieuwe kennis kunnen opdoen en vaak ook nieuwe mensen kunnen ontmoeten. Het idee achter jouw website om een overzicht te bieden van beschikbare workshops is geweldig.",
+		image: {
+			src: "../images/zaden/grandian.png",
+			alt: "grandian",
+		},
+		button: {
+			url: "/zadenkast",
+			text: "De kast",
+			aria: "Bekijk de zadenkast",
+		},
+	},
+];
+
+export const zadenData = [
+	{
+		name: "Grandian",
+		image: "../images/zaden/grandian.png",
+		button: {
+			url: "/zaden/grandian",
+			text: "Bekijk zaadje",
+			aria: "Bekijk grandian zaadje",
+		},
+	},
+	{
+		name: "Milkmaid",
+		image: "../images/zaden/milkmaid.png",
+		button: {
+			url: "/zaden/milkmaid",
+			text: "Bekijk zaadje",
+			aria: "Bekijk milkmaid zaadje",
+		},
+	},
+	{
+		name: "Minibel",
+		image: "../images/zaden/minibel.png",
+		button: {
+			url: "/zaden/minibel",
+			text: "Bekijk zaadje",
+			aria: "Bekijk minibel zaadje",
+		},
+	},
+]
