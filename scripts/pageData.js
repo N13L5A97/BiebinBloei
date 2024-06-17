@@ -235,7 +235,8 @@ export const stekjesData = [
 export const plantjesData = {
 	gynura:
 	{
-		name: "Gynura ‘Fluweelplant’",
+		name: "Gynura",
+		nickname: "'Fluweelplant'",
 		description: "De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.",
 		origin: "Indonesië",
 		difficulty: "Makkelijk",

@@ -16,6 +16,7 @@
 @import 'hero.css';
 @import 'page-transition.css';
 @import 'accessibility-menu.css';
+@import 'error.css';
 
 /* import poppins black and medium */
 
@@ -107,6 +108,7 @@
 
 html{
 	background-color: black;
+	scroll-behavior: smooth;
 }
 
 * {
@@ -142,11 +144,13 @@ h1{
 
 h2{
 	font-size: var(--font-size-h2);
+	margin-top: .8em;
 	margin-bottom: .8em;
 }
 
 h2.smaller{
 	font-size: var(--font-size-h3);
+	z-index: 1;
 }
 
 h3{
