@@ -1,5 +1,14 @@
 {% layout "layouts/base.liquid" %}
 
+{% block head %}
+  <style>
+    :root {
+        --amount: {{ amount }};
+        --cloud: {{ cloud }}
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   {% include "partials/image-slider.liquid" %}
 
@@ -43,17 +52,15 @@
   <section class="partners">
     <h2 class="smaller">Partners</h2>
     <p>
-      Samenwerking HvA en OBA   
-
-        Bieb & Bloei is een initiatief van de Hogeschool van Amsterdam (HvA) 
-        en de Openbare Bibliotheek Amsterdam (OBA). 
-        In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
-        de studenten en de locaties en publieksprogramma’s van de bibliotheek.
+      Bieb & Bloei is een initiatief van de Hogeschool van Amsterdam (HvA) 
+      en de Openbare Bibliotheek Amsterdam (OBA). 
+      In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
+      de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
-    <div>
+    {% comment %} <div>
       {% include "components/oba.liquid"%}
       {% include "components/hva.liquid"%}
-    </div>
+    </div> {% endcomment %}
 
 
   </section>

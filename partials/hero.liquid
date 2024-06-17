@@ -1,5 +1,8 @@
 <section class="hero-section">
   <div class="image-slider-gradient"></div>
   <h1>{{ pageTitle }}</h1>
+  {% if plant.nickname %}
+  <h2 class="smaller">{{ plant.nickname }}</h2>
+  {% endif %}
   <img src="/images/image-slide-1.png" alt="">
 </section>

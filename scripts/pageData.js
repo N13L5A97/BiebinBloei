@@ -230,7 +230,8 @@ export const stekjesData = [
 export const plantjesData = {
 	gynura:
 	{
-		name: "Gynura ‘Fluweelplant’",
+		name: "Gynura",
+		nickname: "'Fluweelplant'",
 		description: "De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.",
 		origin: "Indonesië",
 		difficulty: "Makkelijk",
@@ -279,3 +280,50 @@ export const plantenTips = {
 		laag: "Brrr, ik heb het koud! Mag ik naar binnen?"
 	}
 }
+
+export const zadenKastInfo = [
+	{
+		title: "Hoe de kast is gemaakt",
+		content:
+			"Natuurlijk! Workshops zijn fantastische leermogelijkheden waarbij deelnemers praktische vaardigheden kunnen verwerven, nieuwe kennis kunnen opdoen en vaak ook nieuwe mensen kunnen ontmoeten. Het idee achter jouw website om een overzicht te bieden van beschikbare workshops is geweldig.",
+		image: {
+			src: "../images/zaden/grandian.png",
+			alt: "grandian",
+		},
+		button: {
+			url: "/zadenkast",
+			text: "De kast",
+			aria: "Bekijk de zadenkast",
+		},
+	},
+];
+
+export const zadenData = [
+	{
+		name: "Grandian",
+		image: "../images/zaden/grandian.png",
+		button: {
+			url: "/zaden/grandian",
+			text: "Bekijk zaadje",
+			aria: "Bekijk grandian zaadje",
+		},
+	},
+	{
+		name: "Milkmaid",
+		image: "../images/zaden/milkmaid.png",
+		button: {
+			url: "/zaden/milkmaid",
+			text: "Bekijk zaadje",
+			aria: "Bekijk milkmaid zaadje",
+		},
+	},
+	{
+		name: "Minibel",
+		image: "../images/zaden/minibel.png",
+		button: {
+			url: "/zaden/minibel",
+			text: "Bekijk zaadje",
+			aria: "Bekijk minibel zaadje",
+		},
+	},
+]

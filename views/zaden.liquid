@@ -1,0 +1,19 @@
+{% layout "layouts/base.liquid" %}
+
+{% block content %}
+    {% include "partials/hero.liquid" %}
+    <section class="stekjes-section">
+        <h3>Ontdek de vreugde van tuinieren met onze populaire zadencollectie</h3>
+        <div class="stekjes">
+            {% for zaad in zadenData %}
+                {% include "components/zaden-card.liquid"
+                , {zaad} %}
+            {% endfor %}
+        </div>
+    </section>
+
+    {% for card in zadenKastInfo %}
+        {% include "partials/card.liquid"
+          , {card} %}
+      {% endfor %}
+{% endblock %}

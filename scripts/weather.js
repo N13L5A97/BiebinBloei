@@ -51,26 +51,48 @@ function checkSunSet(givenTime) {
 }
 
 function checkWeatherCondition(data) {
-    // const currentWeatherCondition = data.current.condition.code
-    const currentWeatherCondition = 1006
+    const currentWeatherCondition = data.current.condition.code
+    // const currentWeatherCondition = 1006
     
+    const today = new Date();
+    const spring = new Date(today.getFullYear(), 3, 21);
+    const summer = new Date(today.getFullYear(), 6, 21);
+    const fall = new Date(today.getFullYear(), 9, 21);
+    const winter = new Date(today.getFullYear(), 12, 21);
+   
     switch (currentWeatherCondition) {
       case 1000: {
-        // zonnig | sunny
-        return "Sunny";
+        if (today >= spring && today < summer) {
+          // lente
+          var weatherScript = "./animations/seizoen/bloesem/bloesem.js"
+          var weatherCSS = "./animations/seizoen/bloesem/bloesem.css"
+        } else if (today >= summer && today < fall) {
+          // zomer
+          var weatherScript = "./animations/seizoen/"
+          var weatherCSS = "./animations/seizoen/"
+        } else if (today >= fall && today < winter) {
+          // herfst
+          var weatherScript = "./animations/seizoen/herfstblaadjes/herfst.js"
+          var weatherCSS = "./animations/seizoen/herfstblaadjes/herfst.css"
+        } else {
+          // winter
+          var weatherScript = "./animations/seizoen/"
+          var weatherCSS = "./animations/seizoen/"
+        }
+        return [weatherScript, weatherCSS];
       }
   
       case 1003: {
         // licht bewolkt | partly cloudy
-        var weatherScript = "./animations/weer/regen/regen.js";
-        var weatherCSS = "./animations/weer/regen/regen.css";
+        var weatherScript = "./animations/weer/wolken/wolken.js";
+        var weatherCSS = "./animations/weer/wolken/wolken.css";
         return [weatherScript, weatherCSS];
       }
   
       case 1006: {
         // bewolkt | cloudy
-        var weatherScript = "./animations/seizoen/bloesem/bloesem.js";
-        var weatherCSS = "./animations/seizoen/bloesem/bloesem.css";
+        var weatherScript = "./animations/weer/wolken/wolken.js";
+        var weatherCSS = "./animations/weer/wolken/wolken.css";
         return [weatherScript, weatherCSS];
       }
   
@@ -83,15 +105,15 @@ function checkWeatherCondition(data) {
   
       case 1030: {
         // nevel | mist
-        var weatherScript = "./animations/weer/regen/regen.js";
-        var weatherCSS = "./animations/weer/regen/regen.css";
+        var weatherScript = "./animations/weer/mist/mist.js";
+        var weatherCSS = "./animations/weer/mist/mist.css";
         return [weatherScript, weatherCSS];
       }
   
       case 1063: {
         // plaatselijk regen mogelijk
-        var weatherScript = "./animations/seizoen/herfstblaadjes/herfst.js";
-        var weatherCSS = "./animations/seizoen/herfstblaadjes/herfst.css";
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
         return [weatherScript, weatherCSS];
       }
   
@@ -107,6 +129,8 @@ function checkWeatherCondition(data) {
   
       case 1072: {
         // kans op motregen
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
         return [weatherScript, weatherCSS];
       }
   
@@ -131,11 +155,15 @@ function checkWeatherCondition(data) {
   
       case 1135: {
         // mist | fog
+        var weatherScript = "./animations/weer/mist/mist.js";
+        var weatherCSS = "./animations/weer/mist/mist.css";
         return [weatherScript, weatherCSS];
       }
   
       case 1147: {
         // ijskoude mist | freezing fog
+        var weatherScript = "./animations/weer/mist/mist.js";
+        var weatherCSS = "./animations/weer/mist/mist.css";
         return [weatherScript, weatherCSS];
       }
   

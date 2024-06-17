@@ -2,7 +2,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.querySelector('body'); // regen div pakken
     const sneeuw = document.createElement('div')
     sneeuw.classList.add('sneeuw')
-    const sneeuwVlokken = 70; // hoeveelheid drops die ik wil
+    var style = getComputedStyle(document.body)
+    // const sneeuwVlokken = 70; // hoeveelheid drops die ik wil
+    const sneeuwVlokken = style.getPropertyValue('--amount') * 15; // hoeveelheid drops die ik wil
 
         // voor elke drop in hoeveelheid druppels
         for (let i = 0; i < sneeuwVlokken; i++) {
