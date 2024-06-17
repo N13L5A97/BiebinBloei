@@ -132,10 +132,10 @@ main {
 h1, h2, h3, h4, h5, h6{
 	font-family: var(--font-family-headings);
 	line-height: 1.1;
-	text-transform: capitalize;
 }
 
 h1{
+	text-transform: capitalize;
 	font-size: var(--font-size-h1);
 	z-index: 1;
 }
@@ -170,6 +170,13 @@ p{
 
 a{
 	color: inherit;
+}
+
+span.invert {
+	background-color: var(--primary-color);
+	padding: 0.1em;
+	border-radius: .1em;
+	color: white;
 }
 
 .email,

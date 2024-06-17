@@ -6,13 +6,6 @@
 
     h2 {
         color: var(--primary-color);
-
-        span {
-            background-color: var(--primary-color);
-            padding: 0.1em;
-            border-radius: 5px;
-            color: white;
-        }
     }
 }
 
