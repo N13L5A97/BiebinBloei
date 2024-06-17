@@ -44,7 +44,7 @@ footer {
 		color: var(--secondary-color);
 	
 		svg {
-			height: 5rem;
+			height: 3rem;
 			fill: var(--secondary-color);
 		}
 	}
