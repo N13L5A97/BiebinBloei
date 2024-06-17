@@ -11,6 +11,8 @@
 @import 'image-slider.css';
 @import 'stekjes.css';
 @import 'link-block.css';
+@import 'harry.css';
+@import 'stekje.css';
 @import 'hero.css';
 @import 'page-transition.css';
 @import 'accessibility-menu.css';
@@ -48,12 +50,14 @@
 	--margin-medium: 4rem;
 	--margin-large: 6rem;
 
-	--font-size-paragraph: clamp(1rem, 2vw, 1.2rem);
-	--font-size-headings: clamp(3rem, 8vw ,8rem);
-
-	--font-family-headings: 'Poppins Black', sans-serif;
-	--font-family-alternative: 'Poppins Bold', sans-serif;
-	--font-family-text: 'Poppins Medium', sans-serif;
+	--font-size-h1: clamp(3rem, 8vw ,8rem);
+	--font-size-h2: clamp(2rem, 6vw ,6rem);
+	--font-size-h3: clamp(1.6rem, 2.5vw ,3rem);
+	--font-size-h4: clamp(1.2rem, 1.5vw ,1.8rem);
+	--font-size-p: clamp(1rem, 2vw, 1.2rem);
+	--font-family-headings: 'Poppins Black', Arial black, sans-serif;
+	--font-family-alternative: 'Poppins Bold', Arial bold, sans-serif;
+	--font-family-text: 'Poppins Medium', Arial , sans-serif;
 
 	--primary-color: #3C593E;
 	--secondary-color: #F9E9C2;
@@ -114,7 +118,7 @@ html{
 body {
 	background-color: var(--background-color);
 	font-family: var(--font-family-text);
-	font-size: var(--font-size-paragraph);
+	font-size: var(--font-size-p);
 	z-index: 1;
 	color-scheme: light dark;
 	overflow-x: hidden;
@@ -128,30 +132,51 @@ main {
 h1, h2, h3, h4, h5, h6{
 	font-family: var(--font-family-headings);
 	line-height: 1.1;
-	text-transform: capitalize;
 }
 
 h1{
-	font-size: var(--font-size-headings);
+	text-transform: capitalize;
+	font-size: var(--font-size-h1);
 	z-index: 1;
 }
 
 h2{
-	font-size: calc(var(--font-size-headings) * 0.8);
+	font-size: var(--font-size-h2);
 	margin-bottom: .8em;
 }
 
 h2.smaller{
-	font-size: calc(var(--font-size-headings) * 0.4);
+	font-size: var(--font-size-h3);
 }
 
 h3{
-	font-size: calc(var(--font-size-headings) * 0.3);
+	font-size: var(--font-size-h3);
 }
 
-p{
+h4{
+	font-size: var(--font-size-h4);
+}
+
+h5{
+	font-size: var(--font-size-h5);
+}
+
+p{	
+	font-size: var(--font-size-p);
+	min-width: 10ch;
 	max-width: 75ch;
 	margin: 1rem 0;
+}
+
+a{
+	color: inherit;
+}
+
+span.invert {
+	background-color: var(--primary-color);
+	padding: 0.1em;
+	border-radius: .1em;
+	color: white;
 }
 
 .email,

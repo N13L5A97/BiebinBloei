@@ -1,5 +1,5 @@
 .sneeuw {
-    position: fixed;
+    position: absolute;
     top: 0%;
     width: 100vw;
     height: 100vh;
@@ -18,6 +18,12 @@
     border-radius: 50%;
     opacity: 0.5;
     animation: fall linear infinite;
+}
+
+@media (prefers-reduced-motion) {
+    .vlok {
+        animation: fall linear infinite paused;
+    }
 }
 
 /* vallen van de vlokken */

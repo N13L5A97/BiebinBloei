@@ -1,0 +1,65 @@
+{% layout "layouts/base.liquid" %}
+
+{% block content %}
+    {% include "partials/hero.liquid" %}
+    
+    <section class="card" data="card">
+        <article>
+          <h2 class="smaller">
+            Maak Amsterdam groener en mooier met een geveltuin!
+          </h2>
+          
+          {% comment %} <h3>
+            Wat maakt het zo mooi?
+          </h3> {% endcomment %}
+          <ul>
+            <li>
+                <p>Verfraait de straat: Geveltuinen zorgen voor kleur en leven in de brouwerij.</p>
+            </li>
+            <li>
+                <p>Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</p>
+            </li>
+            <li>
+                <p>Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</p>
+            </li>
+            <li>
+                <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
+            </li>
+            <li>
+                <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+            </li>
+          </ul>
+        </article>
+        <div 
+          class="card-image-container" 
+          style="--background-image: url('{{ '../images/plant1.png' }}')"
+        >
+        </div>
+      </section>
+
+      <section class="">
+        <h2 class="smaller">Waarom <span>meedoen?</span></h2>
+        <p>
+            Ben jij klaar om je straat op te fleuren, een bijdrage te leveren aan de biodiversiteit en het klimaat, én je buren te inspireren?
+            Doe dan mee met ons project om geveltuinen aan te leggen in Amsterdam!
+        </p>
+        <ul>
+            <li>
+                <p>Verfraait de straat: Geveltuinen zorgen voor kleur en leven in de brouwerij.</p>
+            </li>
+            <li>
+                <p>Goed voor het milieu: Planten in geveltuinen nemen CO2 op en zorgen voor een schonere lucht. Ze filteren ook fijnstof en regenwater.</p>
+            </li>
+            <li>
+                <p>Koeler in de zomer: Planten in geveltuinen zorgen voor schaduw en verdampen water, wat voor een verkoelend effect zorgt in de stad.</p>
+            </li>
+            <li>
+                <p>Goed voor de biodiversiteit: Geveltuinen bieden nectar en stuifmeel voor insecten zoals bijen en vlinders.</p>
+            </li>
+            <li>
+                <p>Gezellig: Geveltuinen zorgen voor een meer sociale en betrokken buurt.</p>
+            </li>
+          </ul> 
+        <button></button>
+      </section>
+{% endblock %}

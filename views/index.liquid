@@ -1,5 +1,14 @@
 {% layout "layouts/base.liquid" %}
 
+{% block head %}
+  <style>
+    :root {
+        --amount: {{ amount }};
+        --cloud: {{ cloud }}
+    }
+  </style>
+{% endblock %}
+
 {% block content %}
   {% include "partials/image-slider.liquid" %}
 
@@ -11,7 +20,7 @@
 
   <section class="Buurtcampus">
     <h2 class="smaller">Buurtcampus
-      <span>Oost</span>
+      <span class="invert">Oost</span>
     </h2>
     <p>
       De Buurtcampus-Oost heeft als doel Amsterdam-Oost duurzamer,    
@@ -48,10 +57,10 @@
       In de projecten van Buurtcampus Oost benutten we de kennis en creativiteit van 
       de studenten en de locaties en publieksprogramma’s van de bibliotheek.
     </p>
-    <div>
+    {% comment %} <div>
       {% include "components/oba.liquid"%}
       {% include "components/hva.liquid"%}
-    </div>
+    </div> {% endcomment %}
 
 
   </section>

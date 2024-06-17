@@ -1,4 +1,4 @@
-import * as dotenv from '@tinyhttp/dotenv' 
+import * as dotenv from '@tinyhttp/dotenv'
 import { App } from '@tinyhttp/app'
 import { logger } from '@tinyhttp/logger'
 import { Liquid } from 'liquidjs';
@@ -9,9 +9,11 @@ import { fileURLToPath } from 'url';
 
 // local scripts
 import { test } from './scripts/weather.js'
-import { cardData, stekjesKastInfo, stekjesData, agendaData, sliderData, footerData } from './scripts/pageData.js'
+import { harrycontent } from './scripts/harry.js'
+import { cardData, stekjesKastInfo, stekjesData, zadenKastInfo, zadenData, agendaData, sliderData, footerData, plantjesData, plantenTips } from './scripts/pageData.js'
+import { seasons } from './scripts/seasons.js'
 
-const envFile = dotenv.config({path:'token.env'})
+const envFile = dotenv.config({ path: 'token.env' })
 var apiToken = process.env.API_TOKEN
 
 const engine = new Liquid();
@@ -39,17 +41,22 @@ app.get('/', async (req, res) => {
   console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+  const transition_image = seasons.checkSeason()
 
   
 
   const rainAmount = dataWeather.current.precip_mm 
-  // const rainAmount = 150
+  // current.cloud komt terug als percentage, des te hoger het getal, des te meer bewolkt het is. met hsl is 0% het donkerst en 100% het lichtst, dus er moet een berekening plaats vinden.
+  const cloud = 100 - dataWeather.current.cloud + '%'
+  // const cloud = 100 - 25 + '%'
+  // const rainAmount = 40
 
-  return res.send(renderTemplate('views/index.liquid', { 
+  return res.send(renderTemplate('views/index.liquid', {
     cardData,
     agendaData,
     sliderData,
     footerData,
+    transition_image,
     location: dataWeather.location.name,
     temperature: dataWeather.current.temp_c,
     weather_condition: dataWeather.current.condition.text,
@@ -57,7 +64,7 @@ app.get('/', async (req, res) => {
     wind_speed: dataWeather.current.wind_kph,
     precip: dataWeather.current.precip_mm,
     humidity: dataWeather.current.humidity,
-    cloud: dataWeather.current.cloud,
+    cloud: cloud,
     uv: dataWeather.current.uv,
     sunrise: dataSunMoon.astronomy.astro.sunrise,
     sunset: dataSunMoon.astronomy.astro.sunset,
@@ -76,6 +83,7 @@ app.get('/stekjes', async (req, res) => {
   // send title to the template
   const pageTitle = req.url.slice(1);
   console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
 
   return res.send(renderTemplate('views/stekjes.liquid', { 
     pageTitle,
@@ -83,8 +91,69 @@ app.get('/stekjes', async (req, res) => {
     stekjesData,
     stekjesKastInfo,
     footerData,
+    transition_image,
   }));
 });
+
+app.get('/zaden', async (req, res) => {
+  // send title to the template
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
+
+  return res.send(renderTemplate('views/zaden.liquid', { 
+    pageTitle,
+    sliderData,
+    zadenData,
+    zadenKastInfo,
+    footerData,
+    transition_image,
+  }));
+});
+
+app.get('/geveltuin', async (req, res) => {
+  // send title to the template
+  const pageTitle = req.url.slice(1);
+  console.log(pageTitle)
+  const transition_image = seasons.checkSeason()
+
+  return res.send(renderTemplate('views/geveltuin.liquid', { 
+    pageTitle,
+    sliderData,
+    footerData,
+    transition_image,
+  }));
+});
+
+app.get('/stekjes/:name', async (req, res) => {
+  const plantName = req.params.name;
+  const plantData = plantjesData[plantName];
+  // const plant = plantenTips.harry.uitleg;
+  // console.log(plant)  
+  const dataWeather = await test.pullDataWeather(apiToken);
+  console.log(dataWeather)
+
+  // const harry = testharry.checkTemp(test, plantjesData);
+  const temp = harrycontent.checkTemp(dataWeather, plantData, plantenTips);
+  const weer = harrycontent.checkSunny(dataWeather, plantData, plantenTips);
+  const voeding = harrycontent.checkVoeding(plantenTips);
+  if (plantData) {
+   res.send(renderTemplate('views/stekjes_detail.liquid', {
+        plant: plantData,
+        footerData,
+        plantName,
+        pageTitle: plantName,
+        harry:{ 
+          temp, 
+          weer,
+          voeding,
+        },
+      }))
+
+  } else {
+    res.status(404).send('Plant not found');
+  }
+})
 
 app.get('/weather-api', async (req, res) => {
 
@@ -94,6 +163,7 @@ app.get('/weather-api', async (req, res) => {
   console.log(dataSunMoon)
   const checkWeather = test.checkWeatherCondition(dataWeather)
   console.log(checkWeather)
+  
 
   const rainAmount = dataWeather.current.precip_mm 
   // const rainAmount = 15
@@ -126,6 +196,7 @@ app.get('/weather-api', async (req, res) => {
 app.get('/transparent-card', async (req, res) => {
   res.send(renderTemplate('views/transparent-card.liquid'))
 })
+
 
 app.get('/page-transition', async (req, res) => {
   res.send(renderTemplate('views/page-transition.liquid'))

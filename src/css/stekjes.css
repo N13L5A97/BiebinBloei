@@ -1,15 +1,39 @@
 .stekjes-section{
-    padding: 3rem;
+    padding: var(--v-padding-medium) var(--h-padding-large) var(--v-padding-large);
+    max-width: 100rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    
+    h2{
+        color: var(--primary-color);
+        max-width: 30ch;
+        line-height: 1.5em;
+        position: relative;
+        padding-left: var(--h-padding-small);
+
+        &:before{
+            content: "";
+            background-color: var(--tertiary-color);
+            position: absolute;
+            top: .5em;
+            left: 0;
+            height: .5em;
+            width: .5em;
+            border-radius: 50%;
+        }
+    }
 }
 
 .stekjes{
     display: grid;
     gap: 3rem;
-    padding-bottom: var(--v-padding-large);
-    grid-template-columns: repeat(auto-fit, minmax(min(13em, 100%), 1fr));
+    padding-bottom: var(--v-padding-medium);
+    grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
 }
 
 .link-block.stek-item{
-    height: 60vh;
+    height: 40rem;
     grid-template-columns: 1fr;
 }
