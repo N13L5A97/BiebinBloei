@@ -1,31 +1,38 @@
 <footer>
-  <article>
-    <h3>Adres</h3>
-    <p>
-      {{ footerData.adres.name }}
-    </p>
-    <p>
-      {{ footerData.adres.street }}
-    </p>
-    <p>
-      {{ footerData.adres.zip }} {{ footerData.adres.city }}
-    </p>
-  </article>
-  <article>
-    <h3>Samenwerken</h3>
-    <p>
-      {{ footerData.samenwerken }}
-      <a href="mailto:{{ footerData.contact.email }}" > {{ footerData.contact.email }}</a>.
-    </p>
-  </article>
-  <article>
-    <h3>Contact</h3>
-    <p class="email">
-      <a href="mailto:{{ footerData.contact.email }}"> {{ footerData.contact.email }} </a>
-    </p>
-    <p class="tel">
-      <a href="tel:{{ footerData.contact.tel }}">{{ footerData.contact.tel }}</a>
-    </p>
-    <p>BTW {{ footerData.contact.btw }}</p>
-  </article>
+  <div>
+    <article>
+      <h3>Adres</h3>
+      <p>
+        {{ footerData.adres.name }}
+      </p>
+      <p>
+        {{ footerData.adres.street }}
+      </p>
+      <p>
+        {{ footerData.adres.zip }} {{ footerData.adres.city }}
+      </p>
+    </article>
+    <article>
+      <h3>Samenwerken</h3>
+      <p>
+        {{ footerData.samenwerken }}
+        <a href="mailto:{{ footerData.contact.email }}" > {{ footerData.contact.email }}</a>.
+      </p>
+    </article>
+    <article>
+      <h3>Contact</h3>
+      <p class="email">
+        <a href="mailto:{{ footerData.contact.email }}"> {{ footerData.contact.email }} </a>
+      </p>
+      <p class="tel">
+        <a href="tel:{{ footerData.contact.tel }}">{{ footerData.contact.tel }}</a>
+      </p>
+      <p>BTW {{ footerData.contact.btw }}</p>
+    </article>
+  </div>
+  <div>
+    Bieb in Bloei wordt mogelijk gemaakt door:
+    {% include "components/oba.liquid"%}
+    {% include "components/hva.liquid"%}
+  </div>
 </footer>
