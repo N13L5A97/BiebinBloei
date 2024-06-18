@@ -1,6 +1,10 @@
 #plant{
     background-color: var(--tertiary-color);
     margin-bottom: var(--margin-large);
+
+    & h2::before{
+        background-color: var(--secondary-color);
+    }
 }
 
 #general {
@@ -27,11 +31,13 @@
 
 #care{
     margin-bottom: var(--margin-large);
-    color: var(--quaternary-color);
+    color: var(--primary-color);
     padding-left: calc(var(--margin-small) + var(--h-padding-large));
     display: flex;
     justify-content: left;
     position: relative;
+
+
     h2{
         margin-bottom: 1rem;
     }
