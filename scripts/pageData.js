@@ -264,23 +264,24 @@ export const zadenKastInfo = [
 	{
 		title: "Hoe de kast is gemaakt",
 		content:
-			"Natuurlijk! Workshops zijn fantastische leermogelijkheden waarbij deelnemers praktische vaardigheden kunnen verwerven, nieuwe kennis kunnen opdoen en vaak ook nieuwe mensen kunnen ontmoeten. Het idee achter jouw website om een overzicht te bieden van beschikbare workshops is geweldig.",
+			"De kast is gemaakt van duurzaam hout en is ontworpen om zoveel mogelijk zaden te kunnen opslaan. De kast heeft verschillende vakken waarin de zaden gesorteerd kunnen worden. De zadenkast is zo ontworpen dat de zaden goed beschermd zijn tegen vocht en licht. De kast is voorzien van een deur met een slot zodat de zaden veilig opgeborgen kunnen worden.",
 		image: {
 			src: "../images/zaden/grandian.png",
 			alt: "grandian",
-		},
-		button: {
-			url: "/zadenkast",
-			text: "De kast",
-			aria: "Bekijk de zadenkast",
-		},
+		}
 	},
 ];
+
+
+
 
 export const zadenData = [
 	{
 		name: "Grandian",
-		image: "../images/zaden/grandian.png",
+		image: {
+			src: "../images/zaden/grandian.png",
+			alt: "Grandian",
+		},
 		button: {
 			url: "/zaden/grandian",
 			text: "Bekijk zaadje",
@@ -289,7 +290,10 @@ export const zadenData = [
 	},
 	{
 		name: "Milkmaid",
-		image: "../images/zaden/milkmaid.png",
+		image: {
+			src: "../images/zaden/milkmaid.png",
+			alt: "Milkmaid",
+		},
 		button: {
 			url: "/zaden/milkmaid",
 			text: "Bekijk zaadje",
@@ -298,7 +302,10 @@ export const zadenData = [
 	},
 	{
 		name: "Minibel",
-		image: "../images/zaden/minibel.png",
+		image: {
+			src: "../images/zaden/minibel.png",
+			alt: "Minibel",
+		},
 		button: {
 			url: "/zaden/minibel",
 			text: "Bekijk zaadje",

@@ -1,67 +1,43 @@
 <html lang="nl-NL">
 
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href={{ weatherCSS }}>
-    <link rel="icon" type="image/x-icon" href="">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="">
 
-    <style> :root { --amount: {{ amount }} } </style>
+    <style > :root
+    {
+      --amount: {{ amount }}
+    }
+  </style>
 
-    <title> Bieb in Bloei
-        {% if pageTitle %}
-        | {{ pageTitle }}
-        {% endif %}
-    </title>
-    {% block head %}{% endblock %}
+  <title>
+    Bieb in Bloei
+    {% if pageTitle %}
+      | {{ pageTitle }}
+    {% endif %}
+  </title>
+  {% block head %}
+  {% endblock %}
 </head>
 
 <body class="scroll scroll-vertical">
-    {% include "partials/header.liquid" %}
-    <div class="accessibilityMenu">
-        <label class="accessibilityIcon">
-            <input type="checkbox" id="menu">
-            <img src="/images/accessibility.png">
-        </label>
-        <div class="accessibilityContent">
-            <ul>
-                <li>
-                    <label>
-                        <input type="checkbox" id="toggle-darkmode">
-                        Dark Mode
-                    </label>
-                </li>
-                {% comment %} not used anymore {% endcomment %}
-                {% comment %} <li>                        
-                    <label>
-                        <input type="checkbox" id="reducedMotion" onclick = "reducedMotion()">
-                        Reduced Motion
-                    </label>
-                </li> {% endcomment %}
-                <li>                        
-                    <label>
-                        <input type="checkbox" id="font-size">
-                        Grotere Letters
-                    </label>
-                </li>
-                <li id="google_translate_element">Vertaal de site
-                    
-                </li>
-            </ul>
-        </div>
-    </div>
-    <main>
+  {% include "partials/header.liquid" %}
+  {% include "partials/access-menu.liquid" %}
 
-        {% block content %}{% endblock %}
-        </main>
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
 
-        {% comment %} <div class="transition-container"> {% endcomment %}
-            <img class="transition-image fade-in single" src="{{ transition_image }}">
-        
+  <img class="transition-image fade-in single" src="{{ transition_image }}">
 
-    {% include "partials/footer.liquid" %}
-    {% include "components/scripts.liquid" %}
-</body>
 
-</html>
+  {% include "partials/footer.liquid" %}
+  {% include "components/scripts.liquid" %}
+</body></html>

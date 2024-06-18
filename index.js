@@ -94,10 +94,10 @@ app.get("/", async (req, res) => {
 app.get("/stekjes", async (req, res) => {
 	// send title to the template
 	let pageTitle = req.url.slice(1);
-  //if url end with /, remove it
-  if (pageTitle.slice(-1) === "/") {
-    pageTitle = pageTitle.slice(0, -1);
-  }
+	//if url end with /, remove it
+	if (pageTitle.slice(-1) === "/") {
+		pageTitle = pageTitle.slice(0, -1);
+	}
 
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -115,12 +115,12 @@ app.get("/stekjes", async (req, res) => {
 });
 
 app.get("/zaden", async (req, res) => {
-		// send title to the template
-    let pageTitle = req.url.slice(1);
-    //if url end with /, remove it
-    if (pageTitle.slice(-1) === "/") {
-      pageTitle = pageTitle.slice(0, -1);
-    }
+	// send title to the template
+	let pageTitle = req.url.slice(1);
+	//if url end with /, remove it
+	if (pageTitle.slice(-1) === "/") {
+		pageTitle = pageTitle.slice(0, -1);
+	}
 
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -138,7 +138,7 @@ app.get("/zaden", async (req, res) => {
 });
 
 app.get("/geveltuin", async (req, res) => {
-		// send title to the template
+	// send title to the template
 	let pageTitle = req.url.slice(1);
   //if url end with /, remove it
   if (pageTitle.slice(-1) === "/") {
@@ -168,11 +168,15 @@ app.get("/stekjes/:name", async (req, res) => {
 		// Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
 		const mood = "verdrietig";
 		const fout = "404";
+		const url = "/stekjes";
+		const pagina = "stekjes";
 		const reden = "De plant die u zocht is niet beschikbaar.";
 
 		return res.status(404).send(
 			renderTemplate("views/error.liquid", {
 				fout,
+				url,
+				pagina,
 				reden,
 				harry: {
 					mood,
@@ -184,8 +188,16 @@ app.get("/stekjes/:name", async (req, res) => {
 	try {
 		// Voer verdere asynchrone operaties uit en wacht op hun resultaten
 		const dataWeather = await test.pullDataWeather(apiToken);
-		const temp = await harrycontent.checkTemp( dataWeather, plantData, plantenTips );
-		const weer = await harrycontent.checkSunny( dataWeather, plantData, plantenTips );
+		const temp = await harrycontent.checkTemp(
+			dataWeather,
+			plantData,
+			plantenTips
+		);
+		const weer = await harrycontent.checkSunny(
+			dataWeather,
+			plantData,
+			plantenTips
+		);
 		const voeding = await harrycontent.checkVoeding(plantenTips);
 		const mood = "neutraal";
 
@@ -197,8 +209,8 @@ app.get("/stekjes/:name", async (req, res) => {
 				plantName,
 				pageTitle: plantData.name,
 				transition_image,
-				harry: { 
-          temp,
+				harry: {
+					temp,
 					weer,
 					voeding,
 					mood,
@@ -235,6 +247,11 @@ app.use((req, res) => {
 			reden,
 			harry: {
 				mood,
+			},
+			button: {
+				text: "Terug naar home",
+				url: "/",
+				aria: "Terug naar home",
 			},
 		})
 	);
