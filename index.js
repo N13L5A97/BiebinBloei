@@ -159,6 +159,7 @@ app.get("/stekjes/:name", async (req, res) => {
 
 	//filter stekjesData op naam van de plant
 	const plantData = stekjesData.find((plant) => plant.name == plantName);
+	const transition_image = seasons.checkSeason();
 
 	if (!plantData) {
 		// Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
@@ -192,6 +193,7 @@ app.get("/stekjes/:name", async (req, res) => {
 				footerData,
 				plantName,
 				pageTitle: plantData.name,
+				transition_image,
 				harry: { 
           temp,
 					weer,

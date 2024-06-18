@@ -6,16 +6,16 @@ function checkSeason() {
     const winter = new Date(today.getFullYear(), 12, 21);
 
     if (today >= spring && today < summer) {
-        return ("./images/lente-blad.svg")
+        return ("/images/lente-blad.svg")
     }
     else if (today >= summer && today < fall) {
-        return ("./images/zomer-blad.svg")
+        return ("/images/zomer-blad.svg")
     }
     else if (today >= fall && today < winter) {
-        return ("./images/herfst-blad.svg")
+        return ("/images/herfst-blad.svg")
     }
     else {
-        return ("./images/winter-blad.svg")
+        return ("/images/winter-blad.svg")
     }
 }
 
