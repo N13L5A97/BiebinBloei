@@ -18,6 +18,7 @@
 }
 
 .link-block .button {
+    pointer-events: none;
     grid-column: 1;
     grid-row: 4;
     justify-self: end;
