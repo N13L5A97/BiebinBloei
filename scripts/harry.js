@@ -1,7 +1,5 @@
 function checkTemp(data, plantjesData, plantenTips){
-    console.log(plantjesData)
-    
-
+  
     if (data.current.temp_c >= plantjesData.minTemp & data.current.temp_c <= plantjesData.maxTemp){
         
         let temperatuur = plantenTips.temperatuur.gemiddeld;

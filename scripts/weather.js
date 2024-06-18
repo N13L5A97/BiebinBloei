@@ -15,7 +15,6 @@ function pullDataWeather(token) {
 
 function pullDataSunMoon(token) {
   let currentDate = new Date().toLocaleDateString("en-CA");
-  console.log(currentDate);
   var fetchUrl =
     "http://api.weatherapi.com/v1/astronomy.json?key=" +
     token +
@@ -25,7 +24,6 @@ function pullDataSunMoon(token) {
     longitude +
     "&dt=" +
     currentDate;
-  console.log(fetchUrl);
   return fetch(fetchUrl).then((res) => res.json());
 }
 

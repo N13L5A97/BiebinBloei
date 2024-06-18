@@ -45,12 +45,15 @@ app.use(logger())
 
 app.get("/", async (req, res) => {
 	const dataWeather = await test.pullDataWeather(apiToken);
-	console.log(dataWeather);
+	// console.log(dataWeather);
 	const dataSunMoon = await test.pullDataSunMoon(apiToken);
-	console.log(dataSunMoon);
+	// console.log(dataSunMoon);
 	const checkWeather = test.checkWeatherCondition(dataWeather);
-	console.log(checkWeather);
+	// console.log(checkWeather);
 	const transition_image = seasons.checkSeason();
+
+	console.log("Current weather: " + dataWeather.current.condition.text)
+	console.log("Current weather code: " + dataWeather.current.condition.code)
 
 	const rainAmount = dataWeather.current.precip_mm;
 	// current.cloud komt terug als percentage, des te hoger het getal, des te meer bewolkt het is. met hsl is 0% het donkerst en 100% het lichtst, dus er moet een berekening plaats vinden.
@@ -96,7 +99,7 @@ app.get("/stekjes", async (req, res) => {
 		pageTitle = pageTitle.slice(0, -1);
 	}
 
-	console.log(pageTitle);
+	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
 	return res.send(
@@ -119,7 +122,7 @@ app.get("/zaden", async (req, res) => {
 		pageTitle = pageTitle.slice(0, -1);
 	}
 
-	console.log(pageTitle);
+	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
 	return res.send(
@@ -137,11 +140,11 @@ app.get("/zaden", async (req, res) => {
 app.get("/geveltuin", async (req, res) => {
 	// send title to the template
 	let pageTitle = req.url.slice(1);
-	//if url end with /, remove it
-	if (pageTitle.slice(-1) === "/") {
-		pageTitle = pageTitle.slice(0, -1);
-	}
-	console.log(pageTitle);
+  //if url end with /, remove it
+  if (pageTitle.slice(-1) === "/") {
+    pageTitle = pageTitle.slice(0, -1);
+  }
+	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
 	return res.send(
@@ -231,52 +234,6 @@ app.get("/stekjes/:name", async (req, res) => {
 			})
 		);
 	}
-});
-
-app.get("/weather-api", async (req, res) => {
-	const dataWeather = await test.pullDataWeather(apiToken);
-	console.log(dataWeather);
-	const dataSunMoon = await test.pullDataSunMoon(apiToken);
-	console.log(dataSunMoon);
-	const checkWeather = test.checkWeatherCondition(dataWeather);
-	console.log(checkWeather);
-
-	const rainAmount = dataWeather.current.precip_mm;
-	// const rainAmount = 15
-
-	return res.send(
-		renderTemplate("views/weather-api.liquid", {
-			siteTitle: "Weather API",
-			location: dataWeather.location.name,
-			temperature: dataWeather.current.temp_c,
-			weather_condition: dataWeather.current.condition.text,
-			weather_icon: dataWeather.current.condition.icon,
-			wind_speed: dataWeather.current.wind_kph,
-			precip: dataWeather.current.precip_mm,
-			humidity: dataWeather.current.humidity,
-			cloud: dataWeather.current.cloud,
-			uv: dataWeather.current.uv,
-			sunrise: dataSunMoon.astronomy.astro.sunrise,
-			sunset: dataSunMoon.astronomy.astro.sunset,
-			moonrise: dataSunMoon.astronomy.astro.moonrise,
-			moonset: dataSunMoon.astronomy.astro.moonset,
-			moon_illumination: dataSunMoon.astronomy.astro.moon_illumination,
-			is_moon_up: dataSunMoon.astronomy.astro.is_moon_up,
-			is_sun_up: dataSunMoon.astronomy.astro.is_sun_up,
-			weatherScript: checkWeather[0],
-			weatherCSS: checkWeather[1],
-			amount: rainAmount,
-			check_sunset: test.checkSunSet(dataSunMoon.astronomy.astro.sunset),
-		})
-	);
-});
-
-app.get("/transparent-card", async (req, res) => {
-	res.send(renderTemplate("views/transparent-card.liquid"));
-});
-
-app.get("/page-transition", async (req, res) => {
-	res.send(renderTemplate("views/page-transition.liquid"));
 });
 
 app.use((req, res) => {
