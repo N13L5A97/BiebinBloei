@@ -92,7 +92,7 @@ svg {
         background-color: var(--primary-color);
         color: var(--secondary-color);
 
-        &:focus {
+        &:focus-visible {
             outline: 4px dashed var(--primary-color);
             outline-offset: 4px;
         }
@@ -115,7 +115,7 @@ svg {
         background-color: var(--quaternary-color);
         color: var(--secondary-color);
 
-        &:focus {
+        &:focus-visible {
             outline: 4px dashed var(--quaternary-color);
             outline-offset: 4px;
         }
@@ -138,7 +138,7 @@ svg {
         background-color: var(--secondary-color);
         color: var(--quaternary-color);
 
-        &:focus {
+        &:focus-visible {
             outline: 4px dashed var(--secondary-color);
             outline-offset: 4px;
         }
