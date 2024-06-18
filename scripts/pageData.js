@@ -152,85 +152,84 @@ export const stekjesKastInfo = [
 	},
 ];
 
+// export const stekjesData = [
+// 	{
+// 		name: "Monstera",
+// 		image: "../images/monstera.png",
+// 		button: {
+// 			url: "/stekjes/monstera",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk monstera stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Pilea",
+// 		image: "../images/pilea.png",
+// 		button: {
+// 			url: "/stekjes/pilea",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk pilea stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Calathea",
+// 		image: "../images/calathea.png",
+// 		button: {
+// 			url: "/stekjes/calathea",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk calathea stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Alocasia",
+// 		image: "../images/alocasia.png",
+// 		button: {
+// 			url: "/stekjes/alocasia",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk alocasia stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Calathea",
+// 		image: "../images/calathea.png",
+// 		button: {
+// 			url: "/stekjes/calathea",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk calathea stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Alocasia",
+// 		image: "../images/alocasia.png",
+// 		button: {
+// 			url: "/stekjes/alocasia",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk alocasia stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Monstera",
+// 		image: "../images/monstera.png",
+// 		button: {
+// 			url: "/stekjes/monstera",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk monstera stekje",
+// 		},
+// 	},
+// 	{
+// 		name: "Pilea",
+// 		image: "../images/pilea.png",
+// 		button: {
+// 			url: "/stekjes/pilea",
+// 			text: "Bekijk stekje",
+// 			aria: "Bekijk pilea stekje",
+// 		},
+// 	},
+// ]
+
 export const stekjesData = [
 	{
-		name: "Monstera",
-		image: "../images/monstera.png",
-		button: {
-			url: "/stekjes/monstera",
-			text: "Bekijk stekje",
-			aria: "Bekijk monstera stekje",
-		},
-	},
-	{
-		name: "Pilea",
-		image: "../images/pilea.png",
-		button: {
-			url: "/stekjes/pilea",
-			text: "Bekijk stekje",
-			aria: "Bekijk pilea stekje",
-		},
-	},
-	{
-		name: "Calathea",
-		image: "../images/calathea.png",
-		button: {
-			url: "/stekjes/calathea",
-			text: "Bekijk stekje",
-			aria: "Bekijk calathea stekje",
-		},
-	},
-	{
-		name: "Alocasia",
-		image: "../images/alocasia.png",
-		button: {
-			url: "/stekjes/alocasia",
-			text: "Bekijk stekje",
-			aria: "Bekijk alocasia stekje",
-		},
-	},
-	{
-		name: "Calathea",
-		image: "../images/calathea.png",
-		button: {
-			url: "/stekjes/calathea",
-			text: "Bekijk stekje",
-			aria: "Bekijk calathea stekje",
-		},
-	},
-	{
-		name: "Alocasia",
-		image: "../images/alocasia.png",
-		button: {
-			url: "/stekjes/alocasia",
-			text: "Bekijk stekje",
-			aria: "Bekijk alocasia stekje",
-		},
-	},
-	{
-		name: "Monstera",
-		image: "../images/monstera.png",
-		button: {
-			url: "/stekjes/monstera",
-			text: "Bekijk stekje",
-			aria: "Bekijk monstera stekje",
-		},
-	},
-	{
-		name: "Pilea",
-		image: "../images/pilea.png",
-		button: {
-			url: "/stekjes/pilea",
-			text: "Bekijk stekje",
-			aria: "Bekijk pilea stekje",
-		},
-	},
-]
-
-export const plantjesData = {
-	gynura:
-	{
-		name: "Gynura",
+		name: "gynura",
 		nickname: "'Fluweelplant'",
 		description: "De honderden kleine haartjes op de bladeren zorgen ervoor dat deze plant fluweelachtig aanvoelt. Zodra de knopjes van de kleine gele (helaas onaangenaam ruikende) bloempjes verschijnen, kun je ze beter uit de plant knippen voor ze uitkomen. Op deze manier kan de plant zijn energie beter steken in de mooie bladeren. Sproei de bladeren nooit af, anders krijgen ze bruine vlekken.",
 		origin: "Indonesië",
@@ -247,9 +246,64 @@ export const plantjesData = {
 		image: {
 			src: "../images/gynura.jpeg",
 			alt: "Gynura ‘Fluweelplant’",
+		},
+		button: {
+			url: "/stekjes/gynura",
+			text: "Bekijk stekje",
+			aria: "Bekijk gynura stekje",
+		},
+	},
+	{
+		name: "monstera",
+		nickname: "'Gatenplant'",
+		description: "De Monstera is een makkelijke plant die het goed doet in de schaduw. De plant heeft weinig water nodig en is daarom ideaal voor mensen die vaak vergeten hun planten water te geven. De Monstera is een snelgroeiende plant die het beste tot zijn recht komt in een grote pot. De plant heeft veel licht nodig, maar kan niet goed tegen direct zonlicht.",
+		origin: "Midden- en Zuid-Amerika",
+		difficulty: "Makkelijk",
+		watering: "Een keer per week een scheut water is voldoende. Zorg ervoor dat de grond niet te nat wordt, want daar houdt de Monstera niet van.",
+		feeding: "In de lente en zomer elke maand plantvoeding geven.",
+		toxicity: "De Monstera is giftig voor huisdieren",
+		temp: "In de winter minimaal 15 graden celsius en in de zomer maximaal 25°C.",
+		minTemp: "15",
+		maxTemp: "25",
+		sunlight: "De Monstera houdt van licht, maar niet van direct zonlicht. Zet de plant op een plek waar hij indirect zonlicht krijgt.",
+		sunlightAmount: "veel",
+		cutting: "De Monstera is een snelgroeiende plant die het beste tot zijn recht komt in een grote pot. Als de plant te groot wordt, kun je hem het beste snoeien. Knip de stengels af net boven een blad. Zet de stekjes in een vaasje met water en zet ze op een lichte plek. Zodra de wortels een paar centimeter lang zijn, kun je de stekjes in een potje met aarde zetten.",
+		image: {
+			src: "../images/monstera.png",
+			alt: "Monstera ‘Gatenplant’",
+		},
+		button: {
+			url: "/stekjes/monstera",
+			text: "Bekijk stekje",
+			aria: "Bekijk monstera stekje",
+		},
+	},
+	{
+		name: "calathea",
+		nickname: "'Pauwenplant'",
+		description: "De Calathea is een prachtige plant met grote, groene bladeren met een uniek patroon. De plant is niet moeilijk om te verzorgen, maar heeft wel specifieke wensen als het gaat om licht en water. De Calathea houdt van een lichte plek, maar niet van direct zonlicht. De plant heeft regelmatig water nodig en houdt van een hoge luchtvochtigheid.",
+		origin: "Zuid-Amerika",
+		difficulty: "Gemiddeld",
+		watering: "De Calathea heeft regelmatig water nodig. Houd de grond altijd licht vochtig, maar niet te nat. Geef de plant in de zomer meer water dan in de winter.",
+		feeding: "In de lente en zomer elke maand plantvoeding geven.",
+		toxicity: "De Calathea is niet giftig voor huisdieren",
+		temp: "In de winter minimaal 15 graden celsius en in de zomer maximaal 25°C.",
+		minTemp: "15",
+		maxTemp: "25",
+		sunlight: "De Calathea houdt van een lichte plek, maar niet van direct zonlicht. Zet de plant op een plek waar hij indirect zonlicht krijgt.",
+		sunlightAmount: "gemiddeld",
+		cutting: "De Calathea groeit snel en kan na verloop van tijd te groot worden. Als de plant te groot wordt, kun je hem het beste snoeien. Knip de stengels af net boven een blad. Zet de stekjes in een vaasje met water en zet ze op een lichte plek. Zodra de wortels een paar centimeter lang zijn, kun je de stekjes in een potje met aarde zetten.",
+		image: {
+			src: "../images/calathea.png",
+			alt: "Calathea ‘Pauwenplant’",
+		},
+		button: {
+			url: "/stekjes/calathea",
+			text: "Bekijk stekje",
+			aria: "Bekijk calathea stekje",
 		}
 	}
-}
+]
 
 export const plantenTips = {
 	voeding:{
