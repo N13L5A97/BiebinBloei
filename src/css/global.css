@@ -178,8 +178,8 @@ a{
 
 span.invert {
 	background-color: var(--primary-color);
-	padding: 0.1em;
-	border-radius: .1em;
+	padding: 0.1em .5em;
+	border-radius: .1em .8em;
 	color: white;
 }
 
