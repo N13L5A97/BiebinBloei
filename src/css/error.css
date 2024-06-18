@@ -1,39 +1,37 @@
 .viernulvier {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
     height: 100vh;
-    width: 100%;
+	width: 100%;
 
-    div{
-        display: flex;
-        justify-content: left;
-        width: 21.5rem;
-    }
+	div {
+		display: flex;
+		justify-content: left;
+		width: 21.5rem;
+	}
 
-    &:hover{
-        background-color: white;
-    }
+	&:hover {
+		background-color: white;
+	}
 
-    .button{
-        background-color: var(--primary-color);
-        color: var(--secondary-color);
-        transition: 200ms;
-        transform-origin: left;
-        padding: .5rem;
-        svg{
-            fill: var(--secondary-color);
-        }
-               
-                &:hover {
-                    padding: .5rem;
-                    padding-right: 1.5rem;
-        
-                    svg {
-                        transform: translateX(1rem);
-                    }
-                }
-    }
+	.button {
+		background-color: var(--primary-color);
+		color: var(--secondary-color);
+		transition: 200ms;
+		transform-origin: left;
+		svg {
+			fill: var(--secondary-color);
+		}
+
+		&:hover {
+			padding-right: 2rem;
+
+			svg {
+				transform: translateX(0.8rem);
+			}
+		}
+	}
 }
-

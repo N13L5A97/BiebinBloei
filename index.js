@@ -91,10 +91,10 @@ app.get("/", async (req, res) => {
 app.get("/stekjes", async (req, res) => {
 	// send title to the template
 	let pageTitle = req.url.slice(1);
-  //if url end with /, remove it
-  if (pageTitle.slice(-1) === "/") {
-    pageTitle = pageTitle.slice(0, -1);
-  }
+	//if url end with /, remove it
+	if (pageTitle.slice(-1) === "/") {
+		pageTitle = pageTitle.slice(0, -1);
+	}
 
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -112,12 +112,12 @@ app.get("/stekjes", async (req, res) => {
 });
 
 app.get("/zaden", async (req, res) => {
-		// send title to the template
-    let pageTitle = req.url.slice(1);
-    //if url end with /, remove it
-    if (pageTitle.slice(-1) === "/") {
-      pageTitle = pageTitle.slice(0, -1);
-    }
+	// send title to the template
+	let pageTitle = req.url.slice(1);
+	//if url end with /, remove it
+	if (pageTitle.slice(-1) === "/") {
+		pageTitle = pageTitle.slice(0, -1);
+	}
 
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -135,12 +135,12 @@ app.get("/zaden", async (req, res) => {
 });
 
 app.get("/geveltuin", async (req, res) => {
-		// send title to the template
+	// send title to the template
 	let pageTitle = req.url.slice(1);
-  //if url end with /, remove it
-  if (pageTitle.slice(-1) === "/") {
-    pageTitle = pageTitle.slice(0, -1);
-  }
+	//if url end with /, remove it
+	if (pageTitle.slice(-1) === "/") {
+		pageTitle = pageTitle.slice(0, -1);
+	}
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
@@ -161,31 +161,40 @@ app.get("/stekjes/:name", async (req, res) => {
 	const plantData = stekjesData.find((plant) => plant.name == plantName);
 	const transition_image = seasons.checkSeason();
 
-if (!plantData) {
-      // Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
-      const mood = "verdrietig";
-      const fout = "404";
-      const url = "/stekjes";
-      const pagina = "stekjes";
-      const reden = "De plant die u zocht is niet beschikbaar.";
+	if (!plantData) {
+		// Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
+		const mood = "verdrietig";
+		const fout = "404";
+		const url = "/stekjes";
+		const pagina = "stekjes";
+		const reden = "De plant die u zocht is niet beschikbaar.";
 
-      return res.status(404).send(renderTemplate('views/error.liquid', {
-        fout,
-        url,
-        pagina,
-        reden,
-        harry: {
-          mood,
-        },
-      }));
-    }
-    
+		return res.status(404).send(
+			renderTemplate("views/error.liquid", {
+				fout,
+				url,
+				pagina,
+				reden,
+				harry: {
+					mood,
+				},
+			})
+		);
+	}
 
 	try {
 		// Voer verdere asynchrone operaties uit en wacht op hun resultaten
 		const dataWeather = await test.pullDataWeather(apiToken);
-		const temp = await harrycontent.checkTemp( dataWeather, plantData, plantenTips );
-		const weer = await harrycontent.checkSunny( dataWeather, plantData, plantenTips );
+		const temp = await harrycontent.checkTemp(
+			dataWeather,
+			plantData,
+			plantenTips
+		);
+		const weer = await harrycontent.checkSunny(
+			dataWeather,
+			plantData,
+			plantenTips
+		);
 		const voeding = await harrycontent.checkVoeding(plantenTips);
 		const mood = "neutraal";
 
@@ -197,8 +206,8 @@ if (!plantData) {
 				plantName,
 				pageTitle: plantData.name,
 				transition_image,
-				harry: { 
-          temp,
+				harry: {
+					temp,
 					weer,
 					voeding,
 					mood,
@@ -271,19 +280,22 @@ app.get("/page-transition", async (req, res) => {
 });
 
 app.use((req, res) => {
-  const mood = "twerk"
-  const fout = "404"
-  const url = "/"
-  const pagina = "home"
-  const reden = "Exuses voor het ongemak, deze pagina bestaat niet."
+	const mood = "twerk";
+	const fout = "404";
+	const reden = "Exuses voor het ongemak, deze pagina bestaat niet.";
 
-  res.status(404).send(renderTemplate('views/error.liquid', {
-    fout,
-    reden,
-    url,
-    pagina,
-      harry:{ 
-        mood,
-      },
-    }))
-})
+	res.status(404).send(
+		renderTemplate("views/error.liquid", {
+			fout,
+			reden,
+			harry: {
+				mood,
+			},
+			button: {
+				text: "Terug naar home",
+				url: "/",
+				aria: "Terug naar home",
+			},
+		})
+	);
+});

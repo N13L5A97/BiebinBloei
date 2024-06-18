@@ -1,19 +1,21 @@
 {% layout "layouts/base.liquid" %}
 
 {% block content %}
-{% include "partials/hero.liquid" %}
-<section class="stekjes-section">
-  <h2 class="smaller">Vind jouw favoriet in onze collectie geliefde <span class="invert">stekjes</span></h2>
-  <div class="stekjes">
-    {% for stekje in stekjesData %}
-    {% include "components/stekjes-card.liquid"
-    , {stekje} %}
-    {% endfor %}
-  </div>
-</section>
+  {% include "partials/hero.liquid" %}
+  <section class="stekjes-section">
+    <h2 class="smaller">Vind jouw favoriet in onze collectie geliefde
+      <span class="invert">stekjes</span>
+    </h2>
+    <div class="stekjes">
+      {% for stekje in stekjesData %}
+        {% include "components/stekjes-card.liquid"
+          , {stekje} %}
+      {% endfor %}
+    </div>
+  </section>
 
-{% for card in stekjesKastInfo %}
-{% include "partials/card.liquid"
-, {card} %}
-{% endfor %}
+  {% for card in stekjesKastInfo %}
+    {% include "partials/card.liquid"
+      , {card} %}
+  {% endfor %}
 {% endblock %}
