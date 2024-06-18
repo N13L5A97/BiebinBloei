@@ -9,16 +9,16 @@ function checkSeason() {
         // return ("./images/winter-blad-transition.svg")
         // return ("./images/herfst-blad-transition.svg")
         // return ("./images/zomer-blad-transition.svg")
-        return ("./images/lente-blad-transition.svg")
+        return ("/images/lente-blad-transition.svg")
     }
     else if (today >= summer && today < fall) {
-        return ("./images/zomer-blad-transition.svg")
+        return ("/images/zomer-blad-transition.svg")
     }
     else if (today >= fall && today < winter) {
-        return ("./images/herfst-blad-transition.svg")
+        return ("/images/herfst-blad-transition.svg")
     }
     else {
-        return ("./images/winter-blad-transition.svg")
+        return ("/images/winter-blad-transition.svg")
     }
 }
 
