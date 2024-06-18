@@ -74,8 +74,6 @@ nav ul li a {
 	text-decoration: none;
 }
 
-
-
 nav ul li:hover {
 	transform: scale(1.1);
 }
@@ -85,14 +83,14 @@ header.menuOpen nav ul li a:hover {
 	color: var(--tertiary-color);
 }
 
-nav a:focus {
+
+nav a:focus-visible {
 	border-radius: 0.5rem;
 	outline: 2px solid var(--tertiary-color);
 	outline-offset: 2px;
 }
 
-nav ul li a:focus {
-	padding: 0.5rem;
+nav ul li a:focus-visible {
 	color: var(--quaternary-color);
 	background-color: var(--tertiary-color);
 	border-radius: 0.5rem;
@@ -137,10 +135,13 @@ header.menuOpen nav ul li a {
 	font-size: 1.5em;
 	margin-top: 2em;
 	display: block;
+	height: 3rem;
+	display: flex;
+	align-items: center;
+	padding: 0 0.5rem;
 }
 
-header.menuOpen nav ul li a:focus {
-	padding: 0.5rem;
+header.menuOpen nav ul li a:focus-visible {
 	color: var(--quaternary-color);
 	background-color: var(--tertiary-color);
 }
@@ -162,10 +163,6 @@ header.menuOpen nav ul li a:focus {
 		transition: 200ms;
 	}
 
-	nav ul li a {
-		display: block;
-	}
-  
 	header.menuOpen nav ul {
 		position: fixed;
 		inset: 0;
@@ -182,7 +179,6 @@ header.menuOpen nav ul li a:focus {
 		display: block;
 	}
 }
-
 
 /* Hamburger menu icon */
 #hamburger {
@@ -210,8 +206,6 @@ header.menuOpen nav ul li a:focus {
 	margin: 7px 0;
 	display: flex;
 	background-color: transparent;
-
-
 }
 
 #middle div {
@@ -224,16 +218,14 @@ header.menuOpen nav ul li a:focus {
 	&:last-child {
 		border-radius: 0 5px 5px 0;
 	}
-
-
 }
 
 .menuOpen #hamburger #middle div:first-child {
-	animation: slideLeft .2s forwards;
+	animation: slideLeft 0.2s forwards;
 }
 
 .menuOpen #hamburger #middle div:last-child {
-	animation: slideRight .2s forwards;
+	animation: slideRight 0.2s forwards;
 }
 
 @keyframes slideRight {
@@ -261,31 +253,31 @@ header.menuOpen nav ul li a:focus {
 }
 
 .menuOpen #hamburger .cross:first-child {
-	animation: rotateRight .2s forwards;
-	animation-delay: .2s;
+	animation: rotateRight 0.2s forwards;
+	animation-delay: 0.2s;
 }
 
 .menuOpen #hamburger .cross:last-child {
-	animation: rotateLeft .2s forwards;
-	animation-delay: .2s;
+	animation: rotateLeft 0.2s forwards;
+	animation-delay: 0.2s;
 }
 
 @keyframes rotateRight {
 	from {
-		transform: translateY(0)rotate(0deg);
+		transform: translateY(0) rotate(0deg);
 	}
 
 	to {
-		transform: translateY(12px)rotate(45deg);
+		transform: translateY(12px) rotate(45deg);
 	}
 }
 
 @keyframes rotateLeft {
 	from {
-		transform: translateY(0)rotate(0deg);
+		transform: translateY(0) rotate(0deg);
 	}
 
 	to {
-		transform: translateY(-12px)rotate(-45deg);
+		transform: translateY(-12px) rotate(-45deg);
 	}
 }

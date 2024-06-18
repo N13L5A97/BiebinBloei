@@ -256,6 +256,36 @@
     }
 }
 
+#tips {
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: fit-content;
+    position: relative;
+    min-width: 25ch + 2rem;
+    outline: black solid 0.2rem;
+    z-index: 2;
+
+    p {
+        max-width: 32ch;
+        color: var(--primary-color);
+    }
+
+    &:before {
+        content: " ";
+        background-image: url(../images/spraak.svg);
+        width: 2rem;
+        height: 2rem;
+        position: absolute;
+        top: 50%;
+        left: -1.8rem;
+        filter: drop-shadow(-3px 2px 0px rgba(0, 0, 0, 1));
+        z-index: 1;
+    }
+}
+
 @keyframes wave{
     0% {    
         transform: translateY(-20px) translateX(10px) rotate(55deg);
@@ -455,30 +485,3 @@
     }
 }
 
-#tips{
-    background-color: white;
-    border-radius: 1rem;
-    display: flex;
-    flex-direction: column; 
-    padding: 1rem;
-    width: fit-content;
-    position: relative;
-    min-width: 25ch + 2rem;    
-    outline: black solid 0.2rem;
-    z-index: 2;
-    p{
-        max-width: 32ch;
-        color: var(--primary-color);
-    }
-    &:before{
-        content: " ";
-        background-image: url(../images/spraak.svg);
-        width: 2rem;
-        height: 2rem;
-        position: absolute;
-        top: 50%;
-        left: -1.8rem;
-        filter: drop-shadow(-3px 2px 0px rgba(0, 0, 0, 1));
-        z-index: 1;
-    }
-}
