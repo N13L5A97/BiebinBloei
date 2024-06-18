@@ -1,5 +1,5 @@
 .stekjes-section{
-    padding: var(--v-padding-medium) var(--h-padding-large) var(--v-padding-large);
+    padding: var(--v-padding-medium) var(--h-padding-small) var(--v-padding-large);
     max-width: 100rem;
     margin: auto;
     display: flex;
@@ -39,5 +39,11 @@
 
     & h4{
         text-transform: capitalize;
+    }
+}
+
+@media screen and (min-width: 720px){
+    &.stekjes-section {
+        padding: var(--v-padding-medium) var(--h-padding-large) var(--v-padding-large);
     }
 }

@@ -1,5 +1,5 @@
 .partners {
-    padding: var(--v-padding-large) var(--h-padding-large);
+    padding: var(--v-padding-large) var(--h-padding-small);
     background-color: var(--primary-color);
     height: auto;
     justify-content: center;
@@ -11,11 +11,11 @@
     background-attachment: fixed;
 }
 
-.partners{
+.partners {
     color: white;
 }
 
-.partners > div {
+.partners>div {
     margin-top: var(--margin-small);
     display: flex;
     width: min-content;
@@ -26,7 +26,13 @@
     align-items: center;
 }
 
-.partners > div svg {
+.partners>div svg {
     height: 5rem;
     fill: var(--quaternary-color);
+}
+
+@media (min-width: 1000px) {
+    .partners {
+        padding: var(--v-padding-large) var(--h-padding-large);
+    }
 }
