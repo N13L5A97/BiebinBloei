@@ -4,8 +4,10 @@
       {{ card.title }}
     </h2>
     {{ card.content }}
+    {% if card.button %}
     {% include "./components/button.liquid"
       , button: card.button %}
+    {% endif %}
   </article>
   <div 
     class="card-image-container" 
