@@ -36,4 +36,8 @@
 .link-block.stek-item{
     height: 30rem;
     grid-template-columns: 1fr;
+
+    & h4{
+        text-transform: capitalize;
+    }
 }
