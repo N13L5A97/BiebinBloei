@@ -90,7 +90,12 @@ app.get("/", async (req, res) => {
 
 app.get("/stekjes", async (req, res) => {
 	// send title to the template
-	const pageTitle = req.url.slice(1);
+	let pageTitle = req.url.slice(1);
+  //if url end with /, remove it
+  if (pageTitle.slice(-1) === "/") {
+    pageTitle = pageTitle.slice(0, -1);
+  }
+
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
@@ -107,8 +112,13 @@ app.get("/stekjes", async (req, res) => {
 });
 
 app.get("/zaden", async (req, res) => {
-	// send title to the template
-	const pageTitle = req.url.slice(1);
+		// send title to the template
+    let pageTitle = req.url.slice(1);
+    //if url end with /, remove it
+    if (pageTitle.slice(-1) === "/") {
+      pageTitle = pageTitle.slice(0, -1);
+    }
+
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
@@ -125,8 +135,12 @@ app.get("/zaden", async (req, res) => {
 });
 
 app.get("/geveltuin", async (req, res) => {
-	// send title to the template
-	const pageTitle = req.url.slice(1);
+		// send title to the template
+	let pageTitle = req.url.slice(1);
+  //if url end with /, remove it
+  if (pageTitle.slice(-1) === "/") {
+    pageTitle = pageTitle.slice(0, -1);
+  }
 	console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
