@@ -7,15 +7,7 @@
     <link rel="stylesheet" href={{ weatherCSS }}>
     <link rel="icon" type="image/x-icon" href="">
 
-    <style>
-        :root {
-            --amount: {
-                    {
-                    amount
-                }
-            }
-        }
-    </style>
+    <style> :root { --amount: {{ amount }} } </style>
 
     <title> Bieb in Bloei
         {% if pageTitle %}
@@ -30,7 +22,7 @@
     <div class="accessibilityMenu">
         <label class="accessibilityIcon">
             <input type="checkbox" id="menu">
-            <img src="./images/accessibility.png">
+            <img src="/images/accessibility.png">
         </label>
         <div class="accessibilityContent">
             <ul>
@@ -66,7 +58,6 @@
 
         {% comment %} <div class="transition-container"> {% endcomment %}
             <img class="transition-image fade-in single" src="{{ transition_image }}">
-        {% comment %} </div> {% endcomment %}
         
 
     {% include "partials/footer.liquid" %}

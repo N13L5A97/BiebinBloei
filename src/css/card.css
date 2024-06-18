@@ -12,7 +12,7 @@
     
     margin: var(--margin-small) 5rem;
     margin-top: calc(var(--margin-small) * -2);
-    padding: var(--h-padding-medium) var(--h-padding-small) var(--h-padding-medium);
+    padding: var(--h-padding-medium);
     
     align-self: center;
     
@@ -93,7 +93,7 @@ svg {
         color: var(--secondary-color);
 
         &:focus-visible {
-            outline: 4px dashed var(--tertiary-color);
+            outline: 4px dashed var(--primary-color);
             outline-offset: 4px;
         }
 
@@ -116,7 +116,7 @@ svg {
         color: var(--secondary-color);
 
         &:focus-visible {
-            outline: 4px dashed var(--secondary-color);
+            outline: 4px dashed var(--quaternary-color);
             outline-offset: 4px;
         }
 
@@ -154,15 +154,19 @@ svg {
         padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
         grid-template-columns: 1fr 1fr;
 
-        h2:before {
-            content: "";
-            position: absolute;
-            top: .5em;
-            left: calc(var(--h-padding-large) / -2);
-            transform: translate(-50%, -50%);
-            height: .4em;
-            width: .4em;
-            border-radius: 50%;
+        h2{
+            max-width: 7ch;
+
+            &:before {
+                content: "";
+                position: absolute;
+                top: .5em;
+                left: calc(var(--h-padding-large) / -2);
+                transform: translate(-50%, -50%);
+                height: .4em;
+                width: .4em;
+                border-radius: 50%;
+            }
         }
     }
 }
