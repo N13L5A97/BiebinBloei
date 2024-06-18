@@ -21,7 +21,8 @@
     gap: 2rem;
     width: 100%;
     overflow-x: scroll;
-    padding-bottom: 1rem;
+    padding: 1rem;
+    margin-left: -1rem;
     list-style-type: none;
 }
 
@@ -50,7 +51,6 @@
     &:focus {
         outline: 4px dashed var(--quaternary-color);
         outline-offset: 4px;
-
     }
 }
 
