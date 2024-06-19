@@ -98,6 +98,7 @@ app.get("/stekjes", async (req, res) => {
 	if (pageTitle.slice(-1) === "/") {
 		pageTitle = pageTitle.slice(0, -1);
 	}
+	const heroImage = "/images/stekjes1.png";
 
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -105,6 +106,7 @@ app.get("/stekjes", async (req, res) => {
 	return res.send(
 		renderTemplate("views/stekjes.liquid", {
 			pageTitle,
+			heroImage,
 			sliderData,
 			stekjesData,
 			stekjesKastInfo,
@@ -122,12 +124,15 @@ app.get("/zaden", async (req, res) => {
 		pageTitle = pageTitle.slice(0, -1);
 	}
 
+	const heroImage = "/images/zaad1.png";
+
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
 	return res.send(
 		renderTemplate("views/zaden.liquid", {
 			pageTitle,
+			heroImage,
 			sliderData,
 			zadenData,
 			zadenKastInfo,
@@ -144,12 +149,15 @@ app.get("/geveltuin", async (req, res) => {
   if (pageTitle.slice(-1) === "/") {
     pageTitle = pageTitle.slice(0, -1);
   }
+
+  const heroImage = "/images/geveltuin1.png";
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
 
 	return res.send(
 		renderTemplate("views/geveltuin.liquid", {
 			pageTitle,
+			heroImage,
 			sliderData,
 			footerData,
 			transition_image,
@@ -163,6 +171,7 @@ app.get("/stekjes/:name", async (req, res) => {
 	//filter stekjesData op naam van de plant
 	const plantData = stekjesData.find((plant) => plant.name == plantName);
 	const transition_image = seasons.checkSeason();
+	const heroImage = "/images/stekjes1.png";
 
 	if (!plantData) {
 		// Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
@@ -208,6 +217,7 @@ app.get("/stekjes/:name", async (req, res) => {
 				footerData,
 				plantName,
 				pageTitle: plantData.name,
+				heroImage,
 				transition_image,
 				harry: {
 					temp,
