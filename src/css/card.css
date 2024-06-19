@@ -10,7 +10,7 @@
     height: min-content;
     width: 100%;
     margin: var(--margin-small) 5rem;
-    margin-top: calc(var(--margin-small) * -2);
+    margin-top: calc(var(--margin-small) * -1);
     padding: var(--h-padding-small);
 
     align-self: center;
@@ -162,6 +162,7 @@ svg {
     .card {
         padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
         grid-template-columns: 1fr 1fr;
+        margin-top: calc(var(--margin-small) * -2);
 
         .card-image-container {
                 display: block;
