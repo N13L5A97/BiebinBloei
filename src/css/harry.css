@@ -3,8 +3,6 @@
     border: none;
 }
 
-
-
 .halloharry .harryknop{
     position: absolute;
     z-index: 1;
@@ -278,11 +276,20 @@
         background-image: url(../images/spraak.svg);
         width: 2rem;
         height: 2rem;
+        transform: rotate(-90deg);
+        bottom: -2rem;
+        right: 5rem;
         position: absolute;
-        top: 50%;
-        left: -1.8rem;
         filter: drop-shadow(-3px 2px 0px rgba(0, 0, 0, 1));
         z-index: 1;
+    }
+}
+
+@media (min-width: 1000px) {
+    #tips:before {
+        transform: rotate(0deg);
+        top: 50%;
+        left: -1.8rem;
     }
 }
 

@@ -22,7 +22,7 @@
 
 #weertips div{
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     gap: 2rem;
     justify-content: center;
     align-items: center;
@@ -32,7 +32,8 @@
 #care{
     margin-bottom: var(--margin-large);
     color: var(--primary-color);
-    padding-left: calc(var(--margin-small) + var(--h-padding-large));
+    padding-left: 0;
+    padding: var(--h-padding-small) var(--v-padding-medium);
     display: flex;
     justify-content: left;
     position: relative;
@@ -54,6 +55,16 @@
     }
     p {
         margin: 0 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    #care{
+        padding-left: calc(var(--margin-large) + var(--h-padding-large));
+    }
+
+    #weertips div {
+        flex-direction: row;
     }
 }
 

@@ -15,7 +15,7 @@
 
     align-self: center;
 
-    border-radius: 5rem;
+    border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     background-image: var(--leaf-image);
@@ -151,6 +151,7 @@ svg {
 @media screen and (min-width: 720px) {
     .card{
         width: unset;
+        border-radius: 5rem;
         max-width: clamp(30rem, 100%, 100rem);
     }
 }

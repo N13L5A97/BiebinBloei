@@ -1,5 +1,5 @@
 .partners {
-    padding: var(--v-padding-large) var(--h-padding-small);
+    padding: var(--v-padding-medium) var(--h-padding-small);
     background-color: var(--primary-color);
     height: auto;
     justify-content: center;
@@ -9,9 +9,6 @@
     background-size: 20%;
     background-blend-mode: soft-light;
     background-attachment: fixed;
-}
-
-.partners {
     color: white;
 }
 

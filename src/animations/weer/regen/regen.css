@@ -2,10 +2,16 @@
     position: absolute;
     top: 0%;
     left: -5%;
-    width: 140vw;
+    width: 100vw;
     height: 100vh;
     z-index: 1000;
     pointer-events: none;
+}
+
+@media screen and (min-width: 1000px) {
+    .regen{
+        width: 140vw;
+    }
 }
 
 /* druppel regen */

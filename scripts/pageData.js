@@ -1,5 +1,5 @@
 export const sliderData = {
-	title: "Samen Groen bij <br> de Buurtcampus ",
+	title: "Samen Groen bij de Buurtcampus ",
 	subtitle: "<span>Ruilen</span><span>Leren</span><span>Inspireren</span>",
 	sliderImages: [
 		{

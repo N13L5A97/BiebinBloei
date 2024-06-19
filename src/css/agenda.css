@@ -1,5 +1,5 @@
 .agenda {
-    padding: var(--v-padding-large) var(--h-padding-small);
+    padding: var(--v-padding-medium) var(--h-padding-small);
     background-color: var(--secondary-color);
     color: white;
     scroll-behavior: smooth;
