@@ -43,6 +43,7 @@
     }
 
     .card-image-container {
+        display: none;
         --position-x: 0;
         --position-y: 0;
 
@@ -161,6 +162,11 @@ svg {
     .card {
         padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
         grid-template-columns: 1fr 1fr;
+
+        .card-image-container {
+                display: block;
+        }
+
 
         h2 {
             max-width: 7ch;
