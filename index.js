@@ -177,19 +177,20 @@ app.get("/stekjes/:name", async (req, res) => {
 		// Als plantData niet bestaat, stuur een 404-fout met een aangepaste foutpagina
 		const mood = "verdrietig";
 		const fout = "404";
-		const url = "/stekjes";
-		const pagina = "stekjes";
 		const reden = "De plant die u zocht is niet beschikbaar.";
 
 		return res.status(404).send(
 			renderTemplate("views/error.liquid", {
 				fout,
-				url,
-				pagina,
 				reden,
 				harry: {
 					mood,
 				},
+				button: {
+				text: "Terug naar stekjes",
+				url: "/stekjes",
+				aria: "Terug naar stekjes",
+			},
 			})
 		);
 	}
