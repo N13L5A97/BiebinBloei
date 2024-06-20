@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="/css/global.css">
     <link rel="stylesheet" href={{ weatherCSS }}>
+    
     <link
       rel="icon"
       type="image/x-icon"
@@ -35,9 +36,10 @@
     {% endblock %}
   </main>
 
-  <img class="transition-image fade-in single" src="{{ transition_image }}">
+  <img class="transition-image fade-in" src="{{ transition_image }}">
 
 
   {% include "partials/footer.liquid" %}
   {% include "components/scripts.liquid" %}
+
 </body></html>
