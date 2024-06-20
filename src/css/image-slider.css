@@ -23,7 +23,6 @@
 	}
 
 	h2{
-		font-size: calc(var(--font-size-h1) * 0.3);
 		font-family: var(--font-family-alternative);
 		text-align: center;
 		margin-top: 1em;
@@ -35,11 +34,11 @@
 		padding: 0 1rem;
 		
 		&:first-of-type{
-			border-right: 3px white solid;
+			border-right: 0.2em white solid;
 		}
 
 		&:last-of-type{
-			border-left: 3px white solid;
+			border-left: 0.2em white solid;
 		}
 	}
 }
@@ -59,11 +58,7 @@
 }
 
 .slide {
-	background-image: var(--background-image);
-	background-size: cover;
-	background-position: center;
-	height: 100%;
 	width: 100vw;
 	flex-shrink: 0;
-	z-index: 1;
+	object-fit: cover;
 }

@@ -118,11 +118,15 @@ function checkWeatherCondition(data) {
       case 1066: {
         // plaatselijk sneeuw mogelijk
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1069: {
         // Gedeeltelijk natte sneeuw mogelijk
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1072: {
@@ -189,6 +193,8 @@ function checkWeatherCondition(data) {
       case 1171: {
         // Zware ijskoude motregen
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
       }
   
       case 1180: {
@@ -236,6 +242,8 @@ function checkWeatherCondition(data) {
       case 1198: {
         // Lichte ijskoude regen
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
       }
   
       case 1201: {
@@ -246,11 +254,15 @@ function checkWeatherCondition(data) {
       case 1204: {
         // Lichte natte sneeuw
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1207: {
         // Matige of zware natte sneeuw
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1210: {
@@ -333,6 +345,8 @@ function checkWeatherCondition(data) {
       case 1252: {
         // matige of hevige natte sneeuw
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1255: {
@@ -366,21 +380,29 @@ function checkWeatherCondition(data) {
       case 1273: {
         // Plaatselijk lichte regen met onweer
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
       }
   
       case 1276: {
         // Matige tot zware regen met onweer
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/regen/regen.js";
+        var weatherCSS = "./animations/weer/regen/regen.css";
       }
   
       case 1279: {
         // Fragmentarisch lichte sneeuw met onweer
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       case 1282: {
         // Matige tot zware sneeuwval met onweer
         return [weatherScript, weatherCSS];
+        var weatherScript = "./animations/weer/snee/snee.js";
+        var weatherCSS = "./animations/weer/snee/snee.css";
       }
   
       default: {

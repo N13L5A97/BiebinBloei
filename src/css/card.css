@@ -10,12 +10,12 @@
     height: min-content;
     width: 100%;
     margin: var(--margin-small) 5rem;
-    margin-top: calc(var(--margin-small) * -2);
+    margin-top: calc(var(--margin-small) * -1);
     padding: var(--h-padding-small);
 
     align-self: center;
 
-    border-radius: 5rem;
+    border-radius: 1.5rem;
     box-shadow: rgba(0, 0, 0, .4) 0 -2px 10px;
 
     background-image: var(--leaf-image);
@@ -43,6 +43,7 @@
     }
 
     .card-image-container {
+        display: none;
         --position-x: 0;
         --position-y: 0;
 
@@ -151,6 +152,7 @@ svg {
 @media screen and (min-width: 720px) {
     .card{
         width: unset;
+        border-radius: 5rem;
         max-width: clamp(30rem, 100%, 100rem);
     }
 }
@@ -160,6 +162,12 @@ svg {
     .card {
         padding: var(--h-padding-small) var(--h-padding-small) var(--h-padding-medium) var(--h-padding-large);
         grid-template-columns: 1fr 1fr;
+        margin-top: calc(var(--margin-small) * -2);
+
+        .card-image-container {
+                display: block;
+        }
+
 
         h2 {
             max-width: 7ch;

@@ -140,6 +140,8 @@ h1{
 	text-transform: capitalize;
 	font-size: var(--font-size-h1);
 	z-index: 1;
+	max-width: 11ch;
+	align-self: center;
 }
 
 h2{
@@ -187,3 +189,10 @@ span.invert {
 .tel {
 		white-space: nowrap;
 	}
+
+
+@media (min-width: 1000px){
+	h1{
+		max-width: 15ch;
+	}
+}
