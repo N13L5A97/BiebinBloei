@@ -55,11 +55,11 @@ app.get("/", async (req, res) => {
 	console.log("Current weather: " + dataWeather.current.condition.text)
 	console.log("Current weather code: " + dataWeather.current.condition.code)
 
-	const rainAmount = dataWeather.current.precip_mm;
+	// const rainAmount = dataWeather.current.precip_mm;
 	// current.cloud komt terug als percentage, des te hoger het getal, des te meer bewolkt het is. met hsl is 0% het donkerst en 100% het lichtst, dus er moet een berekening plaats vinden.
 	const cloud = 100 - dataWeather.current.cloud + "%";
 	// const cloud = 100 - 25 + '%'
-	// const rainAmount = 40
+	const rainAmount = 20
 
 	return res.send(
 		renderTemplate("views/index.liquid", {
@@ -176,7 +176,6 @@ app.get("/stekjes/:name", async (req, res) => {
 
 	//filter stekjesData op naam van de plant
 	const plantData = stekjesData.find((plant) => plant.name == plantName);
-	const pageTitle = plantData.name.charAt(0).toUpperCase() + plantData.name.slice(1);
 	const transition_image = seasons.checkSeason();
 	const heroImage = "/images/stekjes1.png";
 
@@ -224,7 +223,7 @@ app.get("/stekjes/:name", async (req, res) => {
 				plant: plantData,
 				footerData,
 				plantName,
-				pageTitle: pageTitle,
+				pageTitle: plantData.name,
 				heroImage,
 				transition_image,
 				harry: {
