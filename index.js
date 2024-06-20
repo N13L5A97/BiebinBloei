@@ -98,6 +98,8 @@ app.get("/stekjes", async (req, res) => {
 	if (pageTitle.slice(-1) === "/") {
 		pageTitle = pageTitle.slice(0, -1);
 	}
+
+	pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
 	const heroImage = "/images/stekjes1.png";
 
 	// console.log(pageTitle);
@@ -123,6 +125,8 @@ app.get("/zaden", async (req, res) => {
 	if (pageTitle.slice(-1) === "/") {
 		pageTitle = pageTitle.slice(0, -1);
 	}
+
+	pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
 
 	const heroImage = "/images/zaad1.png";
 
@@ -150,6 +154,8 @@ app.get("/geveltuin", async (req, res) => {
     pageTitle = pageTitle.slice(0, -1);
   }
 
+  pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1);
+
   const heroImage = "/images/geveltuin1.png";
 	// console.log(pageTitle);
 	const transition_image = seasons.checkSeason();
@@ -170,6 +176,7 @@ app.get("/stekjes/:name", async (req, res) => {
 
 	//filter stekjesData op naam van de plant
 	const plantData = stekjesData.find((plant) => plant.name == plantName);
+	const pageTitle = plantData.name.charAt(0).toUpperCase() + plantData.name.slice(1);
 	const transition_image = seasons.checkSeason();
 	const heroImage = "/images/stekjes1.png";
 
@@ -217,7 +224,7 @@ app.get("/stekjes/:name", async (req, res) => {
 				plant: plantData,
 				footerData,
 				plantName,
-				pageTitle: plantData.name,
+				pageTitle: pageTitle,
 				heroImage,
 				transition_image,
 				harry: {
